@@ -16,7 +16,7 @@
 \makeatletter
 \renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
 \renewcommand{\thispagestyle}[1]{}
-\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2016/2017}}}
+\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Ganjil 2018/2019}}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
 \renewcommand{\baselinestretch}{1}
@@ -35,7 +35,7 @@
 \newcommand{\@npm}{2015730030}
 \newcommand{\@judultopik}{Open Source Snake 360} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
-\newcommand{\tanggal}{05/09/2018}
+\newcommand{\tanggal}{07/09/2018}
 
 % Dokumen hasil template ini harus dicetak bolak-balik !!!!
 
@@ -44,50 +44,53 @@
 \pagenumbering{arabic}
 
 \section{Deskripsi}
-Snake merupakan sebuah permainan yang pertama kali dibuat oleh Peter Trefonas pada tahun 1978. Konsep Snake pertama kali berasal dari permainan arkade yaitu Blockade. Pada saat itu, Snake hanya dapat dimainkan pada komputer pribadi saja. Pada tahun 1997, Snake dapat dimainkan pada telepon genggam Nokia \footnote{https://en.wikipedia.org/wiki/Snake\_(video\_ game\_ genre)}.\\\\
-Cara bermainya cukup mudah yaitu pemain mengendalikan ular untuk mendapatkan makanan tanpa menabrak rintangan atau ular itu sendiri. Setiap memakan makanan, kita akan mendapat skor dan tubuh ular akan memanjang. Apabila ular tersebut menabrak dirinya sendiri atau menabrak rintangan, maka permainan selesai.\\\\
-Sekarang, sudah banyak sekali permainan Snake yang dapat dimainkan di smartphone dan web browser. Bahkan pergerakan ular juga tidak hanya 4 arah saja(atas, bawah, kiri dan kanan), tetapi sudah dapat bergerak ke segala arah. Selain itu, permainan Snake ini juga dapat dimainkan lebih dari 1 orang, contohnya adalah Slither.io. \\\\
-Pada skripsi ini akan dibuat permainan Snake yang ularnya dapat bergerak ke segala arah dan orang lain dapat menambahkan pilihan labirin. Permainan Snake akan dibuat menggunakan HTML5/Canvas dan menambah pilihan labirin menggunakan mekanisme pull request pada Gitlab.
+Snake merupakan sebuah permainan yang pertama kali dibuat oleh Peter Trefonas pada tahun 1978. Konsep Snake pertama kali berasal dari permainan arkade yaitu Blockade. Pada saat itu, Snake hanya dapat dimainkan pada komputer pribadi saja. Pada tahun 1997, Snake dapat dimainkan pada telepon genggam Nokia\footnote{https://en.wikipedia.org/wiki/Snake\_(video\_ game\_ genre)}. Cara bermainya cukup mudah yaitu pemain mengendalikan ular untuk mendapatkan makanan tanpa menabrak rintangan atau ular itu sendiri. Setiap memakan makanan, pemain akan mendapat skor dan tubuh ular akan memanjang. Apabila ular tersebut menabrak dirinya sendiri atau menabrak rintangan, maka permainan selesai.\\\\
+HTML5 adalah sebuah bahasa markah yang digunakan untuk membuat sebuah halaman web. HTML5 merupakan versi kelima dan terbaru. HTML5 memiliki beberapa API (Application Programming Interface) baru, salah satunya adalah canvas\footnote{https://en.wikipedia.org/wiki/HTML5}. Canvas adalah sebuah wadah untuk menggambar bentuk 2D dan menambah sebuah gambar pada halaman web. Dibutuhkan JavaScript untuk menggambar pada canvas\footnote{https://www.w3schools.com/html/html5\_canvas.asp}.\\\\
+Sekarang, sudah banyak sekali permainan Snake yang dapat dimainkan di smartphone dan web. Bahkan pergerakan ular juga tidak hanya 4 arah saja (atas, bawah, kiri dan kanan), tetapi sudah dapat bergerak ke segala arah. Selain itu, ada permainan Snake yang dapat dimainkan lebih dari 1 orang, contohnya adalah Slither.io. Pada skripsi ini akan dibuat permainan Snake yang ularnya dapat bergerak ke segala arah dan orang lain dapat menambahkan pilihan labirin. Permainan Snake akan dibuat menggunakan HTML5 serta orang lain dapat menambah pilihan labirin menggunakan mekanisme pull request pada Github.
 
 \begin{figure}[H]
-\caption{Pergerakan ular ke segala arah}
-\centering
-\includegraphics[width=0.5\textwidth]{snake.png}
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\caption{Pergerakan ular ke segala arah}
+		\centering
+		\includegraphics[width=0.5\textwidth]{snake.png}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\caption{Permainan Snake pada telepon genggam Nokia}
+		\centering
+		\includegraphics[width=0.5\textwidth]{snake2.jpg}
+	\end{minipage}
 \end{figure}
 
 \section{Rumusan Masalah}
 \begin{itemize}
-	\item Bagaimana cara membangun permainan Snake menggunakan HTML5? 
-	\item Bagaimana cara agar ular dapat bergerak ke segala arah?
-	\item Bagaimana cara menggambar tubuh ular menggunakan HTML5?
+	\item Bagaimana membangun permainan Snake menggunakan HTML5? 
 	\item Bagaimana cara menyimpan labirin pada file eksternal?
-	\item Bagaimana cara menambah labirin menggunakan pull request pada Gitlab?
+	\item Bagaimana cara menggunakan pull request pada Github agar orang lain dapat menambahkan labirin?
 \end{itemize}
 
 \section{Tujuan}
 \begin{itemize}
 	\item Dapat membangun permainan Snake menggunakan HTML5. 
-	\item Dapat menggerakan ular ke segala arah.
-	\item Dapat menggambar tubuh ular menggunakan HTML5.
-	\item Dapat menyimpan labirin pada ﬁle eksternal.
-	\item Dapat menambah labirin menggunakan pull request pada Gitlab.
+	\item Dapat menyimpan labirin pada file eksternal.
+	\item Dapat menggunakan pull request pada Github agar orang lain dapat menambahkan labirin.
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
 Perangkat lunak akhir yang akan dibuat memiliki fitur minimal sebagai berikut:
 \begin{itemize}
 	\item Pengguna dapat menggerakan ular ke segala arah dalam permainan Snake tersebut. 
-	\item Pengguna dapat menambahkan labirin menggunakan mekanisme pull request pada Gitlab yang dapat disimpan pada file eksternal.
+	\item Pengguna dapat menambahkan labirin menggunakan mekanisme pull request pada Github yang dapat disimpan pada file eksternal.
 \end{itemize}
 
 \section{Detail Pengerjaan Skripsi}
 Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 	\begin{enumerate}
-		\item Melakukan studi literatur mengenai HTML5, Javascript dan JQuery.
+		\item Melakukan studi literatur mengenai HTML5, Javascript, jQuery dan pull request pada Github.
 		\item Melakukan analisis dan menentukan objek-objek pada permainan Snake.
 		\item Merancang alogritma untuk menggambar tubuh ular, pergerakan ular dan membuat labirin.
 		\item Mengimplentasikan keseluruhan algoritma.
-		\item Menambahkan labirin menggunakan pull request pada Gitlab.
+		\item Menambahkan labirin menggunakan pull request pada Github.
 		\item Melakukan pengujian dan debugging.
 		\item Menulis dokumen skripsi.
 	\end{enumerate}
@@ -95,10 +98,11 @@ Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
 \section{Rencana Kerja}
 Rincian capaian yang direncanakan di Skripsi 1 adalah sebagai berikut:
 \begin{enumerate}
-\item Melakukan studi literatur mengenai HTML5, Javascript, dan JQuery.
+\item Melakukan studi literatur mengenai HTML5, Javascript, jQuery dan pull request Github.
 \item Melakukan analisis dan menentukan objek-objek pada permainan Snake.
 \item Merancang algoritma untuk menggambar tubuh ular dan pergerakan ular.
 \item Mengimplementasikan algoritma untuk menggambar tubuh ular dan pergerakan ular.
+\item Menyelesaikan bab 1 dan 2.
 \end{enumerate}
 
 Sedangkan yang akan diselesaikan di Skripsi 2 adalah sebagai berikut:
@@ -107,7 +111,7 @@ Sedangkan yang akan diselesaikan di Skripsi 2 adalah sebagai berikut:
 \item Mengimplementasikan algoritma untuk membuat labirin.
 \item Menambahkan labirin menggunakan pull request pada Gitlab.
 \item Melakukan pengujian dan debugging.
-\item Menulis dokumen skripsi.
+\item Melanjutkan dokumen skripsi.
 \end{enumerate}
 
 \vspace{1cm}
