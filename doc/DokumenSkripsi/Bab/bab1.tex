@@ -5,40 +5,66 @@
 \section{Latar Belakang}
 \label{sec:label}
 
-Bagian ini akan diisi dengan apa yang melatarbelakangi pembuatan template skripsi ini.
-Termasuk juga masalah-masalah yang akan dihadapi untuk membuatnya, termasuk kurangnya kemampuan penguasaan \LaTeX{} sehingga template ini dibuat dengan mengandalkan berbagai contoh yang tersebar di dunia maya, yang digabung-gabung menjadi satu jua.
-Bagian lain juga akan dilengkapi, untuk sementara diisi dengan lorem ipsum versi bahasa inggris.
+\textit{Snake} merupakan sebuah permainan yang pertama kali dibuat oleh Peter Trefonas pada tahun 1978. Konsep \textit{Snake} berasal dari permainan arkade yaitu \textit{Blockade}. Pada permainan \textit{Blockade}, 2 pemain akan menggerakan masing-masing sebuah garis yang dapat bergerak ke 4 arah yaitu atas, bawah, kiri, dan kanan. Apabila garis milik pemain menabrak rintangan/dinding, pemain tersebut dianggap kalah dan pemain lain akan menang. Untuk mengkahiri permainan, seorang pemain harus 6 kali menang. Konsep yang sama antara permainan \textit{Snake} dan \textit{Blockade} adalah pemain dapat menggerakan sebuah garis yang dapat bergerak ke 4 arah dan kalah apabila garis tersebut menabrak sebuah rintangan/dinding. Cara bermain \textit{Snake} adalah pemain menggerakan sebuah garis yang merepresentasikan sebuah ular pada sebuah labirin. Ular tersebut harus mendapatkan makanan sebanyak-banyaknya tanpa menabrak dinding atau ular itu sendiri. Setiap memakan makanan, tubuh ular akan memanjang dan pemain akan semakin sulit untuk menggerakan ular tersebut dengan bebas karena tubuh ular semakin lama akan menutupi labirin tersebut. Awalnya \textit{Snake} hanya dapat dimainkan pada komputer pribadi. Namun pada tahun 1997, \textit{Snake} dapat dimainkan pada telepon genggam \textit{Nokia} dan \textit{Nokia} yang mempopulerkan \textit{Snake}. \\
+
+HTML(\textit{Hyper Text Markup Language}) adalah sebuah bahasa markah yang digunakan untuk membuat halaman web. HTML5 merupakan HTML versi 5 yang terbaru dan penerus dari HTML4, XHTML1, dan DOM level 2 HTML. HTML5 memiliki beberapa elemen baru, salah satunya adalah HTML5 Canvas. HTML5 Canvas adalah tempat untuk menggambar \textit{pixel-pixel} yang dapat ditulis menggunakan bahasa pemrograman \textit{JavaScript}. \\
+
+Sekarang sudah banyak sekali \textit{Snake} yang dapat dimainkan di \textit{smartphone} dan web. Pergerakan ular tidak hanya atas, bawah, kiri, dan kanan saja, tetapi sudah dapat bergerak ke segala arah. Pada skripsi ini, penulis akan membuat \textit{Snake} yang berbeda dari yang sudah ada sebelumnya. Ular pada \textit{Snake} dapat bergerak ke segala arah dan orang lain dapat menambahkan labirin menggunakan mekanisme \textit{pull request Github}. Dengan begitu, orang lain dapat menambahkan labirin sesuai dengan keinginanya dan pemain tidak akan cepat bosan karena labirin yang disediakan cukup banyak dan variatif.
 
 \dtext{5-10}
 
 \section{Rumusan Masalah}
 \label{sec:rumusan}
-Bagian ini akan diisi dengan penajaman dari masalah-masalah yang sudah diidentifikasi di bagian sebelumnya. 
+Rumusan dari masalah yang akan dibahas pada skripsi ini adalah sebagai berikut:
+\begin{itemize}
+	\item Bagaimana membangun permainan \textit{Snake} menggunakan HTML5?
+	\item Bagaimana cara menyimpan labirin pada file eksternal?
+	\item Bagaimana cara menggunakan \textit{pull request} pada \textit{Github} agar orang lain dapat menambahkan labirin?
+\end{itemize}
 
 \dtext{6}
 
 \section{Tujuan}
 \label{sec:tujuan}
-Akan dipaparkan secara lebih terperinci dan tersturkur apa yang menjadi tujuan pembuatan template skripsi ini
+Tujuan-tujuan yang hendak dicapai melalui penulisan skripsi ini adalah sebagai berikut:
+\begin{itemize}
+	\item Dapat membangun permainan \textit{Snake} menggunakan HTML5.
+	\item Dapat menyimpan labirin pada file eksternal.
+	\item Dapat menggunakan \textit{pull request} pada \textit{Github} agar orang lain dapat menambahkan labirin.
+\end{itemize}
 
 \dtext{7}
 
 \section{Batasan Masalah}
 \label{sec:batasan}
-Untuk mempermudah pembuatan template ini, tentu ada hal-hal yang harus dibatasi, misalnya saja bahwa template ini bukan berupa style \LaTeX{} pada umumnya (dengan alasannya karena belum mampu jika diminta membuat seperti itu)
+Beberapa batasan yang dibuat terkait dengan pengerjaan skripsi ini adalah sebagai berikut:
+\begin{itemize}
+	\item Permainan ini hanya dapat dimainkan menggunakan \textit{web browser} pada komputer.
+	\item \textit{Web browser} yang digunakan sudah mendukung HTML5 Canvas.
+\end{itemize}
 
 \dtext{8}
 
 \section{Metodologi}
 \label{sec:metlit}
-Tentunya akan diisi dengan metodologi yang serius sehingga templatenya terkesan lebih serius.
-
+Metodologi pada penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+	\item Melakukan studi literatur tentang HTML5, \textit{JavaScript}, \textit{jQuery}, dan \textit{pull request} pada \textit{Github}.
+	\item Melakukan analisis dan menentukan objek-objek pada \textit{Snake}.
+	\item Merancang algoritma untuk menggambar tubuh ular, pergerakan ular dan membuat labirin.
+	\item Mengimplementasikan keseluruhan algoritma.
+	\item Menambahkan labirin menggunakan \textit{pull request} pada \textit{Github}.
+	\item Melakukan pengujian dan \textit{debugging}.
+	\item Melakukan penarikan kesimpulan. 
+\end{enumerate}
 \dtext{9}
 
 \section{Sistematika Pembahasan}
 \label{sec:sispem}
-Rencananya Bab 2 akan berisi petunjuk penggunaan template dan dasar-dasar \LaTeX.
-Mungkin bab 3,4,5 dapt diisi oleh ketiga jurusan, misalnya peraturan dasar skripsi atau pedoman penulisan, tentu jika berkenan.
-Bab 6 akan diisi dengan kesimpulan, bahwa membuat template ini ternyata sungguh menghabiskan banyak waktu.
+Sistematikan penulisan setiap bab pada penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+	\item Bab 1 berisikan latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan dari penelitian yang dilakukan.
+	\item Bab 2 berisikan dasar-dasar teori yang menunjang penelitian ini. Teori yang digunakan adalah: pengertian \textit{Snake}, HTML5 Canvas, \textit{Javascript}, \textit{jQuery} dan \textit{Github}.
+\end{enumerate}
 
 \dtext{10}
