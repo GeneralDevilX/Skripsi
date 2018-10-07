@@ -3,10 +3,10 @@
 \label{chap:teori}
 
 \lstdefinelanguage{JavaScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywords={new, true, false, function, return, null, catch, switch, var, if, while, do, else, const, this},
   keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{gray}\bfseries,
+  ndkeywords={moveTo,lineTo,arc},
+  ndkeywordstyle=\color{purple}\bfseries,
   identifierstyle=\color{black},
   sensitive=false,
   comment=[l]{//},
@@ -14,7 +14,8 @@
   commentstyle=\itshape\color{green},
   stringstyle=\color{red},
   morestring=[b]',
-  morestring=[b]"
+  morestring=[b]",
+  captionpos=b,
 }
 
 \lstset{
@@ -67,46 +68,88 @@ Permainan \textit{Snake} ini dapat dimainkan secara \textit{singleplayer} atau \
 \label{sec:HTML5Canvas}
 HTML5 Canvas adalah sebuah daerah \textit{bitmap} yang dapat dimanipulasi oleh \textit{Javascript}. Pada daerah \textit{bitmap} tersebut, \textit{pixel-pixel} akan di\textit{render} oleh canvas. Setiap \textit{frame}, HTML5 Canvas akan menggambar pada area \textit{bitmap} tersebut menggunakan \textit{Canvas} API(\textit{Application Programming Interface}) yang dipanggil pada \textit{Javascript}. API dari HTML5 Canvas yang umum adalah 2D \textit{Context}. Dengan adanya 2D \textit{Context}, \textit{programmer} dapat membuat bentuk 2D, menampilkan gambar, \textit{render} tulisan, memberi warna, membuat garis dan kurva, dan manipulasi \textit{pixel}. HTML5 Canvas tidak hanya digunakan untuk menggambar dan menampilkan gambar serta tulisan. HTML5 Canvas dapat digunakan untuk membuat animasi, aplikasi pada \textit{web} dan permainan. 
 
-Untuk menambahkan \textit{canvas} pada halaman HTML, diperlukan \textit{tag} <canvas>. Di bawah ini adalah potongan kode untuk menambahkan \textit{canvas} pada halaman HTML. \textbf{YANG CONTEXT HARUS DIMASUKIN DI SINI ATAU DI JAVASCRIPT?}
+Untuk menambahkan \textit{canvas} pada halaman HTML, diperlukan \textit{tag} <canvas>. Di bawah ini adalah potongan kode untuk menambahkan \textit{canvas} pada halaman HTML. 
 
-\begin{lstlisting}[language=HTML]
+\begin{lstlisting}[language=HTML, caption=Menambahkan \textit{canvas}]
 	<canvas id='canvas' width='500' height='300'>
 		Your browser does not support HTML5 Canvas.
 	</canvas>
 	
 \end{lstlisting}
 
-Berikut adalah penjelsan atribut yang ada pada \textit{canvas} berdasarkan potongan kode di atas : \textbf{DIISI!}
+
+Berikut adalah penjelsan atribut yang ada pada \textit{canvas} berdasarkan potongan kode di atas : 
+\begin{itemize}
+	\item id
+\end{itemize}
 
 
 \section{\textit{\textit{Javascript}}}
 \label{sec:Javascript}
 \textit{Javascript} adalah bahasa pemrograman yang ringan, \textit{interpreted} dan berorientasi objek yang digunakan pada halaman \textit{web}. \textit{Javascript} dapat membuat objek dengan menambahkan \textit{method} dan atributnya sama seperti bahasa pemrograman C++ dan \textit{Java}. Setelah objek diinisialisasi, maka objek tersebut dapat dijadikan \textit{blueprint} untuk membuat objek lain yang mirip\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/About\_ JavaScript}. \textit{Javascript} dapat digunakan untuk mengimplementasi hal yang kompleks pada halaman web. Contohnya adalah menamplikan peta yang interaktif dan membuat animasi 2D/3D. Selain \textit{Javascript}, HTML(\textit{HyperText Markup Language}) dan CSS(\textit{Cascading Style Sheet}) merupakan bagian/komponen penting dalam pembuatan halaman \textit{web}\footnote{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First\_ steps/What\_ is\_ JavaScript}.\\
 
-\subsection{Fitur Utama pada \textit{Javascript}}
-\textit{Javascript} memiliki fitur utama yang umum dikenal pada bahasa pemrograman lainya. Fitur-fitur utama tersebut adalah variabel, \textit{comment}, \textit{function}, \textit{conditional} dan operator. 
 
-\subsubsection{Variabel}
-Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variable pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel dapat menyimpan nilai dengan tipe data yang berbeda. Di bawah ini adalah potongan kode untuk mendeklarasikan variabel.
+\subsection{Variabel}
+Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variable pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel pada Javascript tidak perlu menuliskan tipe datanya ketika mendeklarasikan variabel. Di bawah ini adalah potongan kode untuk mendeklarasikan variabel.\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar\_ and\_ types}
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Javascript, caption=Deklarasi variabel]
 	var myVariable;
+	
 \end{lstlisting}
 
-\subsubsection{\textit{Comment}}
+Nilai variabel pada potongan kode di atas adalah \textit{undifined} karena variabel tersebut tidak diberi nilai/value. Di bawah ini adalah potongan kode untuk mengisi nilai pada variabel. 
 
+\begin{lstlisting}[language=Javascript, caption=Mengisi nilai sebuah variabel]
+	myVariable = 3;	
+	
+\end{lstlisting}
+
+Variabel dapat menyimpan beberapa tipe data diantaranya adalah\footnote{https://developer.mozilla.org/en-US/docs/Learn/Getting\_ started\_ with\_ the\_ web/JavaScript\_ basics} :
+\begin{itemize}
+	\item \textit{String} : nilai yang berupa teks atau sekumpulan huruf.
+	\item \textit{Number} : nilai yang berupa angka.
+	\item \textit{Boolean} : nilai \textit{true/false}.
+	\item \textit{Array} : struktur untuk menyimpan lebih dari 1 nilai dalam sebuah \textit{reference}
+	\item \textit{Object} : semua yang ada pada Javascript termasuk objek pada HTML.
+\end{itemize}
+
+\subsection{\textit{Constant}}
+\textit{Constant} adalah sebuah variabel \textit{read-only}, artinya nilai pada \textit{constant} tidak dapat diubah. Untuk mendeklarasikan \textit{constant}, digunakan \textit{keyword 'const'}. Di bawah ini adalah potongan kode untuk mendeklarasi \textit{constant}.
+
+\begin{lstlisting}[language=Javascript, caption=Deklarasi \textit{constant}]
+	const myConst = 1;
+	
+\end{lstlisting}
+
+\subsection{\textit{Function}}
+\textit{Function} adalah sekumpulan perintah/\textit{statements} untuk menjalankan suatu tugas atau menghitung nilai. Untuk membuat \textit{function}, digunakan \textit{keyword 'function'}, kemudian diikuti dengan nama \textit{function} tersebut, parameter yang dituliskan di dalam kurung, dan \textit{statement}/perintah \textit{Javascript} yang ditulis di dalam kurung kurawal. Parameter pada \textit{function} bisa lebih dari 1 yang penulisanya dipisahkan oleh tanda koma (,). \textit{Function} bisa memiliki parameter atau tidak. Di bawah ini adalah potongan kode untuk membuat \textit{function} penjumlahan 2 buah bilangan.
+
+\begin{lstlisting}[language=Javascript, caption=\textit{Function} penjumlahan 2 buah bilangan]
+	function penjumlahan(angka1,angka2){
+		var hasil = angka1+angka2;
+		return hasil;
+	}
+	
+\end{lstlisting}
+
+Setelah membuat \textit{function}, \textit{function} tersebut tidak langsung dieksekusi. Membuat \textit{function} hanya memberi nama \textit{function} tersebut dan mendeskripsikan apa yang akan dilakukan oleh \textit{function} tersebut apabila dipanggil. Dengan memanggil \textit{function}, maka \textit{function} akan dieksekusi\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions}. Di bawah ini adalah potongan kode untuk memanggil \textit{function} dengan nama penjumlahan.
+
+\begin{lstlisting}[language=Javascript, caption=Memanggil \textit{function} penjumlahan]
+	penjumlahan(10,5);
+	
+\end{lstlisting}
 
 \subsection{Menggambar pada \textit{Canvas}}
 Sesudah menuliskan \textit{tag} <canvas> pada HTML, canvas tidak bisa langsung digambar. Karena itu perlu ditambahkan \textit{drawing context} pada \textit{Javascript}. Di bawah ini adalah potongan kode untuk menambahkan \textit{drawing context}.
 
-\begin{lstlisting}
+\begin{lstlisting}[language=Javascript, caption=Menambahkan \textit{drawing context canvas}]
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext('2d');
 \end{lstlisting}
 
-Berdasarkan potongan kode di atas, variabel myCanvas menyimpan objek dengan id = 'canvas'. Id ini mengacu ke objek \textit{canvas} yang pada potongan kode sebelumnya. Variabel myCanvas sekarang sudah menyimpan objek \textit{canvas}. Kemudian variabel context menyimpan \textit{drawing context} 2D. Sesudah itu, \textit{canvas} tersebut dapat digambar dengan bentuk 2D, garis, kurva, membuat tulisan, dan menambahkan gambar. Selain untuk menggambar, bentuk-bentuk tersebut dapat diberi warna sesuai dengan keinginan.\\
+Berdasarkan potongan kode di atas, variabel myCanvas menyimpan objek dengan id = 'canvas'. Id ini mengacu ke objek \textit{canvas} pada HTML yang memilki id bernama canvas. Variabel myCanvas sekarang sudah menyimpan objek \textit{canvas}. Kemudian variabel context menyimpan \textit{drawing context} 2D. Sesudah itu, \textit{canvas} tersebut dapat digambar dengan bentuk 2D, garis, kurva, membuat tulisan, dan menambahkan gambar. Selain untuk menggambar, bentuk-bentuk tersebut dapat diberi warna sesuai dengan keinginan.\\
 
-Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat tersebut akan menempatkan gambar tersebut pada \textit{canvas}. Posisi awal/\textit{origin} pada \textit{canvas} adalah (0,0) yang terletak di ujung kiri atas \textit{canvas}. Gambar~\ref{fig:grid} adalah penempatan kotak biru pada \textit{canvas} terhadap \textit{origin}.
+Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat tersebut akan menempatkan gambar tersebut pada \textit{canvas}. Posisi awal/\textit{origin} pada \textit{canvas} adalah (0,0) yang terletak di ujung kiri atas \textit{canvas}. Gambar~\ref{fig:grid}\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_ API/Tutorial/Drawing\_ shapes} adalah penempatan kotak biru pada \textit{canvas} terhadap \textit{origin}.
 
 \begin{figure}[H]
 	\centering  
@@ -115,9 +158,9 @@ Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat t
 	\label{fig:grid} 
 \end{figure} 
 
-Pada Gambar~\ref{fig:grid}, titik ujung kiri kotak biru tersebut berjarak x \textit{pixel} dari kiri dan berjarak y \textit{pixel} dari atas. 
+Pada di atas, titik ujung kiri kotak biru tersebut berjarak x \textit{pixel} dari kiri dan berjarak y \textit{pixel} dari atas. 
 
-\subsubsection{Menggambar Bentuk Persegi Panjang}
+\subsubsection{Menggambar Persegi Panjang}
 Ada 3 cara untuk menggambar persegi panjang:
 
 \begin{itemize}
@@ -137,56 +180,36 @@ Fungsi tersebut memiliki parameter yang sama. Parameter x dan y untuk menentukan
 	\item Sesudah \textit{path} tersebut sudah dibuat, \textit{path} tersebut dapat di\textit{render} menggunakan \textit{stroke} atau \textit{fill}.
 \end{enumerate}
 
+Langkah pertama untuk membuat \textit{path} baru adalah dengan menggunakan fungsi \textit{beginPath()}. Setelah itu, perintah-perintah untuk menggambar dapat digunakan untuk membuat bentuk-bentuk yang diinginkan. Apabila sudah selesai menggambar, gunakan fungsi \textit{stroke()} untuk menggambar outline dari \textit{path} tersebut atau \textit{fill()} untuk mengisi area path tersebut. Setelah itu, gunakan fungsi \textit{closePath()} untuk menutup bentuk tersebut dengan cara menggambar garis lurus dari posisi titik terakhir ke titik awal. Fungsi lainnya yang menjadi bagian dari membuat \textit{path} adalah fungsi \textit{moveTo()}. Fungsi ini diibaratkan seperti mengangkat sebuah pensil dari sebuah titik pada kertas kemudian menempatkanya pada titik yang diinginkan. Di bawah ini adalah fungsi moveTo().
+
+\begin{lstlisting}[language=Javascript, caption=Fungsi \textit{moveTo()}]
+	moveTo(x,y);
+\end{lstlisting}
+
+Fungsi \textit{moveTo} memiliki 2 parameter yaitu x dan y yang merupakan posisi titik pada \textit{canvas}. Ketika canvas sudah diinisialsasi dan fungsi beginPath() sudah dipanggil, fungsi moveTo() berguna sebagai penempatan titik awal untuk menggambar. Fungsi lineTo() digunakan untuk menggambar sebuah garis. Di bawah ini adalah fungsi lineTo().
+
+\begin{lstlisting}[language=Javascript, caption=Fungsi \textit{lineTo()}]
+	lineTo(x,y);
+\end{lstlisting}
+
+Fungsi lineTo() memiliki 2 parameter yaitu x dan y yang merupakan titik akhir dari garis. Garis akan digambar mulai dari posisi titik awal sampai ke posisi titik akhir garis. Titik awal ini bergantung pada titik akhir dari \textit{path} sebelumya. Titik awal dapat diubah dengan menggunakan fungsi \textit{moveTo()}.
+
+Fungsi \textit{arc()} digunakan untuk menggambar lingkaran atau busur. Di bawah ini adalah fungsi arc().
+
+\begin{lstlisting}[language=Javascript, caption=Fungsi \textit{arc()}]
+	arc(x,y,radius,startAngle,endAngle,anticlockwise);
+\end{lstlisting}
+
+Parameter x dan y adalah posisi titik tengah busur pada canvas. Radius adalah besar jari-jari busur. StartAngle dan endAngle adalah titik awal dan titik akhir busur dalam satuan radian yang diukur dari sumbu x. Anticlockwise adalah parameter yang bernilai boolean, apabila bernilai true, maka busur akan digambar berlawanan arah jarum jam dan jika bernilai false, busur akan digambar searah jarum jam. Karena fungsi arc() menerima input sudut dalam radian, maka perlu dilakukan konversi dari satuan derajat menjadi radian terlebih dahulu. Rumusnya adalah sebagai berikut :
+
 
 \subsection{Membuat Objek pada \textit{Javascript}}
-\textit{Javascript} mendukung OOP(\textit{Object Oriented Programming}) sehingga \textit{programmer} lebih mudah mengerti cara kerja program tersebut. \textit{Object Oriented Programming} merupakan paradigma pemrograman berdasarkan konsep objek\footnote{https://id.wikipedia.org/wiki/Pemrograman\_ berorientasi\_ objek}. Objek tersebut dapat berupa benda-benda yang ada pada kehidupan sehari-hari. Setiap objek memiliki atribut dan \textit{method}. Atribut adalah data dan karakteristik yang terdapat pada objek. \textit{Method} adalah hal yang dapat dilakukan oleh objek tersebut. Contohnya, objek mobil memiliki atribut warna mobil, merk mobil, dan berat mobil. \textit{Method} objek mobil adalah dapat berbelok, dapat berhenti dan dapat maju. \\
 
-Pada \textit{Javascript} untuk membuat objek, digunakan perintah \textit{function}. Pada Gambar~\ref{fig:objectFunctionCode} adalah potongan kode untuk membuat objek pada \textit{Javascript} dengan atribut dan \textit{method}.
-
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=1]{objectFunctionCode}
-	\caption[Membuat objek pada \textit{Javascript}]{Membuat objek pada \textit{Javascript}}
-	\label{fig:objectFunctionCode} 
-\end{figure} 
-
-Berdasarkan potongan kode pada Gambar~\ref{fig:objectFunctionCode}, objek mobil tersebut memiliki atribut yaitu merk mobil, warna mobil dan berat mobil. \textit{Method} dari objek mobil adalah mobil dapat berbelok ke kanan dan ke kiri.
 
 \subsection{\textit{Events}}
-\textit{Event} adalah sebuah cara untuk membuat halaman web menjadi lebih interaktif. Javascript akan menjalankan suatu hal apabila \textit{event} tersebut terdeteksi\footnote{https://www.w3schools.com/js/js\_ events.asp}. Misalnya apabila sebuah tombol ditekan pada \textit{web browser}, maka akan muncul tanggal hari ini.  Pada skripsi ini, event yang digunakan adalah event milik \textit{jQuery} dan \textit{event keyboard} akan digunakan. Setiap tombol pada \textit{keyboard} memiliki kode unik/\textit{key code} tersendiri. \textit{Event-event} yang digunakan adalah sebagai berikut:
 
-\begin{itemize}
-	\item \textit{keydown} : fungsi akan dieksekusi apabila pengguna menekan sebuah tombol.
-	\item \textit{keyup} : fungsi akan dieksekusi apabila pengguna sedang tidak menekan sebuah tombol.
-\end{itemize}
-
-Kode-kode pada \textit{keyboard} yang digunakan adalah tombol atas, bawah, kanan dan kiri. Pada Gambar~\ref{fig:eventKeyDown} adalah potongan kode untuk membuat \textit{event keydown}.
-
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=1]{eventKeydown}
-	\caption[\textit{Event keydown} pada tombol atas, bawah, kiri, dan kanan]{\textit{Event keydown} pada tombol atas, bawah, kiri, dan kanan}
-	\label{fig:eventKeyDown} 
-\end{figure} 
 
 \subsection{Membuat Animasi}
-\textit{Javascript} dan \textit{jQuery} dapat digunakan untuk membuat animasi. Animasi adalah proses pergantian gambar yang hampir berbeda satu dengan yang lainya secara cepat sehingga gambar tersebut seolah-olah bergerak\footnote{https://en.wikipedia.org/wiki/Animation}. Langkah-langkah untuk membuat animasi menggunakan canvas adalah :
-
-\begin{itemize}
-	\item \textit{Draw} : gambar objek tersebut
-	\item \textit{Update} : \textit{update} posisi dari objek tersebut.
-	\item \textit{Clear} : hapus semua objek yang ada pada canvas.
-	\item \textit{Repeat} : lakukan 3 hal diatas secara berulang.
-\end{itemize}
-
-Untuk membuat animasi, membutuhkan perintah \textit{setTimeout}. \textit{setTimeout} dapat membatasi \textit{framerate} sehingga animasi tidak bergerak terlalu cepat. Sintaks untuk \textit{setTimeout} adalah setTimeout(x,y), di mana x adalah sebuah fungsi yang ingin dibuat animasi dan y adalah \textit{framerate} dari animasi tersebut. Gambar~\ref{fig:animate} menunjukan cara untuk membuat animasi. Fungsi \textit{animate()} di baris paling akhir harus dipanggil lagi supaya animasi dapat berjalan terus-menerus.
-
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=1]{animate}
-	\caption[Membuat kotak berpindah posisi]{Membuat kotak berpindah posisi}
-	\label{fig:animate} 
-\end{figure} 
 
 \section{\textit{jQuery}}
 \textit{jQuery} adalah pustaka yang dimiliki oleh \textit{Javascript}. Semua perintah-perintah pada \textit{Javascript} dapat digunakan oleh \textit{jQuery}. Penulisan \textit{jQuery} lebih singkat dibandingkan \textit{Javascript}.
