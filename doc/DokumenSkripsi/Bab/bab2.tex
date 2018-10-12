@@ -3,9 +3,9 @@
 \label{chap:teori}
 
 \lstdefinelanguage{JavaScript}{
-  keywords={new, true, false, function, return, null, catch, switch, var, if, while, do, else, const, this},
+  keywords={new, true, false, function, return, null, catch, switch, var, if, while, do, else, const, this,Math},
   keywordstyle=\color{blue}\bfseries,
-  ndkeywords={moveTo,lineTo,arc},
+  ndkeywords={moveTo,lineTo,arc,random,floor},
   ndkeywordstyle=\color{purple}\bfseries,
   identifierstyle=\color{black},
   sensitive=false,
@@ -88,6 +88,7 @@ Berikut adalah penjelsan atribut yang ada pada \textit{canvas} berdasarkan poton
 \label{sec:Javascript}
 \textit{Javascript} adalah bahasa pemrograman yang ringan, \textit{interpreted} dan berorientasi objek yang digunakan pada halaman \textit{web}. \textit{Javascript} dapat membuat objek dengan menambahkan \textit{method} dan atributnya sama seperti bahasa pemrograman C++ dan \textit{Java}. Setelah objek diinisialisasi, maka objek tersebut dapat dijadikan \textit{blueprint} untuk membuat objek lain yang mirip\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/About\_JavaScript}. \textit{Javascript} dapat digunakan untuk mengimplementasi hal yang kompleks pada halaman web. Contohnya adalah menamplikan peta yang interaktif dan membuat animasi 2D/3D. Selain \textit{Javascript}, HTML(\textit{HyperText Markup Language}) dan CSS(\textit{Cascading Style Sheet}) merupakan bagian/komponen penting dalam pembuatan halaman \textit{web}\footnote{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First\_steps/What\_is\_JavaScript}.\\
 
+Untuk menambahkan Javascript pada sebuah halaman web yang dibuat, gunakan tag <script>. Ada 2 cara untuk menambahkan Javascript yaitu menambahkan langsung di halaman web tersebut(Internal Javascript) dan menambahkan file Javascript terpisah(External Javascript).
 
 \subsection{Variabel}
 Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variable pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel pada Javascript tidak perlu menuliskan tipe datanya ketika mendeklarasikan variabel. Di bawah ini adalah potongan kode untuk mendeklarasikan variabel.\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar\_and\_types}
@@ -262,11 +263,121 @@ Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstru
 	
 \end{lstlisting}
 
+\subsubsection{Method}
+Method adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat method, tuliskan nama method terlebih dahulu kemudian \textit{assign} fungsi pada nama method tersebut. Untuk memanggil method sebuah objek, tuliskan nama objek/kelas terlebih dahulu, kemudian tuliskan nama method sesuai dengan yang sudah dibuat beserta tanda kurung. Tanda kurung berisi parameter. Di bawah ini adalah potongan kode untuk membuat dan memanggil method bergerakMaju() pada kelas Mobil.
+
+\begin{lstlisting}[language=Javascript, caption=Membuat dan memanggil method bergerakMaju()]
+	function Mobil(merkMobil,beratMobil,warnaMobil,tahunProduksi){
+		this.merkMobil = merkMobil;
+		this.beratMobil = beratMobil; //satuan dalam kg
+		this.warnaMobil = warnaMobil;
+		this.tahunProduksi = tahunProduksi;
+		
+		this.bergerakMaju = function(){
+			//kode agar mobil bergerak maju
+		}
+	}
+	
+	var mobil1 = new Mobil('Toyota',1000,'Hitam',2010);
+	mobil1.bergerakMaju(); //memanggil fungsi untuk bergerak maju
+	
+\end{lstlisting}
 
 \subsection{\textit{Events}}
+Events adalah kejadian/peristiwa yang terjadi pada sistem yang diprogram. Sistem akan memberitahu apabila kejadian tersebut sudah terjadi dan akan melakukan suatu aksi ketika kejadian sudah terjadi. Misalnya, di bandara ketika landasan pacu sudah bersih untuk pesawat lepas landas, sinyal akan dikomunikasikan kepada pilot bahwa pesawat sudah boleh untuk lepas landas. Dalam web, events ditembakan di dalam \textit{browser window} dan dikaitkan pada objek yang spesifik seperti sekumpulan elemen, dokumen HTML yang dimuat atau keseluruhan \textit{browser window}. Ada beberapa events yang dapat terjadi diantaranya adalah : 
+
+\begin{itemize}
+	\item Pengguna mengklik sebuah element atau mengarahkan kursor ke sebuah elemen.
+	\item Pengguna menekan sebuah tombol pada keyboard.
+	\item Pengguna mengatur besar dan menutup browser window.
+	\item Halaman web selesai dimuat.
+	\item Form sedang disubmit.
+	\item Video sedang dimainkan, dijeda, atau selesai.
+	\item Ketika error terjadi.
+\end{itemize}
+
+Setiap events memiliki event handler, yang berisikan sekumpulan kode yang akan dijalankan ketika event sudah terjadi. Event handler juga sering disebut sebagai event listener. Listener menunggu event yang terjadi dan handler adalah kode yang dijalankan ketika listener mendapatkan event/ketika event terjadi. Untuk memperjelas bagaimana cara menggunakan event, di bawah ini terdapat contoh kode untuk menambahkan event pada button/tombol.
+
+\begin{lstlisting}[language=Javascript,{alsolanguage=HTML}, caption=Menambahkan event pada button]
+	<html>
+		<title>Event pada tombol</title>
+		<body>
+			<button id='tombol'>Change color</button>
+		</body>
+	</html>
+	
+	<script>
+		var btn = document.getElementById('tombol');
+
+		function random(number) {
+  			return Math.floor(Math.random()*(number+1));
+		}
+
+		btn.onclick = function() {
+  			var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  			document.body.style.backgroundColor = rndCol;
+		}
+	</script>
+	
+\end{lstlisting}
+
+Berdasarkan kode di atas, objek button dengan id='tombol' disimpan di dalam variabel bernama 'btn'. Ada fungsi bernama 'random' untuk mengembalikan sebuah nilai acak. Setelah itu ada event handler. Event handler property yang digunakan adalah onclick. Event handler property onclick mengecek apakah objek(dalam kasus ini objeknya adalah button) sudah ditekan/diklik. Bila tombol sudsh diklik, maka akan mengeksekusi fungsi untuk mengubah warna background. Warna RGB tersebut digenerate secara acak menggunakan fungsi random yang sudah dibuat sebelumnya. Tidak hanya event handler property onclick saja yang dapat digunakan pada halaman web. Berikut ini adalah beberapa event handler property lainnya:
+
+\begin{itemize}
+	\item onfocus dan onblur : event akan terjadi apabila sebuah objek difokuskan/tidak. Biasanya digunakan untuk menampilkan informasi tentang bagaimana cara mengisi form ketika difokuskan atau menampilkan pesan error ketika form tersebut diisi dengan nilai yang salah/tidak valid.
+	\item ondblclick : event akan terjadi ketika objek diklik 2 kali/double click.
+	\item window.keypress, window.onkeydown, window.onkeyup : event akan terjadi apabila sebuah tombol pada keyboard ditekan. Keypress adalah event ketika tombol ditekan kemudian dilepas. Keydown adalah event ketika tombol ditekan dan keyup adalah event ketika tombol dala m keadaan tidak ditekan. Untuk ketiga event ini, event tersebut harus diregister pada object window yang merepresentasikan browser window.
+	\item onmouseover dan onmouseout : event akan terjadi ketika posisi kursor mouse berada luar objek lalu ditempatkan di atas objek dan ketika posisi kursor mouse berada di atas objek lalu keluar dari objek. 
+\end{itemize}
+
+Beberapa event handler property tersebut sangat umum dan tersedia di manapun, sedangkan beberapa event handler property lainnya sangat spesifik dan hanya digunakan untuk elemen tertentu, contohnya adalah menggunakan onplay untuk elemen tertentu yaitu <video>.
+
+Mekanisme event terbaru dalam spesifikasi DOM(Document Object Model) level 2 Events yang memberikan browser sebuah fungsi baru yaitu addEventListener(). Fungsi ini mirip seperti event handler property namun memiliki sintaks yang berbeda. Di bawah ini adalah potongan kode untuk menggunakan fungsi addEventListener().
+
+\begin{lstlisting}[language=Javascript, caption=Menggunakan fungsi addEventListener()]
+
+	var btn = document.getElementById('tombol');
+
+	function bgChange() {
+  		var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  		document.body.style.backgroundColor = rndCol;
+	}   
+
+	btn.addEventListener('click', bgChange);
+	
+\end{lstlisting}
+
+Pada fungsi addEventListener(), ada 2 buah parameter yaitu event yang ingin digunakan(dalam potongan kode di atas menggunakan event click) dan kode sebagai handler yang ingin dijalankan ketika event tersebut terjadi. Selain cara di atas, dapat juga menuliskan semua kode di dalam fungsi addEventListener() seperti potongan kode di bawah ini.
+
+\begin{lstlisting}[language=Javascript, caption=Menuliskan kode di dalam fungsi addEventListener()]
+
+	btn.addEventListener('click', function() {
+  		var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  		document.body.style.backgroundColor = rndCol;
+	});
+	
+\end{lstlisting}
 
 
 \subsection{Membuat Animasi}
+Ketika menggambar sebuah bentuk pada canvas, bentuk tersebut tidak berpindah tempat. Agar bentuk dapat bergerak, bentuk tersebut harus digambar ulang dan semua yang sudah digambar sebelumnya. Langkah-langkah untuk membuat animasi adalah sebagai berikut :
+
+\begin{enumerate}
+	\item Membersihkan canvas : hilangkan semua bentuk-bentuk yang sudah tergambar di canvas. Untuk menghapus keseluruhan canvas, gunakan fungsi clearRect().
+	\item Menyimpan state canvas : ketika mengubah atribut(seperti style) yang mempengaruhi state canvas dan ingin original state tersebut digunakan kembali, state tersebut harus disimpan. 
+	\item Gambar bentuk : gambar bentuk yang ingin dianimasikan.
+	\item Mengembalikan state canvas : jika state sudah disimpan, kembalikan state tersebut sebelum menggambar di frame yang baru.
+\end{enumerate}
+
+Bentuk yang digambar pada canvas dapat menggunakan method/fungsi yang dimiliki oleh canvas atau dengan membuat fungsi sendiri. Hasil yang ada pada canvas akan muncul setelah script selesai mengeksekusi. Jadi dibutuhkan cara untuk mengeksekusi fungsi untuk menggambar dalam waktu tertentu. Ada 3 fungsi yang dapat digunakan untuk memanggil fungsi dalam kurun waktu tertentu diantaranya adalah :
+
+\begin{itemize}
+	\item \textit{setInterval(function,delay)}: mengeksekusi fungsi \textit{function} berulang kali setiap \textit{delay} milisekon.
+	\item setTimeout(function,delay): mengeksekusi fungsi \textit{function} setiap \textit{delay} milisekon.
+	\item requestAnimationFrame(callback): memberitahu browser untuk menjalankan animasi dan meminta browser memanggil fungsi yang spesifik untuk memperbarui animasi sebelum digambar.
+\end{itemize}
+
+Jika tidak ingin ada iteraksi user, gunakan fungsi setInterval() untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input keyboard atau mouse untuk mengontrol animasi, gunakan fungsi setTimeout()\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Basic\_animations}.
 
 \section{\textit{jQuery}}
 \textit{jQuery} adalah pustaka yang dimiliki oleh \textit{Javascript}. Semua perintah-perintah pada \textit{Javascript} dapat digunakan oleh \textit{jQuery}. Penulisan \textit{jQuery} lebih singkat dibandingkan \textit{Javascript}.
@@ -278,7 +389,7 @@ Di bawah ini adalah potongan kode pada \textit{jQuery}. Untuk mendapatkan objek 
 	
 \end{lstlisting}
 
-\textit{jQuery} dapat mendeteksi apakah halaman \textit{web} sudah siap atau belum. Potongan kode di bawah ini adalah untuk mendeteksi halaman \textit{web}.
+\textit{jQuery} dapat mendeteksi apakah halaman \textit{web} sudah siap atau belum. Potongan kode di bawah ini adalah untuk mendeteksi halaman \textit{web} apakah sudah siap atau belum.
 
 \begin{lstlisting}
 	$( document ).ready(function() {
@@ -291,6 +402,110 @@ Kode yang dituliskan di dalam \$( document ).ready(function() akan dijalan setel
 
 \section{\textit{Git}}
 \label{sec:Git}
-\textit{Github} adalah layanan \textit{web hosting} bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem \textit{version control} yaitu \textit{Git}\footnote{https://en.wikipedia.org/wiki/GitHub}. \textit{Git} dapat mengetahui perubahan pada file di komputer. \textit{Github} biasanya digunakan oleh para \textit{programmer} untuk menambahkan/merevisi \textit{source code} dan sebagai media untuk berkolaborasi dalam proyek pembangunan perangkat lunak. \textit{Source code} tersebut disimpan dikelompokan pada file dan file tersebut disimpan di\textit{repository}. Dalam 1 \textit{repository}, \textit{owner}(pengguna yang membuat \textit{repository}) dapat mengundang pengguna lain untuk berkolaborasi. Ketika ada perubahan pada \textit{repository}, maka \textit{collaborator}(pengguna yang diberi hak untuk mengubah \textit{repository}) dapat mengetahui \textit{source code} atau file yang direvisi oleh \textit{collaborator} lain.\\
 
-\textit{Github} memiliki banyak fitur untuk memudahkan kerja \textit{programmer}. Fitur \textit{Github} yang mendukung penelitian ini adalah \textit{pull request}. \textit{Pull request} memberitahu \textit{collaborator} lain tentang perubahan pada \textit{repository}. Dengan adanya \textit{pull request}, pengguna dan \textit{collaborator} lain dapat berdiskusi tentang perubahan tersebut. Perubahan tersebut harus di \textit{merge} oleh \textit{collaborator} dari \textit{repository}. Apabila sudah di \textit{merge} oleh \textit{collaborator}, perubahan tersebut akan disimpan di \textit{repository}\footnote{https://help.github.com/articles/about-pull-requests}.
+\subsection{Version Control}
+Version control adalah sistem yang menyimpan perubahan pada sebuah file atau sekumpulan file secara berkala sehingga dapat mendapatkan versi yang spesifik nantinya. VCS(Version Control System) memungkinkan pengguna untuk mengembalikan file yang diinginkan ke state sebelumnya, mengembalikan keseluruhan proyek ke state sebelumnya, membandingkan perubahan secara berkala, dapat melihat pengguna terakhir yang memodifikasi sesuatu yang menyebabkan masalah, dan masih banyak lagi. Ketika beberapa file ada yang hilang karena sebuah kesalahan, file-file tersebut dapat dikembalikan dengan mudah. 
+
+\subsubsection{Local Version Control System}
+Local Version Control System memiliki sebuah basis data yang menyimpan semua perubahan pada file dalam revision control. Salah satu VCS tools yang cukup terkenal adalah RCS yang masih digunakan oleh banyak komputer hingga sekarang. Cara kerja RCS adalah menyimpan patch sets yang merupakan perbedaan antara beberapa file seperti pada Gambar~\ref{fig:LVC}. Patch sets tersebut disimpan di disk. RCS dapat menampilkan file apa saja pada suatu waktu dengan menggabungkan patch-patch tersebut.  
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{LVC}  
+	\caption[Local Version Control]{Local Version Control}
+	\label{fig:LVC} 
+\end{figure}
+
+\subsubsection{Centralized Version Control System}
+Dengan menggunakan Local Version Control System adalah bila ada beberapa orang yang berkolaborasi dengan developer. Karena pada Local Version Control System, version control dimiliki oleh masing-masing komputer sehingga pengguna tidak tahu apakah file tersebut sudah diubah oleh kolaborator lain. CVCS(Centralized Version Control System) memiliki sebuah server yang menyimpan semua file beserta historynya dan jumlah client yang mengecek file tersebut. Dengan adanya CVCS, semua orang mengetahui apa yang dilakukan oleh kolaborator yang mengerjakan pyoyek. Tetapi kelemahanya adalah ketika server tersebut down, tidak akan ada yang bisa berkolaborasi dan menyimpan perubahan yang sudah dikerjakan. Selain itu apabila data di server tersebut hilang maka dan tidak melakukan back-up, proyek yang sedang dikerjakan akan hilang beserta semua historinya. Struktur CVCS dapat dilihat pada Gambar~\ref{fig:CVCS}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{CVCS}  
+	\caption[Centralized Version Control]{Centralized Version Control}
+	\label{fig:CVCS} 
+\end{figure}
+
+\subsubsection{Distributed Version Control System}
+Dalam DVCS(Distributed Version Control System) seperti Git, Mercurial, Bazaar dan Darcs, client tidak mengecek version terbaru dari file tetapi client menggandakan repository termasuk historinya. Jika server mati/kehilangan data, maka client memiliki back-up file untuk mengembalikanya.  Ilustrasi DVCS terdapat pada Gambar~\ref{fig:DVCS}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{DVCS}  
+	\caption[Distributed Version Control]{Distributed Version Control}
+	\label{fig:DVCS} 
+\end{figure}
+
+\subsection{Git}
+Git merupakan sebuah version control namun berbeda dengan VCS lainnya dilihat dari cara menyimpan datanya. Sistem seperti CVS, Subversion, Perforce, Bazzar menyimpan data sebagai sekumpulan file dan perubahan setiap file disimpan setiap waktu. Pada Git, data tersebut dianggap sebagain sekumpulan snapshot dari miiature filesystem. Setiap commit atau menyimpan proyek, Git seolah-olah mengambil gambar untuk melihat seperti apa file yang terlihat pada saat itu dan menyimpannya sebagai referensi pada snapshot tersebut. Singkatnya, apabila tidak ada file yang diubah, Git tidak akan menyimpan file lagi.\\
+
+Hampir semua operasi pada Git dapat dilakukan secara lokal. Ketika ingin menlihat histori suatu proyek, Git akan mengambil data histori tersebut dari basis data lokal, sehingga tidak perlu memintanya ke server. Selain itu, pengguna dapat bekerja secara offline. Pada sistem lain seperti Perforce, pengguna tidak dapat melakukan banyak hal jika tidak terkoneksi ke server dan pada CVS, pengguna dapat mengedit file tetapi tidak dapat commit ke basis data. Pada Git, pengguna dapat commit dikarenakan Git memiliki basis data lokal.\\
+
+Git memiliki 3 state utama pada file yaitu: 
+
+\begin{itemize}
+	\item committed : data sudah tersimpan di basis data lokal.
+	\item modified : file sudah diubah namun belum dicommit ke basis data.
+	\item staged : menandai file yang sudah dimodifikasi dalam versi sekarang untuk dicommit.
+\end{itemize}
+
+Terdapat 3 bagian utama dalam proyek Git yaitu : 
+
+\begin{itemize}
+	\item Git directory : tempat untuk menyimpan metadata dan objek basis data untuk proyek yang dibuat. Ini adalah bagian terpenting dari Git dan inilah yang di-copy ketika clone repository dari komputer lain.
+	\item Working tree : single checkout sebuah versi dari proyek. File diambil dari basis data yang sudah dicompressed di Git directory dan disimpan pada disk untuk digunakan dan dimodifikasi.
+	\item Staging area : sebuah file yang ada di Git directory yang menyimpan informasi tentang apa yang akan disimpan untuk commit selanjutnya.  
+\end{itemize}
+
+Gambar~\ref{fig:gitState} di bawah ini menunjukan working tree, staging area dan Git directory.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{gitState}  
+	\caption[Working tree, staging area, dan Git directory]{Working tree, staging area, dan Git directory}
+	\label{fig:gitState} 
+\end{figure}
+
+Workflow pada Git adalah sebagai berikut :
+
+\begin{enumerate}
+	\item Pengguna memodifikasi file di working tree milik pengguna.
+	\item Pengguna memilih file yang akan menjadi bagian dari commit selanjutnya. File yang dipilih tersebut akan ditambahkan ke staging area. 
+	\item Pengguna commit file tersebut yang berada pada staging area dan menyimpan snapshot secara permanen ke Git directory.
+\end{enumerate}
+
+Apabila versi tertentu dari sebuah file sudah ada pada Git directory, maka file tersebut dalam state committed. Jika file sudah dimodifikasi dan sudah ditambahkan ke staging area, maka file tersebut dalam state stage. Jika file sudah diubah dan sudah dicheckout tetapi belum dalam state staged, maka file tersebut dalam state modified.
+
+
+\subsection{Git Branching}
+
+\subsection{GitHub}
+GitHub merupakan single host terbesar untuk Git repository dan sebagai titik tengah dari kolaborasi untuk jutaan pengembang dan proyek. Persentase terbesar dari semua Git repository dihosting di GitHub dan banyak proyek open-source menggunakanya untuk Git hosting, code review, issue tracking dan lainnya. 
+
+\subsubsection{Fork}
+Jika pengguna ingin berkontribusi pada proyek yang sudah ada dan pengguna tidak memiliki akses untuk push, maka pengguna dapat fork proyek tersebut. Ketika proyek tersebut telah di-fork, GitHub akan membuatkan sebuah copy/clone dari proyek tersebut yang sekarang sudah menjadi milik penggunanya dan dapat di-push. Orang lain dapat fork proyek, push proyek, dan berkontribusi dalam perubahan tersebut kembali ke repository aslinya dengan membuat Pull Request.\\
+
+Untuk fork proyek, kunjungi halaman proyek dan klik tombol 'Fork' seperti pada Gambar~\ref{fig:forkButton} yang berada di atas kanan halaman. 
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=1]{forkButton}  
+	\caption[Tombol 'Fork']{Tombol 'Fork'}
+	\label{fig:forkButton} 
+\end{figure}
+
+Github didesain untuk collaboration workflow tertentu yang berfokus pada Pull Request. Flow ini akan bekerja bila pengguna berkolaborasi dengan perusahhan yang globally-distributed atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak fork. Flownya adalah sebagai berikut :
+
+\begin{enumerate}
+	\item Fork proyek.
+	\item Buat topic branch dari master.
+	\item Lakukan beberapa commit untuk memperbaiki proyek.
+	\item Push branch ini ke proyek GitHub.
+	\item Buka Pull Request di GitHub.
+	\item Diskusikan dan commit.
+	\item Pemilik proyek merges/menggabungkan atau menutup Pull Requset.
+\end{enumerate}
+
+\subsubsection{Pull Request}
+Pull Request membuka tempat diskusi dengan code review dan owner(pemilik repository) dan kontributor dapat berkomunikasi tentang perubahan tersebut sampai owner merasa puas dan senang. Setelah itu owner akan merge/menggabungkan perubahan tersebut. Untuk membuat Pull Request, bukalah halaman 'Branches' dan buat Pull Request baru dari halaman tersebut dengan menklik tombol hijau seperti pada Gambar.... Sesudah mengklik tombol untuk membuat Pull Request baru, akan muncul sebuah laman yang meminta mengisi judul Pull Request dan deskripsi seperti pada Gambar.... Ketika tombol 'Create pull request' diklik,  maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.
+
