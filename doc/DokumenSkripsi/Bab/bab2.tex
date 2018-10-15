@@ -154,7 +154,7 @@ Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat t
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{grid}
+	\includegraphics[scale=0.7]{grid}
 	\caption[Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}]{Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}}
 	\label{fig:grid} 
 \end{figure} 
@@ -229,7 +229,7 @@ OOP (\textit{Object Oriented Programming}) adalah sebuah paradigma \textit{progr
 Ide umum pada OOP adalah menggunakan objek untuk memodelkan benda-benda yang ada pada dunia nyata. Objek tersebut kemudian direpresentasi pada program yang dibuat. Objek-objek dapat berisi data, fungsionalitas dan \textit{behaviour} yang merepresentasikan informasi tentang objek tersebut dan tugas objek\footnote{https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented\_JS}. Contohnya, bila ingin membuat objek sebuah mobil. Mobil memiliki beberapa informasi diantaranya adalah merk mobil, berat mobil, warna mobil dan tahun produksi. Informasi tersebut dapat disebut sebagai properti dari objek. Mobil dapat bergerak maju, berbelok ke kanan, berbelok ke kiri, bergerak mundur dan berhenti. Hal-hal yang dapat dilakukan oleh objek disebut sebagai method dari objek. 
 
 \subsubsection{Kelas}
-Javascript tidak memiliki statement 'class' yang dapat digunakan pada bahasa pemrograman C++ atau \textit{Java}. Untuk membuat kelas, Javascript menggunakan \textit{function} sebagai konstruktor untuk kelas. Karena itu, membuat kelas sama dengan membuat \textit{function} pada Javascript. Di bawah ini adalah potongan kode untuk membuat kelas bernama Mobil.
+\textit{Javascript} tidak memiliki \textit{statement 'class'} yang dapat digunakan pada bahasa pemrograman C++ atau \textit{Java}. Untuk membuat kelas, \textit{Javascript} menggunakan \textit{function} sebagai konstruktor untuk kelas. Karena itu, membuat kelas sama dengan membuat \textit{function} pada \textit{Javascript}. Di bawah ini adalah potongan kode untuk membuat kelas bernama Mobil.
 
 \begin{lstlisting}[language=Javascript, caption=Membuat kelas Mobil]
 	function Mobil(){
@@ -239,17 +239,17 @@ Javascript tidak memiliki statement 'class' yang dapat digunakan pada bahasa pem
 \end{lstlisting}
 
 \subsubsection{Objek}
-Untuk membuat instansi baru dari objek, gunakan statement 'new' yang nantinya akan disimpan pada variabel. Di bawah ini adalah potongan kode untuk membuat \textit{instance}.
+Untuk membuat instansi baru dari objek, gunakan \textit{statement 'new'} yang nantinya akan disimpan pada variabel. Di bawah ini adalah potongan kode untuk membuat instansi.
 
 \begin{lstlisting}[language=Javascript, caption=Membuat \textit{instance} mobil]
 	var mobil1 = new Mobil();
 \end{lstlisting}
 
 \subsubsection{Konstruktor}
-Konstruktor adalah method yang ada pada kelas. Konstruktor akan dipanggil ketika pertama kali inisialisasi atau saat instansi baru dari objek dibuat. \textit{Function} pada Javascript berfungsi sebagai konstruktor sehingga tidak perlu membuat method konstruktor lagi. Semua aksi yang terdapat pada kelas akan dieksekusi pada saat instansiasi.
+Konstruktor adalah \textit{method} yang ada pada kelas. Konstruktor akan dipanggil ketika pertama kali inisialisasi atau saat instansi baru dari objek dibuat. \textit{Function} pada \textit{Javascript} berfungsi sebagai konstruktor sehingga tidak perlu membuat method konstruktor lagi. Semua aksi yang terdapat pada kelas akan dieksekusi pada saat instansiasi.
 
 \subsubsection{Properti/Atribut}
-Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstruktor kelas sehingga setiap properti pada kelas akan dibuat ketika membuat instansi baru. Untuk membuat properti, gunakan statement 'this'. Cara ini mirip dengan bahasa pemrograman Java ketika membuat sebuah properti pada objek. Syntax untuk mengakses properti di luar kelas adalah : namaInstansi.properti. Di bawah ini adalah potongan kode untuk mendefinisikan properti pada kelas Mobil pada saat instansiasi.
+Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstruktor kelas sehingga setiap properti pada kelas akan dibuat ketika membuat instansi baru. Untuk membuat properti, gunakan \textit{statement 'this'}. Cara ini mirip dengan bahasa pemrograman \textit{Java} ketika membuat sebuah properti pada objek. Sintaks untuk mengakses properti di luar kelas adalah : namaInstansi.properti. Di bawah ini adalah potongan kode untuk mendefinisikan properti pada kelas Mobil pada saat instansiasi.
 
 \begin{lstlisting}[language=Javascript, caption=Mendefinisikan properti pada kelas Mobil]
 	function Mobil(merkMobil,beratMobil,warnaMobil,tahunProduksi){
@@ -263,8 +263,8 @@ Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstru
 	
 \end{lstlisting}
 
-\subsubsection{Method}
-Method adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat method, tuliskan nama method terlebih dahulu kemudian \textit{assign} fungsi pada nama method tersebut. Untuk memanggil method sebuah objek, tuliskan nama objek/kelas terlebih dahulu, kemudian tuliskan nama method sesuai dengan yang sudah dibuat beserta tanda kurung. Tanda kurung berisi parameter. Di bawah ini adalah potongan kode untuk membuat dan memanggil method bergerakMaju() pada kelas Mobil.
+\subsubsection{\textit{Method}}
+\textit{Method} adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat \textit{method}, tuliskan nama \textit{method} terlebih dahulu kemudian \textit{assign} fungsi pada nama method tersebut. Untuk memanggil \textit{method} sebuah objek, tuliskan nama objek/kelas terlebih dahulu, kemudian tuliskan nama \textit{method} sesuai dengan yang sudah dibuat beserta tanda kurung. Tanda kurung berisi parameter. Di bawah ini adalah potongan kode untuk membuat dan memanggil method bergerakMaju() pada kelas Mobil.
 
 \begin{lstlisting}[language=Javascript, caption=Membuat dan memanggil method bergerakMaju()]
 	function Mobil(merkMobil,beratMobil,warnaMobil,tahunProduksi){
@@ -283,20 +283,20 @@ Method adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat method, 
 	
 \end{lstlisting}
 
-\subsection{\textit{Events}}
-Events adalah kejadian/peristiwa yang terjadi pada sistem yang diprogram. Sistem akan memberitahu apabila kejadian tersebut sudah terjadi dan akan melakukan suatu aksi ketika kejadian sudah terjadi. Misalnya, di bandara ketika landasan pacu sudah bersih untuk pesawat lepas landas, sinyal akan dikomunikasikan kepada pilot bahwa pesawat sudah boleh untuk lepas landas. Dalam web, events ditembakan di dalam \textit{browser window} dan dikaitkan pada objek yang spesifik seperti sekumpulan elemen, dokumen HTML yang dimuat atau keseluruhan \textit{browser window}. Ada beberapa events yang dapat terjadi diantaranya adalah : 
+\subsection{\textit{Event}}
+\textit{Event} adalah kejadian/peristiwa yang terjadi pada sistem yang diprogram. Sistem akan memberitahu apabila kejadian tersebut sudah terjadi dan akan melakukan suatu aksi ketika kejadian sudah terjadi. Misalnya, di bandara ketika landasan pacu sudah bersih untuk pesawat lepas landas, sinyal akan dikomunikasikan kepada pilot bahwa pesawat sudah boleh untuk lepas landas. Dalam \textit{web}, \textit{event} ditembakan di dalam \textit{browser window} dan dikaitkan pada objek yang spesifik seperti sekumpulan elemen, dokumen HTML yang dimuat atau keseluruhan \textit{browser window}. Ada beberapa \textit{event} yang dapat terjadi diantaranya adalah : 
 
 \begin{itemize}
 	\item Pengguna mengklik sebuah element atau mengarahkan kursor ke sebuah elemen.
-	\item Pengguna menekan sebuah tombol pada keyboard.
-	\item Pengguna mengatur besar dan menutup browser window.
-	\item Halaman web selesai dimuat.
-	\item Form sedang disubmit.
+	\item Pengguna menekan sebuah tombol pada \textit{keyboard}.
+	\item Pengguna mengatur besar dan menutup \textit{browser window}.
+	\item Halaman \textit{web} selesai dimuat.
+	\item \textit{Form} sedang di\textit{submit}.
 	\item Video sedang dimainkan, dijeda, atau selesai.
-	\item Ketika error terjadi.
+	\item Ketika \textit{error} terjadi.
 \end{itemize}
 
-Setiap events memiliki event handler, yang berisikan sekumpulan kode yang akan dijalankan ketika event sudah terjadi. Event handler juga sering disebut sebagai event listener. Listener menunggu event yang terjadi dan handler adalah kode yang dijalankan ketika listener mendapatkan event/ketika event terjadi. Untuk memperjelas bagaimana cara menggunakan event, di bawah ini terdapat contoh kode untuk menambahkan event pada button/tombol.
+Setiap \textit{event} memiliki \textit{event handler}, yang berisikan sekumpulan kode yang akan dijalankan ketika \textit{event} sudah terjadi. \textit{Event handler} juga sering disebut sebagai \textit{event listener}. \textit{Listener} menunggu \textit{event} yang terjadi dan \textit{handler} adalah kode yang dijalankan ketika \textit{listener} mendapatkan \textit{event}/ketika \textit{event} terjadi. Untuk memperjelas bagaimana cara menggunakan \textit{event}, di bawah ini terdapat contoh kode untuk menambahkan event pada button/tombol.
 
 \begin{lstlisting}[language=Javascript,{alsolanguage=HTML}, caption=Menambahkan event pada button]
 	<html>
@@ -321,18 +321,18 @@ Setiap events memiliki event handler, yang berisikan sekumpulan kode yang akan d
 	
 \end{lstlisting}
 
-Berdasarkan kode di atas, objek button dengan id='tombol' disimpan di dalam variabel bernama 'btn'. Ada fungsi bernama 'random' untuk mengembalikan sebuah nilai acak. Setelah itu ada event handler. Event handler property yang digunakan adalah onclick. Event handler property onclick mengecek apakah objek(dalam kasus ini objeknya adalah button) sudah ditekan/diklik. Bila tombol sudsh diklik, maka akan mengeksekusi fungsi untuk mengubah warna background. Warna RGB tersebut digenerate secara acak menggunakan fungsi random yang sudah dibuat sebelumnya. Tidak hanya event handler property onclick saja yang dapat digunakan pada halaman web. Berikut ini adalah beberapa event handler property lainnya:
+Berdasarkan kode di atas, objek \textit{button} dengan id='tombol' disimpan di dalam variabel bernama 'btn'. Ada fungsi bernama \textit{'random'} untuk mengembalikan sebuah nilai acak. Setelah itu ada \textit{event handler}. \textit{Event handler property} yang digunakan adalah \textit{onclick}. \textit{Event handler property onclick} mengecek apakah objek(dalam kasus ini objeknya adalah button) sudah ditekan/diklik. Bila tombol sudsh diklik, maka akan mengeksekusi fungsi untuk mengubah warna \textit{background}. Warna RGB tersebut di\textit{generate} secara acak menggunakan fungsi \textit{random} yang sudah dibuat sebelumnya. Tidak hanya \textit{event handler property onclick} saja yang dapat digunakan pada halaman web. Berikut ini adalah beberapa \textit{event handler property} lainnya:
 
 \begin{itemize}
-	\item onfocus dan onblur : event akan terjadi apabila sebuah objek difokuskan/tidak. Biasanya digunakan untuk menampilkan informasi tentang bagaimana cara mengisi form ketika difokuskan atau menampilkan pesan error ketika form tersebut diisi dengan nilai yang salah/tidak valid.
-	\item ondblclick : event akan terjadi ketika objek diklik 2 kali/double click.
-	\item window.keypress, window.onkeydown, window.onkeyup : event akan terjadi apabila sebuah tombol pada keyboard ditekan. Keypress adalah event ketika tombol ditekan kemudian dilepas. Keydown adalah event ketika tombol ditekan dan keyup adalah event ketika tombol dala m keadaan tidak ditekan. Untuk ketiga event ini, event tersebut harus diregister pada object window yang merepresentasikan browser window.
-	\item onmouseover dan onmouseout : event akan terjadi ketika posisi kursor mouse berada luar objek lalu ditempatkan di atas objek dan ketika posisi kursor mouse berada di atas objek lalu keluar dari objek. 
+	\item \textit{onfocus} dan \textit{onblur} : event akan terjadi apabila sebuah objek difokuskan/tidak. Biasanya digunakan untuk menampilkan informasi tentang bagaimana cara mengisi \textit{form} ketika difokuskan atau menampilkan pesan \textit{error} ketika \textit{form} tersebut diisi dengan nilai yang salah/tidak valid.
+	\item \textit{ondblclick} : \textit{event} akan terjadi ketika objek diklik 2 kali/\textit{double click}.
+	\item \textit{window.keypress, window.onkeydown, window.onkeyup} : \textit{event} akan terjadi apabila sebuah tombol pada \textit{keyboard} ditekan. \textit{Keypress} adalah \textit{event} ketika tombol ditekan kemudian dilepas. \textit{Keydown} adalah \textit{event} ketika tombol ditekan dan \textit{keyup} adalah \textit{event} ketika tombol dalam keadaan tidak ditekan. Untuk ketiga \textit{event} ini, event tersebut harus di\textit{register} pada objek \textit{window} yang merepresentasikan \textit{browser window}.
+	\item \textit{onmouseover} dan \textit{onmouseout} : event akan terjadi ketika posisi kursor \textit{mouse} berada luar objek lalu ditempatkan di atas objek dan ketika posisi kursor \textit{mouse} berada di atas objek lalu keluar dari objek. 
 \end{itemize}
 
-Beberapa event handler property tersebut sangat umum dan tersedia di manapun, sedangkan beberapa event handler property lainnya sangat spesifik dan hanya digunakan untuk elemen tertentu, contohnya adalah menggunakan onplay untuk elemen tertentu yaitu <video>.
+Beberapa \textit{event handler property} tersebut sangat umum dan tersedia di manapun, sedangkan beberapa \textit{event handler property} lainnya sangat spesifik dan hanya digunakan untuk elemen tertentu, contohnya adalah menggunakan \textit{onplay} untuk elemen tertentu yaitu <video>.\\
 
-Mekanisme event terbaru dalam spesifikasi DOM(Document Object Model) level 2 Events yang memberikan browser sebuah fungsi baru yaitu addEventListener(). Fungsi ini mirip seperti event handler property namun memiliki sintaks yang berbeda. Di bawah ini adalah potongan kode untuk menggunakan fungsi addEventListener().
+Mekanisme event terbaru dalam spesifikasi DOM(\textit{Document Object Model}) \textit{level} 2 \textit{Events} yang memberikan \textit{browser} sebuah fungsi baru yaitu \textit{addEventListener()}. Fungsi ini mirip seperti \textit{event handler property} namun memiliki sintaks yang berbeda. Di bawah ini adalah potongan kode untuk menggunakan fungsi \textit{addEventListener()}.
 
 \begin{lstlisting}[language=Javascript, caption=Menggunakan fungsi addEventListener()]
 
@@ -347,7 +347,7 @@ Mekanisme event terbaru dalam spesifikasi DOM(Document Object Model) level 2 Eve
 	
 \end{lstlisting}
 
-Pada fungsi addEventListener(), ada 2 buah parameter yaitu event yang ingin digunakan(dalam potongan kode di atas menggunakan event click) dan kode sebagai handler yang ingin dijalankan ketika event tersebut terjadi. Selain cara di atas, dapat juga menuliskan semua kode di dalam fungsi addEventListener() seperti potongan kode di bawah ini.
+Pada fungsi \textit{addEventListener()}, ada 2 buah parameter yaitu \textit{event} yang ingin digunakan(dalam potongan kode di atas menggunakan \textit{event click}) dan kode sebagai \textit{handler} yang ingin dijalankan ketika \textit{event} tersebut terjadi. Selain cara di atas, dapat juga menuliskan semua kode di dalam fungsi \textit{addEventListener()} seperti potongan kode di bawah ini.
 
 \begin{lstlisting}[language=Javascript, caption=Menuliskan kode di dalam fungsi addEventListener()]
 
@@ -360,132 +360,168 @@ Pada fungsi addEventListener(), ada 2 buah parameter yaitu event yang ingin digu
 
 
 \subsection{Membuat Animasi}
-Ketika menggambar sebuah bentuk pada canvas, bentuk tersebut tidak berpindah tempat. Agar bentuk dapat bergerak, bentuk tersebut harus digambar ulang dan semua yang sudah digambar sebelumnya. Langkah-langkah untuk membuat animasi adalah sebagai berikut :
+Ketika menggambar sebuah bentuk pada \textit{canvas}, bentuk tersebut tidak berpindah tempat. Agar bentuk dapat bergerak, bentuk tersebut harus digambar ulang dan semua yang sudah digambar sebelumnya. Langkah-langkah untuk membuat animasi adalah sebagai berikut :
 
 \begin{enumerate}
-	\item Membersihkan canvas : hilangkan semua bentuk-bentuk yang sudah tergambar di canvas. Untuk menghapus keseluruhan canvas, gunakan fungsi clearRect().
-	\item Menyimpan state canvas : ketika mengubah atribut(seperti style) yang mempengaruhi state canvas dan ingin original state tersebut digunakan kembali, state tersebut harus disimpan. 
+	\item Membersihkan \textit{canvas} : hilangkan semua bentuk-bentuk yang sudah tergambar di canvas. Untuk menghapus keseluruhan \textit{canvas}, gunakan fungsi \textit{clearRect()}.
+	\item Menyimpan \textit{state canvas} : ketika mengubah atribut(seperti \textit{style}) yang mempengaruhi \textit{state canvas} dan ingin \textit{original state} tersebut digunakan kembali, \textit{state} tersebut harus disimpan. 
 	\item Gambar bentuk : gambar bentuk yang ingin dianimasikan.
-	\item Mengembalikan state canvas : jika state sudah disimpan, kembalikan state tersebut sebelum menggambar di frame yang baru.
+	\item Mengembalikan \textit{state canvas} : jika state sudah disimpan, kembalikan \textit{state} tersebut sebelum menggambar di \textit{frame} yang baru.
 \end{enumerate}
 
-Bentuk yang digambar pada canvas dapat menggunakan method/fungsi yang dimiliki oleh canvas atau dengan membuat fungsi sendiri. Hasil yang ada pada canvas akan muncul setelah script selesai mengeksekusi. Jadi dibutuhkan cara untuk mengeksekusi fungsi untuk menggambar dalam waktu tertentu. Ada 3 fungsi yang dapat digunakan untuk memanggil fungsi dalam kurun waktu tertentu diantaranya adalah :
+Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki oleh \textit{canvas} atau dengan membuat fungsi sendiri. Hasil yang ada pada \textit{canvas} akan muncul setelah \textit{script} selesai mengeksekusi. Jadi dibutuhkan cara untuk mengeksekusi fungsi untuk menggambar dalam waktu tertentu. Ada 3 fungsi yang dapat digunakan untuk memanggil fungsi dalam kurun waktu tertentu diantaranya adalah :
 
 \begin{itemize}
-	\item \textit{setInterval(function,delay)}: mengeksekusi fungsi \textit{function} berulang kali setiap \textit{delay} milisekon.
-	\item setTimeout(function,delay): mengeksekusi fungsi \textit{function} setiap \textit{delay} milisekon.
-	\item requestAnimationFrame(callback): memberitahu browser untuk menjalankan animasi dan meminta browser memanggil fungsi yang spesifik untuk memperbarui animasi sebelum digambar.
+	\item \textit{setInterval(function,delay)}: mengeksekusi fungsi \textit{function} berulang kali setiap \textit{delay} milidetik.
+	\item \textit{setTimeout(function,delay)}: mengeksekusi fungsi \textit{function} setiap \textit{delay} milidetik.
+	\item \textit{requestAnimationFrame(callback)}: memberitahu \textit{browser} untuk menjalankan animasi dan meminta \textit{browser} memanggil fungsi yang spesifik untuk memperbarui animasi.
 \end{itemize}
 
-Jika tidak ingin ada iteraksi user, gunakan fungsi setInterval() untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input keyboard atau mouse untuk mengontrol animasi, gunakan fungsi setTimeout()\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Basic\_animations}.
+Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi setTimeout()\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Basic\_animations}.
 
-\section{\textit{jQuery}}
-\textit{jQuery} adalah pustaka yang dimiliki oleh \textit{Javascript}. Semua perintah-perintah pada \textit{Javascript} dapat digunakan oleh \textit{jQuery}. Penulisan \textit{jQuery} lebih singkat dibandingkan \textit{Javascript}.
-
-Di bawah ini adalah potongan kode pada \textit{jQuery}. Untuk mendapatkan objek pada \textit{jQuery} selalu diawali dengan simbol '\$'. Kemudian diikuti dengan objeknya lalu \textit{method}nya. 
-
-\begin{lstlisting}
-	$( "h1" ).remove();
-	
-\end{lstlisting}
-
-\textit{jQuery} dapat mendeteksi apakah halaman \textit{web} sudah siap atau belum. Potongan kode di bawah ini adalah untuk mendeteksi halaman \textit{web} apakah sudah siap atau belum.
-
-\begin{lstlisting}
-	$( document ).ready(function() {
-    	// kode dituliskan di sini
-	});
-	
-\end{lstlisting}
-
-Kode yang dituliskan di dalam \$( document ).ready(function() akan dijalan setelah DOM(\textit{Document Object Model}) pada halaman web tersebut sudah siap untuk dieksekusi oleh \textit{Javascript}. 
 
 \section{\textit{Git}}
 \label{sec:Git}
 
-\subsection{Version Control}
-Version control adalah sistem yang menyimpan perubahan pada sebuah file atau sekumpulan file secara berkala sehingga dapat mendapatkan versi yang spesifik nantinya. VCS(Version Control System) memungkinkan pengguna untuk mengembalikan file yang diinginkan ke state sebelumnya, mengembalikan keseluruhan proyek ke state sebelumnya, membandingkan perubahan secara berkala, dapat melihat pengguna terakhir yang memodifikasi sesuatu yang menyebabkan masalah, dan masih banyak lagi. Ketika beberapa file ada yang hilang karena sebuah kesalahan, file-file tersebut dapat dikembalikan dengan mudah. 
+\subsection{\textit{Version Control}}
+\textit{Version control} adalah sistem yang menyimpan perubahan pada sebuah \textit{file} atau sekumpulan \textit{file} secara berkala sehingga dapat mendapatkan versi yang spesifik nantinya. VCS(\textit{Version Control System}) memungkinkan pengguna untuk mengembalikan \textit{file} yang diinginkan ke \textit{state} sebelumnya, mengembalikan keseluruhan proyek ke \textit{state} sebelumnya, membandingkan perubahan secara berkala, dapat melihat pengguna terakhir yang memodifikasi sesuatu yang menyebabkan masalah, dan masih banyak lagi. Ketika beberapa \textit{file} ada yang hilang karena sebuah kesalahan, \textit{file-file} tersebut dapat dikembalikan dengan mudah. 
 
 \subsubsection{Local Version Control System}
-Local Version Control System memiliki sebuah basis data yang menyimpan semua perubahan pada file dalam revision control. Salah satu VCS tools yang cukup terkenal adalah RCS yang masih digunakan oleh banyak komputer hingga sekarang. Cara kerja RCS adalah menyimpan patch sets yang merupakan perbedaan antara beberapa file seperti pada Gambar~\ref{fig:LVC}. Patch sets tersebut disimpan di disk. RCS dapat menampilkan file apa saja pada suatu waktu dengan menggabungkan patch-patch tersebut.  
+\textit{Local Version Control} System memiliki sebuah basis data yang menyimpan semua perubahan pada \textit{file} dalam \textit{revision control}. Salah satu VCS tools yang cukup terkenal adalah RCS yang masih digunakan oleh banyak komputer hingga sekarang. Cara kerja RCS adalah menyimpan \textit{patch sets} yang merupakan perbedaan antara beberapa \textit{file} seperti pada Gambar~\ref{fig:LVC}. \textit{Patch sets} tersebut disimpan di \textit{disk}. RCS dapat menampilkan \textit{file} apa saja pada suatu waktu dengan menggabungkan \textit{patch-patch} tersebut.  
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.4]{LVC}  
+	\includegraphics[scale=0.5]{LVC}  
 	\caption[Local Version Control]{Local Version Control}
 	\label{fig:LVC} 
 \end{figure}
 
 \subsubsection{Centralized Version Control System}
-Dengan menggunakan Local Version Control System adalah bila ada beberapa orang yang berkolaborasi dengan developer. Karena pada Local Version Control System, version control dimiliki oleh masing-masing komputer sehingga pengguna tidak tahu apakah file tersebut sudah diubah oleh kolaborator lain. CVCS(Centralized Version Control System) memiliki sebuah server yang menyimpan semua file beserta historynya dan jumlah client yang mengecek file tersebut. Dengan adanya CVCS, semua orang mengetahui apa yang dilakukan oleh kolaborator yang mengerjakan pyoyek. Tetapi kelemahanya adalah ketika server tersebut down, tidak akan ada yang bisa berkolaborasi dan menyimpan perubahan yang sudah dikerjakan. Selain itu apabila data di server tersebut hilang maka dan tidak melakukan back-up, proyek yang sedang dikerjakan akan hilang beserta semua historinya. Struktur CVCS dapat dilihat pada Gambar~\ref{fig:CVCS}.
+\textit{Local Version Control System} menjadi kurang efektif, bila ada beberapa orang yang berkolaborasi dengan pengembang. Karena pada \textit{Local Version Control System}, \textit{version control} dimiliki oleh masing-masing komputer sehingga pengguna tidak tahu apakah \textit{file} tersebut sudah diubah oleh kolaborator lain. CVCS(\textit{Centralized Version Control System}) memiliki sebuah \textit{server} yang menyimpan semua \textit{file} beserta historynya dan jumlah \textit{client} yang mengecek \textit{file} tersebut. Dengan adanya CVCS, semua orang mengetahui apa yang dilakukan oleh kolaborator yang mengerjakan proyek. Tetapi kelemahanya adalah ketika \textit{server} tersebut \textit{down}, tidak akan ada yang bisa berkolaborasi dan tidak dapat menyimpan perubahan yang sudah dikerjakan. Selain itu apabila data di \textit{server} tersebut hilang maka dan tidak melakukan \textit{back-up}, proyek yang sedang dikerjakan akan hilang beserta semua historinya. Struktur CVCS dapat dilihat pada Gambar~\ref{fig:CVCS}.
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.4]{CVCS}  
+	\includegraphics[scale=0.6]{CVCS}  
 	\caption[Centralized Version Control]{Centralized Version Control}
 	\label{fig:CVCS} 
 \end{figure}
 
 \subsubsection{Distributed Version Control System}
-Dalam DVCS(Distributed Version Control System) seperti Git, Mercurial, Bazaar dan Darcs, client tidak mengecek version terbaru dari file tetapi client menggandakan repository termasuk historinya. Jika server mati/kehilangan data, maka client memiliki back-up file untuk mengembalikanya.  Ilustrasi DVCS terdapat pada Gambar~\ref{fig:DVCS}.
+Dalam DVCS(\textit{Distributed Version Control System}) seperti \textit{Git, Mercurial, Bazaar dan Darcs}, \textit{client} tidak mengecek versi terbaru dari \textit{file} tetapi \textit{client} menggandakan \textit{repository} termasuk historinya. Jika \textit{server} mati/kehilangan data, maka \textit{client} memiliki \textit{file back-up} untuk mengembalikanya.  Ilustrasi DVCS terdapat pada Gambar~\ref{fig:DVCS}.
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.4]{DVCS}  
+	\includegraphics[scale=0.6]{DVCS}  
 	\caption[Distributed Version Control]{Distributed Version Control}
 	\label{fig:DVCS} 
 \end{figure}
 
-\subsection{Git}
-Git merupakan sebuah version control namun berbeda dengan VCS lainnya dilihat dari cara menyimpan datanya. Sistem seperti CVS, Subversion, Perforce, Bazzar menyimpan data sebagai sekumpulan file dan perubahan setiap file disimpan setiap waktu. Pada Git, data tersebut dianggap sebagain sekumpulan snapshot dari miiature filesystem. Setiap commit atau menyimpan proyek, Git seolah-olah mengambil gambar untuk melihat seperti apa file yang terlihat pada saat itu dan menyimpannya sebagai referensi pada snapshot tersebut. Singkatnya, apabila tidak ada file yang diubah, Git tidak akan menyimpan file lagi.\\
+\subsection{\textit{Git}}
+\textit{Git} merupakan sebuah \textit{version control} namun berbeda dengan VCS lainnya dilihat dari cara menyimpan datanya. Sistem seperti CVS, \textit{Subversion, Perforce, Bazzar} menyimpan data sebagai sekumpulan \textit{file} dan perubahan setiap \textit{file} disimpan setiap waktu. Pada \textit{Git}, data tersebut dianggap sebagai sekumpulan \textit{snapshot} dari \textit{miniature filesystem}. Setiap \textit{commit} atau menyimpan proyek, \textit{Git} seolah-olah mengambil gambar untuk melihat seperti apa \textit{file} yang terlihat pada saat itu dan menyimpannya sebagai referensi pada \textit{snapshot} tersebut. Singkatnya, apabila tidak ada \textit{file} yang diubah, Git tidak akan menyimpan \textit{file} lagi.\\
 
-Hampir semua operasi pada Git dapat dilakukan secara lokal. Ketika ingin menlihat histori suatu proyek, Git akan mengambil data histori tersebut dari basis data lokal, sehingga tidak perlu memintanya ke server. Selain itu, pengguna dapat bekerja secara offline. Pada sistem lain seperti Perforce, pengguna tidak dapat melakukan banyak hal jika tidak terkoneksi ke server dan pada CVS, pengguna dapat mengedit file tetapi tidak dapat commit ke basis data. Pada Git, pengguna dapat commit dikarenakan Git memiliki basis data lokal.\\
+Hampir semua operasi pada \textit{Git} dapat dilakukan secara lokal. Ketika ingin menlihat histori suatu proyek, \textit{Git} akan mengambil data histori tersebut dari basis data lokal, sehingga tidak perlu memintanya ke \textit{server}. Selain itu, pengguna dapat bekerja secara \textit{offline}. Pada sistem lain seperti \textit{Perforce}, pengguna tidak dapat melakukan banyak hal jika tidak terkoneksi ke \textit{server} dan pada CVS, pengguna dapat mengubah \textit{file} tetapi tidak dapat \textit{commit} ke basis data. Pada \textit{Git}, pengguna dapat \textit{commit} dikarenakan \textit{Git} memiliki basis data lokal.\\
 
-Git memiliki 3 state utama pada file yaitu: 
-
-\begin{itemize}
-	\item committed : data sudah tersimpan di basis data lokal.
-	\item modified : file sudah diubah namun belum dicommit ke basis data.
-	\item staged : menandai file yang sudah dimodifikasi dalam versi sekarang untuk dicommit.
-\end{itemize}
-
-Terdapat 3 bagian utama dalam proyek Git yaitu : 
+\textit{Git} memiliki 3 \textit{state} utama pada \textit{file} yaitu: 
 
 \begin{itemize}
-	\item Git directory : tempat untuk menyimpan metadata dan objek basis data untuk proyek yang dibuat. Ini adalah bagian terpenting dari Git dan inilah yang di-copy ketika clone repository dari komputer lain.
-	\item Working tree : single checkout sebuah versi dari proyek. File diambil dari basis data yang sudah dicompressed di Git directory dan disimpan pada disk untuk digunakan dan dimodifikasi.
-	\item Staging area : sebuah file yang ada di Git directory yang menyimpan informasi tentang apa yang akan disimpan untuk commit selanjutnya.  
+	\item \textit{committed} : data sudah tersimpan di basis data lokal.
+	\item \textit{modified} : \textit{file} sudah diubah namun belum di\textit{commit} ke basis data.
+	\item \textit{staged} : menandai file yang sudah dimodifikasi dalam versi sekarang untuk di\textit{commit}.
 \end{itemize}
 
-Gambar~\ref{fig:gitState} di bawah ini menunjukan working tree, staging area dan Git directory.
+Terdapat 3 bagian utama dalam proyek \textit{Git} yaitu : 
+
+\begin{itemize}
+	\item \textit{Git directory} : tempat untuk menyimpan \textit{metadata} dan objek basis data untuk proyek yang dibuat. Ini adalah bagian terpenting dari \textit{Git} dan inilah yang di-\textit{copy} ketika \textit{clone repository} dari komputer lain.
+	\item \textit{Working tree} : \textit{single checkout} sebuah versi dari proyek. \textit{File} diambil dari basis data yang sudah di\textit{compressed} di \textit{Git directory} dan disimpan pada \textit{disk} untuk digunakan dan dimodifikasi.
+	\item \textit{Staging area} : sebuah \textit{file} yang ada di \textit{Git directory} yang menyimpan informasi tentang apa yang akan disimpan untuk \textit{commit} selanjutnya.  
+\end{itemize}
+
+Gambar~\ref{fig:gitState} di bawah ini menunjukan \textit{working tree, staging area dan Git directory}.
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.4]{gitState}  
+	\includegraphics[scale=0.6]{gitState}  
 	\caption[Working tree, staging area, dan Git directory]{Working tree, staging area, dan Git directory}
 	\label{fig:gitState} 
 \end{figure}
 
-Workflow pada Git adalah sebagai berikut :
+\textit{Workflow} pada \textit{Git} adalah sebagai berikut :
 
 \begin{enumerate}
-	\item Pengguna memodifikasi file di working tree milik pengguna.
-	\item Pengguna memilih file yang akan menjadi bagian dari commit selanjutnya. File yang dipilih tersebut akan ditambahkan ke staging area. 
-	\item Pengguna commit file tersebut yang berada pada staging area dan menyimpan snapshot secara permanen ke Git directory.
+	\item Pengguna memodifikasi \textit{file} di \textit{working tree} milik pengguna.
+	\item Pengguna memilih \textit{file} yang akan menjadi bagian dari \textit{commit} selanjutnya. \textit{File} yang terpilih akan ditambahkan ke \textit{staging area}. 
+	\item Pengguna melakukan \textit{commit file} tersebut yang berada pada \textit{staging area} dan menyimpan \textit{snapshot} secara permanen ke \textit{Git directory}.
 \end{enumerate}
 
-Apabila versi tertentu dari sebuah file sudah ada pada Git directory, maka file tersebut dalam state committed. Jika file sudah dimodifikasi dan sudah ditambahkan ke staging area, maka file tersebut dalam state stage. Jika file sudah diubah dan sudah dicheckout tetapi belum dalam state staged, maka file tersebut dalam state modified.
+Apabila versi tertentu dari sebuah \textit{file} sudah ada pada \textit{Git directory}, maka \textit{file} tersebut dalam berada dalam \textit{state committed}. Jika \textit{file} sudah dimodifikasi dan sudah ditambahkan ke \textit{staging area}, maka file tersebut dalam state \textit{staged}. Jika \textit{file} sudah diubah dan sudah di\textit{checkout} tetapi belum dalam \textit{state staged}, maka \textit{file} tersebut dalam \textit{state modified}.\\
+
+Ada beberapa cara dalam menggunakan \textit{Git} yaitu dengan menggunakan \textit{command-line} dan beberapa GUI(\textit{Graphical User Interface}) yang memiliki kemampuan yang bermacam-macam. Pada umumnya digunakan \textit{command-line}, karena \textit{command-line} dapat menjalankan semua perintah \textit{Git} sedangkan GUI hanya memiliki sebagian fungsionalitas pada \textit{Git} supaya simpel dan mudah digunakan. 
+
+\subsubsection{Mendapatkan \textit{Git Repository}}
+Untuk mendapatkan \textit{Git repository} ada 2 cara yaitu : menjadikan sebuah proyek yang terdapat pada direktori lokal yang belum dalam \textit{version control} lalu menjadikannya sebagai \textit{Git repository} dan dengan \textit{clone Git repository} yang sudah ada.\\
+
+Jika memiliki direktori proyek yang belum dalam \textit{version control} dan ingin mengontrolnya menggunakan \textit{Git}, hal pertama yang harus dilakukan adalah dengan membuka direktori proyek. Perintah untuk membuat repository pada \textit{Windows} adalah dengan mengetikan perintah \textit{\$ cd /c/user/my\_project} sesudah itu ketik perintah \textit{\$ git init}. Perintah tersebut akan membuat subdirektori bernama \textit{.git} yang mengandung semua repository yang dibutuhkan. Setelah mengetikan perintah di atas, proyek tersebut belum di-\textit{track} sama sekali. Untuk men-\textit{track file-file} pada sebuah proyek, pertama gunakan perintah \textit{git add} untuk men-\textit{track file} yang diinginkan kemudian ketik \textit{git commit} untuk commit file tersebut.\\
+
+\textit{Clone repository} adalah mendapatkan \textit{copy} dari \textit{repository} yang sudah ada. Perintah yang digunakan adalah \textit{git clone}. Tidak hanya \textit{file-file} pada \textit{repository} saja yang di\textit{copy}, tetapi semua histori pada \textit{repository} tersebut akan ikut ter\textit{copy}. Perintah \textit{git clone} diikuti dengan \textit{url}. \textit{Url} ini berisi \textit{link} di mana \textit{repository} berada.
+
+\subsubsection{\textit{Record} Perubahan pada \textit{Repository}}
+Setiap \textit{file} dalam direktori memiliki 2 \textit{state} yaitu \textit{tracked} atau \textit{untracked}. \textit{Tracked file} adalah \textit{file} yang berada pada \textit{snapshot} terakhir. \textit{Tracked file} adalah \textit{file} yang \textit{Git} ketahui sekarang. \textit{Untracked file} adalah \textit{file} yang tidak berada pada \textit{snapshot} terakhir. Ketika \textit{file} diubah, \textit{Git} melihat bahwa \textit{file} tersebut sudah dimodifikasi, karena \textit{file} tersebut diubah setelah \textit{commit} terakhir. Kemudian \textit{file} yang sudah dimodifikasi tersebut di-\textit{stage} dan \textit{commit} semua \textit{file} yang sudah di\textit{staged} tersebut. Gambar~\ref{fig:lifecycle} menunjukan siklus hidup dari status \textit{file}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{lifecycle}  
+	\caption[Siklus hidup pada status \textit{file}]{Siklus hidup pada status file}
+	\label{fig:lifecycle} 
+\end{figure}
+
+Perintah \textit{git status} digunakan untuk mengecek status \textit{file}. Jika mengetik perintah sesudah \textit{clone}, maka tidak ada \textit{untracked file} karena pada saat \textit{clone}, tidak ada \textit{file} yang dimodifikasi. Bila menambahkan sebuah \textit{file} baru atau mengubah \textit{file} lalu mengetik perintah \textit{git status}, maka akan diberitahukan bahwa terdapat \textit{untracked file}. Karena itu untuk men-\textit{track file} baru, gunakan perintah \textit{git add} yang diikuti dengan nama \textit{file}nya seperti contoh ini : \textit{\$ git add README}. Perintah \textit{git add} tidak hanya digunakan untuk men-\textit{track file} baru. Selain digunakan untuk men-\textit{track file}, perintah \textit{git add} digunakan untuk stage \textit{file} yang sudah dimodifikasi.\\
+
+Tidak semua \textit{file} akan ditambahkan secara otomatis oleh \textit{Git} atau ada \textit{file} yang ditunjukan sebagai \textit{file untracked}. Hal ini dapat diatasi dengan membuat sebuah \textit{file} yang bernama \textit{.gitignore}. \textit{File .gitignore} ini berisi \textit{file-file} yang tidak akan di-\textit{track} oleh \textit{Git}. \textit{File} yang biasanya ada dalam \textit{.gitignore} adalah \textit{log}, \textit{tmp} atau \textit{file} dokumentasi yang di\textit{generate} secara otomatis. Adapun aturan untuk \textit{pattern} yang dapat dimasukan pada \textit{file .gitignore} diantaranya adalah :
+
+\begin{itemize}
+	\item Baris kosong atau baris yang diawali dengan tanda pagar(\#) akan dibiarkan.
+	\item \textit{Standard glob patterns}.
+	\item \textit{Pattern} diawali dengan garis miring(/) untuk mencegah rekusrif.
+	\item \textit{Pattern} diakhiri dengan garis miring untuk menspesifikasikan direktori.
+	\item Menegasikan \textit{pattern} diawali dengan tanda seru(!).
+\end{itemize}
+
+\textit{Glob pattern} adalah \textit{regular expression} yang digunakan oleh \textit{shells}. Tanda bintang(*) untuk nol atau beberapa karakter, [abc] untuk karakter apa saja yang berada di dalam kurung siku, tanda tanya(?) untuk sebuah karakter apa saja dan tanda kurung siku dengan tanda strip(-) untuk karakter antara sebuah karakter dengan karakter lainya.\\
+
+Perintah \textit{git commit} digunakan untuk \textit{commit file} yang sudah diubah dan ditambahkan. \textit{File} tersebut harus sudah di-\textit{stage} dengan menggunakan perintah \textit{git add}. \textit{File} yang belum di-\textit{stage} akan berada dalam state \textit{modified} meskipun sudah melakukan \textit{commit}. Untuk menambahkan keterangan tentang \textit{file} yang di\textit{commit} dapat dituliskan perintah \textit{git commit -m} yang diikuti dengan keterangan yang ingin disampaikan. 
 
 
-\subsection{Git Branching}
+\subsection{\textit{Git Branching}}
+\textit{Branching} artinya membuat dan mengerjakan sebuah proyek di tempat yang berbeda namun masih dalam repository yang sama sehingga tidak mengubah proyek utama. Ketika \textit{commit}, \textit{Git} menyimpan objek \textit{commit} yang memiliki sebuah \textit{pointer} pada \textit{snapshot} sebuah konten yang sudah dalam \textit{state staged}. Objek ini mengandung nama pembuat dan alamat email, pesan yang diketik, dan \textit{pointer} ke \textit{commit}. \\
 
-\subsection{GitHub}
-GitHub merupakan single host terbesar untuk Git repository dan sebagai titik tengah dari kolaborasi untuk jutaan pengembang dan proyek. Persentase terbesar dari semua Git repository dihosting di GitHub dan banyak proyek open-source menggunakanya untuk Git hosting, code review, issue tracking dan lainnya. 
+Misalkan seorang pengguna memiliki 3 \textit{file}, kemudian file tersebut semuanya di-\textit{stage} dan \textit{commit}. \textit{Staging file} akan mengkomputasi \textit{checksum} untuk setiap \textit{file}, menyimpan versi tersebut pada \textit{Git repository}(hal ini dapat disebut juga sebagai \textit{blobs}), dan menambah \textit{checksum} tersebut ke \textit{staging area}. Lalu \textit{Git} melakukan \textit{checksum} pada setiap \textit{subdirectory} dan menyimpan ketiga objek tersebut pada \textit{Git repository}. Sesudah itu \textit{Git} akan membuat objek \textit{commit} yang mengandung \textit{metadata} dan \textit{pointer} ke proyek \textit{root} sehingga dapat melihat \textit{snapshot} tersebut pada setiap versi. Sekarang, \textit{Git repository} memiliki 5 objek yaitu 3 \textit{blob} yang merepresentasikan 3 file, sebuah \textit{tree} yang mengandung isi direktori dan memberi nama \textit{blob} berdasarkan nama file yang di\textit{commit}, dan sebuah \textit{commit} dengan \textit{pointer} ke \textit{root tree} dan semua \textit{commit metadata}. Gambar~\ref{fig:branch} merupakan \textit{tree} dari penjelasan tersebut.
 
-\subsubsection{Fork}
-Jika pengguna ingin berkontribusi pada proyek yang sudah ada dan pengguna tidak memiliki akses untuk push, maka pengguna dapat fork proyek tersebut. Ketika proyek tersebut telah di-fork, GitHub akan membuatkan sebuah copy/clone dari proyek tersebut yang sekarang sudah menjadi milik penggunanya dan dapat di-push. Orang lain dapat fork proyek, push proyek, dan berkontribusi dalam perubahan tersebut kembali ke repository aslinya dengan membuat Pull Request.\\
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.6]{branch}  
+	\caption[Commit dan tree dari file yang dicommit]{Commit dan tree dari file yang dicommit}
+	\label{fig:branch} 
+\end{figure}
 
-Untuk fork proyek, kunjungi halaman proyek dan klik tombol 'Fork' seperti pada Gambar~\ref{fig:forkButton} yang berada di atas kanan halaman. 
+Jika ada perubahan pada proyek dan \textit{commit} proyek tersebut, maka \textit{commit} sesudahnya menyimpan \textit{pointer} pada \textit{commit} sebelum \textit{commit} terbaru seperti yang terdapat pada Gambar~\ref{fig:commitTree}. Jadi \textit{parent} dari sebuah \textit{commit} adalah \textit{commit} sebelumnya dan kemudian seterusnya.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.8]{commitTree}  
+	\caption[Commit dan parent dari commit]{Commit dan parent dari commit}
+	\label{fig:commitTree} 
+\end{figure}
+
+Nama \textit{branch} pada \textit{Git} awalnya disebut \textit{master}. Ketika \textit{commit}, pengguna diberikan \textit{branch master} yang menunjuk pada \textit{file} yang di\textit{commit} terakhir. Setiap \textit{commit}, pointer pada \textit{branch master} akan terus maju secara otomatis. 
+
+\subsection{\textit{GitHub}}
+\textit{GitHub} merupakan \textit{single host} terbesar untuk \textit{Git repository} dan sebagai titik tengah dari kolaborasi untuk jutaan pengembang dan proyek. Persentase terbesar dari semua \textit{Git repository} di\textit{hosting} di \textit{GitHub} dan banyak proyek \textit{open-source} menggunakanya untuk \textit{Git hosting, code review, issue tracking} dan lainnya. 
+
+\subsubsection{\textit{Fork}}
+Jika pengguna ingin berkontribusi pada proyek yang sudah ada dan pengguna tidak memiliki akses untuk \textit{push}, maka pengguna dapat \textit{fork} proyek tersebut. Ketika proyek tersebut telah di-\textit{fork}, \textit{GitHub} akan membuatkan sebuah \textit{copy/clone} dari proyek tersebut yang sekarang sudah menjadi milik penggunanya dan dapat di\textit{push}. Orang lain dapat \textit{fork} proyek, \textit{push} proyek, dan berkontribusi dalam perubahan tersebut kembali ke \textit{repository} aslinya dengan membuat \textit{Pull Request}.\\
+
+Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'Fork'} seperti pada Gambar~\ref{fig:forkButton} yang berada di atas kanan halaman. 
 
 \begin{figure}[H]
 	\centering  
@@ -494,18 +530,19 @@ Untuk fork proyek, kunjungi halaman proyek dan klik tombol 'Fork' seperti pada G
 	\label{fig:forkButton} 
 \end{figure}
 
-Github didesain untuk collaboration workflow tertentu yang berfokus pada Pull Request. Flow ini akan bekerja bila pengguna berkolaborasi dengan perusahhan yang globally-distributed atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak fork. Flownya adalah sebagai berikut :
+\textit{Github} didesain untuk \textit{collaboration workflow} tertentu yang berfokus pada \textit{Pull Request}. \textit{Flow} ini akan bekerja bila pengguna berkolaborasi dengan perusahhan yang \textit{globally-distributed} atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak \textit{fork}. \textit{Flow}nya adalah sebagai berikut :
 
 \begin{enumerate}
-	\item Fork proyek.
-	\item Buat topic branch dari master.
-	\item Lakukan beberapa commit untuk memperbaiki proyek.
-	\item Push branch ini ke proyek GitHub.
-	\item Buka Pull Request di GitHub.
-	\item Diskusikan dan commit.
-	\item Pemilik proyek merges/menggabungkan atau menutup Pull Requset.
+	\item \textit{Fork} proyek yang diinginkan.
+	\item Buat topik \textit{branch} dari \textit{master}.
+	\item Lakukan \textit{commit} untuk memperbaiki proyek.
+	\item \textit{Push branch} ke proyek \textit{GitHub}.
+	\item Buka \textit{Pull Request} di \textit{GitHub}.
+	\item Diskusikan dan \textit{commit} proyek tersebut apabila proyek tersebut masih membutuhkan perbaikan.
+	\item Pemilik proyek \textit{merges}/menggabungkan atau menutup \textit{Pull Requset}.
 \end{enumerate}
 
-\subsubsection{Pull Request}
-Pull Request membuka tempat diskusi dengan code review dan owner(pemilik repository) dan kontributor dapat berkomunikasi tentang perubahan tersebut sampai owner merasa puas dan senang. Setelah itu owner akan merge/menggabungkan perubahan tersebut. Untuk membuat Pull Request, bukalah halaman 'Branches' dan buat Pull Request baru dari halaman tersebut dengan menklik tombol hijau seperti pada Gambar.... Sesudah mengklik tombol untuk membuat Pull Request baru, akan muncul sebuah laman yang meminta mengisi judul Pull Request dan deskripsi seperti pada Gambar.... Ketika tombol 'Create pull request' diklik,  maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.
+\subsubsection{\textit{Pull Request}}
+\textit{Pull Request} membuka tempat diskusi untuk \textit{owner(pemilik repository)} dan kontributor sehingga dapat berkomunikasi tentang perubahan tersebut sampai \textit{owner} merasa puas dan senang. Setelah itu \textit{owner} akan \textit{merge}/menggabungkan perubahan tersebut. Untuk membuat \textit{Pull Request}, bukalah halaman \textit{'Branches'} dan buat \textit{Pull Request} baru. Sesudah itu, akan muncul sebuah laman yang meminta mengisi judul dan deskripsi \textit{Pull Request} tersebut. Ketika tombol \textit{'Create pull request'} diklik,  maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.\\ 
 
+Setelah kontributor sudah membuat Pull Request, pemilik proyek dapat melihat saran  perubahan proyek dari orang lain, menggabungkan proyek, menolak perubahan proyek, dan memberikan komentar/keterangan pada perubahan tersebut. Sesudah pemilik proyek memberikan keterangan tentang perubahan tersebut, kontributor menjadi tahu apa yang harus dilakukan agar perubahan tersebut dapat disetujui. Apabila perubahan tersebut membuat pemilik proyek puas, pemilik proyek akan merge perubahan tersebut dengan proyek aslinya dan otomatis  akan menutup \textit{Pull Request}.
