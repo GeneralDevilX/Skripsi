@@ -513,13 +513,17 @@ Jika ada perubahan pada proyek dan \textit{commit} proyek tersebut, maka \textit
 	\label{fig:commitTree} 
 \end{figure}
 
-Nama \textit{branch} pada \textit{Git} awalnya disebut \textit{master}. Ketika \textit{commit}, pengguna diberikan \textit{branch master} yang menunjuk pada \textit{file} yang di\textit{commit} terakhir. Setiap \textit{commit}, pointer pada \textit{branch master} akan terus maju secara otomatis. 
+Nama \textit{branch} pada \textit{Git} awalnya disebut \textit{master}. Ketika \textit{commit}, pengguna diberikan \textit{branch master} yang menunjuk pada \textit{file} yang di\textit{commit} terakhir. Setiap \textit{commit}, pointer pada \textit{branch master} akan terus maju secara otomatis.\\ 
+
+Untuk membuat branch baru, gunakan perintah \textit{git branch} diikuti dengan nama \textit{branch}. Git menggunakan pointer yang disebut dengan HEAD untuk mengetahui bahwa pengguna sedang berada dalam branch tertentu. Bila membuat branch baru, posisi HEAD tetap berada pada branch yang sekarang. Perintah git branch hanya membuat branch baru dan tidak berpindah ke branch yang baru saja dibuat. Untuk pindah branch, gunakan perintah git checkout diikuti dengan nama branch. Pointer HEAD akan berpindah ke branch tersebut.\\
+
+\subsubsection{Branching dan Merging}
 
 \subsection{\textit{GitHub}}
 \textit{GitHub} merupakan \textit{single host} terbesar untuk \textit{Git repository} dan sebagai titik tengah dari kolaborasi untuk jutaan pengembang dan proyek. Persentase terbesar dari semua \textit{Git repository} di\textit{hosting} di \textit{GitHub} dan banyak proyek \textit{open-source} menggunakanya untuk \textit{Git hosting, code review, issue tracking} dan lainnya. 
 
 \subsubsection{\textit{Fork}}
-Jika pengguna ingin berkontribusi pada proyek yang sudah ada dan pengguna tidak memiliki akses untuk \textit{push}, maka pengguna dapat \textit{fork} proyek tersebut. Ketika proyek tersebut telah di-\textit{fork}, \textit{GitHub} akan membuatkan sebuah \textit{copy/clone} dari proyek tersebut yang sekarang sudah menjadi milik penggunanya dan dapat di\textit{push}. Orang lain dapat \textit{fork} proyek, \textit{push} proyek, dan berkontribusi dalam perubahan tersebut kembali ke \textit{repository} aslinya dengan membuat \textit{Pull Request}.\\
+Jika pengguna ingin berkontribusi pada proyek yang sudah ada dan pengguna tidak memiliki akses untuk \textit{push}, maka pengguna dapat \textit{fork} proyek tersebut. Ketika proyek tersebut telah di-\textit{fork}, \textit{GitHub} akan membuatkan sebuah \textit{copy/clone} dari proyek tersebut yang sekarang sudah menjadi milik penggunanya dan dapat di\textit{push}. Orang lain dapat \textit{fork} proyek, \textit{push} proyek, dan berkontribusi dalam perubahan tersebut dan menyarankan untuk menggabungkan perubahan tersebut dengan \textit{repository} aslinya dengan membuat \textit{Pull Request}.\\
 
 Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'Fork'} seperti pada Gambar~\ref{fig:forkButton} yang berada di atas kanan halaman. 
 
@@ -530,7 +534,7 @@ Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'For
 	\label{fig:forkButton} 
 \end{figure}
 
-\textit{Github} didesain untuk \textit{collaboration workflow} tertentu yang berfokus pada \textit{Pull Request}. \textit{Flow} ini akan bekerja bila pengguna berkolaborasi dengan perusahhan yang \textit{globally-distributed} atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak \textit{fork}. \textit{Flow}nya adalah sebagai berikut :
+\textit{Github} didesain untuk \textit{collaboration workflow} tertentu yang berfokus pada \textit{Pull Request}. \textit{Flow} ini akan bekerja bila pengguna berkolaborasi dengan perusahan yang \textit{globally-distributed} atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak \textit{fork}. \textit{Flow}nya adalah sebagai berikut :
 
 \begin{enumerate}
 	\item \textit{Fork} proyek yang diinginkan.
@@ -545,4 +549,4 @@ Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'For
 \subsubsection{\textit{Pull Request}}
 \textit{Pull Request} membuka tempat diskusi untuk \textit{owner(pemilik repository)} dan kontributor sehingga dapat berkomunikasi tentang perubahan tersebut sampai \textit{owner} merasa puas dan senang. Setelah itu \textit{owner} akan \textit{merge}/menggabungkan perubahan tersebut. Untuk membuat \textit{Pull Request}, bukalah halaman \textit{'Branches'} dan buat \textit{Pull Request} baru. Sesudah itu, akan muncul sebuah laman yang meminta mengisi judul dan deskripsi \textit{Pull Request} tersebut. Ketika tombol \textit{'Create pull request'} diklik,  maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.\\ 
 
-Setelah kontributor sudah membuat Pull Request, pemilik proyek dapat melihat saran  perubahan proyek dari orang lain, menggabungkan proyek, menolak perubahan proyek, dan memberikan komentar/keterangan pada perubahan tersebut. Sesudah pemilik proyek memberikan keterangan tentang perubahan tersebut, kontributor menjadi tahu apa yang harus dilakukan agar perubahan tersebut dapat disetujui. Apabila perubahan tersebut membuat pemilik proyek puas, pemilik proyek akan merge perubahan tersebut dengan proyek aslinya dan otomatis  akan menutup \textit{Pull Request}.
+Setelah kontributor sudah membuat Pull Request, pemilik proyek dapat melihat saran perubahan proyek dari orang lain, menggabungkan proyek, menolak perubahan proyek, dan memberikan komentar/keterangan pada perubahan tersebut. Sesudah pemilik proyek memberikan keterangan tentang perubahan tersebut, kontributor menjadi tahu apa yang harus dilakukan agar perubahan tersebut dapat disetujui. Apabila perubahan tersebut membuat pemilik proyek puas, pemilik proyek akan merge perubahan tersebut dengan proyek aslinya dan otomatis  akan menutup \textit{Pull Request}.
