@@ -77,10 +77,20 @@ Untuk menambahkan \textit{canvas} pada halaman HTML, diperlukan \textit{tag} <ca
 	
 \end{lstlisting}
 
+Diantara tag <canvas> dan </canvas>, dapat dituliskan text yang akan ditampilkan jika browser tidak support HTML5 Canvas. 
 
-Berikut adalah penjelsan atribut yang ada pada \textit{canvas} berdasarkan potongan kode di atas : 
+Canvas memiliki beberapa atribut diantaranya adalah: 
 \begin{itemize}
-	\item id
+	\item id : nama yang digunakan sebagai referensi objek canvas yang nantinya akan digunakan pada Javascript.
+	\item width : lebar dari canvas.
+	\item height : tinggi dari canvas.
+	\item title : judul sebuah elemen.
+	\item draggable : mengambil sebuah objek dan membawanya ke tempat lain
+	\item tabindex : memfokuskan pada suatu elemen jika tombol tab ditekan.
+	\item class : kelas pada elemen. Biasanya digunakan oleh CSS dan Javascript untuk mengakses elemen tertentu.
+	\item dir : arah penulisan (dari kiri ke kanan atau dari kanan ke kiri)
+	\item hidden : membuat elemen menjadi tersembunyi/tidak terlihat
+	\item accesskey : memberikan petunjuk untuk membuat keyboard shortcut pada sebuah elemen.
 \end{itemize}
 
 
@@ -515,9 +525,88 @@ Jika ada perubahan pada proyek dan \textit{commit} proyek tersebut, maka \textit
 
 Nama \textit{branch} pada \textit{Git} awalnya disebut \textit{master}. Ketika \textit{commit}, pengguna diberikan \textit{branch master} yang menunjuk pada \textit{file} yang di\textit{commit} terakhir. Setiap \textit{commit}, pointer pada \textit{branch master} akan terus maju secara otomatis.\\ 
 
-Untuk membuat branch baru, gunakan perintah \textit{git branch} diikuti dengan nama \textit{branch}. Git menggunakan pointer yang disebut dengan HEAD untuk mengetahui bahwa pengguna sedang berada dalam branch tertentu. Bila membuat branch baru, posisi HEAD tetap berada pada branch yang sekarang. Perintah git branch hanya membuat branch baru dan tidak berpindah ke branch yang baru saja dibuat. Untuk pindah branch, gunakan perintah git checkout diikuti dengan nama branch. Pointer HEAD akan berpindah ke branch tersebut.\\
+Untuk membuat branch baru, gunakan perintah \textit{git branch} diikuti dengan nama \textit{branch}. \textit{Git} menggunakan \textit{pointer} yang disebut dengan \textit{HEAD} untuk mengetahui bahwa pengguna sedang berada dalam \textit{branch} tertentu. Bila membuat \textit{branch} baru, posisi \textit{HEAD} tetap berada pada \textit{branch} yang sekarang. Perintah \textit{git branch} hanya membuat \textit{branch} baru dan tidak berpindah ke \textit{branch} yang baru saja dibuat. Pada Gambar~\ref{fig:head}, jika mengetikan perintah \textit{git branch testing}, \textit{branch testing} akan dibuat tetapi \textit{pointer HEAD} akan tetap berada pada \textit{branch master}.
 
-\subsubsection{Branching dan Merging}
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{head}  
+	\caption[\textit{Pointer HEAD} menunjuk \textit{branch master}]{\textit{Pointer HEAD} menunjuk \textit{branch master}}
+	\label{fig:head} 
+\end{figure}
+
+Untuk pindah \textit{branch}, gunakan perintah \textit{git checkout} diikuti dengan nama \textit{branch}. \textit{Pointer HEAD} akan berpindah ke \textit{branch} tersebut. Bila pada \textit{branch} tersebut pengguna melakukan \textit{commit}, maka \textit{branch} tersebut akan maju beserta dengan \textit{pointer HEAD} seperti dicontohkan pada Gambar~\ref{fig:changeHead}. Misalkan pengguna \textit{commit} pada \textit{branch testing}, maka hanya \textit{branch testing} saja yang maju sedangkan \textit{branch master} tidak. Ini dikarenakan \textit{file} pada \textit{branch master} tidak diubah.\\
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.7]{changeHead}  
+	\caption[\textit{Pointer HEAD} beserta \textit{branch testing}]{\textit{Pointer HEAD} beserta \textit{branch testing}}
+	\label{fig:changeHead} 
+\end{figure}
+
+Perintah \textit{git checkout} tidak hanya sebatas untuk pindah ke \textit{branch} yang diinginkan. \textit{File} yang ada pada \textit{working directory} akan diubah dengan \textit{file} yang ada pada \textit{branch} tersebut. Bila berpindah ke \textit{branch} sebelumnya, maka \textit{file} dalam \textit{working directory} akan dikembalikan sesuai dengan \textit{commit} terakhir dari \textit{branch} tersebut. Untuk membuat \textit{branch} baru sekaligus pindah \textit{branch}, gunakan perintah \textit{git checkout -b} diikuti dengan nama \textit{branch} yang ingin dibuat. Dengan ini \textit{pointer HEAD} akan berada pada \textit{branch} yang baru dibuat. 
+
+\subsubsection{\textit{Basic Merging}}
+\textit{Merging} adalah penggabungan sebuah \textit{branch} dengan \textit{branch} lain. Perntah untuk \textit{merge} adalah \textit{git merge} diikuti dengan nama \textit{branch} yang ingin digabungkan. Bila sebuah \textit{branch} ingin digabungkan dengan \textit{branch} yang memiliki \textit{direct ancestor} yang berbeda, \textit{Git} akan melakukan \textit{three way merge}. \textit{Three way merge} ini menggunakan 2 \textit{snapshot} yang menunjuk pada \textit{branch} yang akan digabungkan dan 1 \textit{snapshot} yang menunjuk pada \textit{ancestor} yang sama dari kedua \textit{branch} tersebut seperti yang terdapat pada Gambar~\ref{fig:threeWayMerge}. Kemudian \textit{Git} membuat \textit{snapshot} baru yang merupakan hasil dari \textit{three way merge} dan secara otomatis akan membuat \textit{commit} yang baru seperti yang terlihat pada Gambar~\ref{fig:mergeCommit}. Hal ini disebut sebagai \textit{merge commit} karena memiliki lebih dari 2 \textit{parent}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.7]{threeWayMerge}  
+	\caption[3 \textit{snapshot} yang digunakan dalam \textit{three way merge}]{3 \textit{snapshot} yang digunakan dalam \textit{three way merge}}
+	\label{fig:threeWayMerge} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.7]{mergeCommit}  
+	\caption[\textit{Merge commit}]{\textit{Merge commit}}
+	\label{fig:mergeCommit} 
+\end{figure}
+
+\textit{Merge} pada \textit{Git} mungkin akan menimbulkan konflik. Hal ini dapat terjadi apabila \textit{file} yang sama pada kedua \textit{branch} tersebut diubah pada bagian yang sama. Ketika mengetikan perintah \textit{git merge}, maka \textit{Git} tidak akan membuat \textit{merge commit} secara otomatis. Proses \textit{merge} akan dijeda sesudah konflik tersebut sudah diselesaikan. Untuk menangani konflik tersebut, pilihlah salah satu \textit{branch}. Maksdud dari memilih salah satu \textit{branch} adalah dengan mengubah \textit{file} yang berada pada salah satu \textit{branch}. Sesudah mengubah \textit{file} pada branch yang dipilih, maka \textit{Git} akan \textit{merge branch} jika tidak ada konflik lagi.
+
+\subsubsection{\textit{Remote Branches}}
+\textit{Remote-tracking branches} adalah referensi dari \textit{state remote branches}. Referensi tersebut merupakan referensi lokal yang hanya dapat dipindahkan oleh \textit{Git} untuk memastikan jika referensi tersebut merepresentasikan \textit{state} dari \textit{remote repository}. \textit{<remote>/<branches>} merupakan \textit{remote-tracking branches}. Jika ingin mengecek \textit{file} pada \textit{branch master} yang berada dalam \textit{remote origin}, maka pengguna harus mengecek \textit{branch origin/master}. Sama seperti \textit{branch master}, \textit{origin} juga merupakan penamaan \textit{remote} secara otomatis ketika \textit{clone repository}. Jika pengguna mengubah \textit{branch} lokal maka \textit{branch} milik server tidak akan berubah dan hanya \textit{pointer} pada lokal saja yang berubah. Maka dari itu \textit{branch} di lokal dan \textit{branch} di \textit{server} bisa saja berbeda seperti yang terlihat pada Gambar~\ref{fig:diverge} Untuk mensinkron \textit{branch} di lokal dan \textit{branch} di \textit{server}, gunakan peirntah \textit{git fetch} diikuti dengan nama \textit{remote}. Dengan cara ini, beberapa data yang belum dimiliki akan diambil dari \textit{server}, meng-\textit{update} basis data lokal dan memindahkan \textit{pointer} ke posisi yang terbaru seperti yang terlihat pada Gambar~\ref{fig:fetch}.\\
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.7]{diverge}  
+	\caption[Perbedaan pada \textit{branch} lokal dan \textit{remote}]{Perbedaan pada \textit{branch} lokal dan \textit{remote}}
+	\label{fig:diverge} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.7]{fetch}  
+	\caption[\textit{Update remote-tracking branches} menggunakan perintah \textit{git fetch}]{\textit{Update remote-tracking branches} menggunakan perintah \textit{git fetch}}
+	\label{fig:fetch} 
+\end{figure}
+
+Jika ingin membagikan \textit{branch} ke pengguna lain, pengguna harus \textit{push branch} tersebut ke remote karena \textit{branch} lokal tidak sinkron secara otomatis dengan \textit{remote}. Perintah yang digunakan untuk \textit{push} adalah \textit{git push} diikuti dengan nama \textit{remote} dan nama \textit{branch}.\\ 
+
+\textit{Check out branch} lokal dari \textit{remote-tracking branch} secara otomatis akan membuat \textit{tracking branch}. \textit{Tracking branch} adalah \textit{branch} lokal yang memiliki hubungan langsung dengan \textit{branch remote}. Jika berada pada \textit{tracking branch} dan mengetikan perintah \textit{git pull}, secara otomatis \textit{Git} mengetahui \textit{server} mana yang akan di-\textit{fetch} dan \textit{branch} apa yang akan di-\textit{merge}. Bila \textit{clone repository}, maka secara otomatis akan membuat sebuah \textit{branch} yang bernama master yang men-\textit{track origin/master}. Untuk mengatur \textit{tracking branch}, perintah yang digunakan adalah \textit{git checkout -b <branch> <remote>/<branch>}. \textit{Git} menyediakan perintah \textit{git checkout --track <remote>/<branch>} sebagai shortcut dari perintah checkout sebelumnya. Perintah \textit{git checkout} juga dapat digunakan untuk mengatur \textit{branch} lokal dengan nama yang berbeda dari \textit{branch remote}. Jika sudah memiliki \textit{branch} lokal dan ingin mengatur \textit{branch} tersebut ke \textit{branch remote} yang sudah di-\textit{pull}, gunakan opsi \textit{-u} atau \textit{--set-upstream-to} pada perintah \textit{git branch}. Untuk melihat \textit{tracking branch} yang sudah diatur, gunakan opsi \textit{-vv} pada perintah \textit{git branch}. Perintah ini akan menampilkan \textit{list} dari \textit{branch} lokal dengan informasi tambahan mengenai \textit{tracking} pada setiap \textit{branch} dan apakah \textit{branch} lokal tersebut memiliki \textit{ahead, behind} atau keduanya. \textit{Ahead} adalah ada \textit{commit} lokal yang belum di-\textit{push} ke \textit{server}, sedangkan \textit{behind} adalah \textit{commit} yang belum digabungkan. Perintah ini tidak langsung mengambil datanya dari \textit{server} tetapi data tersebut merupakan data saat terakhir \textit{fetch} dari \textit{server}. Untuk mendapatkan data yang terbaru, harus \textit{fetch} dari semua \textit{remote} kemudian mengetikan perintah \textit{git branch -vv}.
+
+\textit{Perintah git fetch} akan mengambil semua perubahan yang ada pada \textit{server} yang tidak dimiliki oleh \textit{branch lokal}, tetapi tidak mengubah \textit{working directory} yang sesuai dengan \textit{branch remote}. Perintah \textit{git pull} digunakan untuk mengubah \textit{working directory}. Perintah ini akan melihat \textit{server} dan \textit{branch} yang sedang di-\textit{track}, mengambil data dari \textit{server} tersebut dan menggabungkanya. Singkatnya, perintah \textit{git pull} merupakan gabungan dari perintah \textit{git fetch} dengan \textit{git merge}.\\
+
+\textit{Branch} pada \textit{remote} dapat dihapus dengan menggunakan opsi \textit{--delete} pada perintah \textit{git push}. \textit{Branch} pada \textit{remote} tidak sepenuhnya dihapus, tetapi hanya \textit{pointer}nya saja yang dihilangkan. Jika \textit{branch} tidak sengaja terhapus, maka data pada branch dapat dikembalikan/di\textit{back-up}.
+
+\subsubsection{Rebasing}
+Selain \textit{merge}, ada cara lain untuk menggabungkan kedua \textit{branch} yaitu \textit{rebasing}. Cara kerja dari \textit{rebasing} adalah mencari \textit{ancestor} yang sama dari kedua \textit{branch}, mendapatkan perbedaan setiap \textit{commit} pada \textit{branch} saat ini, menyimpan perbedaan tersebut pada \textit{file} sementara, mengatur ulang \textit{branch} ke \textit{commit} yang sama dengan \textit{branch} yang akan di\textit{rebase}, dan menerapkan setiap perubahannya. Contoh \textit{rebasing} dapat dilihat pada Gambar~\ref{fig:rebasing}. \textit{Commit} C4 pada \textit{branch experiment} berpindah dari C4 ke C4' yang berada di atas C3. Setelah \textit{rebasing}, \textit{merge} kedua \textit{branch} tersebut sehingga hasilnya terlihat seperti pada Gambar~\ref{fig:rebasingMerge}. Untuk \textit{rebasing}, gunakan perintah \textit{git rebase} kemudian diikuti nama \textit{branch} yang ingin di\textit{rebase}. 
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.8]{rebasing}  
+	\caption[\textit{Rebasing commit} C4 ke C3]{\textit{Rebasing commit} C4 ke C3}
+	\label{fig:rebasing} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.8]{rebasingMerge}  
+	\caption[\textit{Merge branch} setelah \textit{rebasing}]{\textit{Merge branch} setelah \textit{rebasing}}
+	\label{fig:rebasingMerge} 
+\end{figure}
+
+Hasil terakhirnya tidak berbeda dengan menggunakan perintah \textit{merge}, namun \textit{rebasing} membuat histori menjadi lebih sedikit dibandingkan dengan \textit{merge}. \textit{Rebasing} juga berguna dalam berkontribusi pada proyek yang bukan milik sendiri. Hal ini akan mempermudah kerja pemilik proyek, karena pemilik proyek hanya tinggal \textit{clean apply} saja. 
 
 \subsection{\textit{GitHub}}
 \textit{GitHub} merupakan \textit{single host} terbesar untuk \textit{Git repository} dan sebagai titik tengah dari kolaborasi untuk jutaan pengembang dan proyek. Persentase terbesar dari semua \textit{Git repository} di\textit{hosting} di \textit{GitHub} dan banyak proyek \textit{open-source} menggunakanya untuk \textit{Git hosting, code review, issue tracking} dan lainnya. 
@@ -534,7 +623,7 @@ Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'For
 	\label{fig:forkButton} 
 \end{figure}
 
-\textit{Github} didesain untuk \textit{collaboration workflow} tertentu yang berfokus pada \textit{Pull Request}. \textit{Flow} ini akan bekerja bila pengguna berkolaborasi dengan perusahan yang \textit{globally-distributed} atau beberapa orang asing berkontribusi dalam sebuah proyek melalui banyak \textit{fork}. \textit{Flow}nya adalah sebagai berikut :
+Berikut adalah langkah-langkah untuk berkolaborasi dalam GitHub: 
 
 \begin{enumerate}
 	\item \textit{Fork} proyek yang diinginkan.
@@ -547,6 +636,6 @@ Untuk \textit{fork} proyek, kunjungi halaman proyek dan klik tombol \textit{'For
 \end{enumerate}
 
 \subsubsection{\textit{Pull Request}}
-\textit{Pull Request} membuka tempat diskusi untuk \textit{owner(pemilik repository)} dan kontributor sehingga dapat berkomunikasi tentang perubahan tersebut sampai \textit{owner} merasa puas dan senang. Setelah itu \textit{owner} akan \textit{merge}/menggabungkan perubahan tersebut. Untuk membuat \textit{Pull Request}, bukalah halaman \textit{'Branches'} dan buat \textit{Pull Request} baru. Sesudah itu, akan muncul sebuah laman yang meminta mengisi judul dan deskripsi \textit{Pull Request} tersebut. Ketika tombol \textit{'Create pull request'} diklik,  maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.\\ 
+\textit{Pull Request} membuka tempat diskusi untuk \textit{owner(pemilik repository)} dan kontributor sehingga dapat berkomunikasi tentang perubahan tersebut sampai \textit{owner} merasa puas dan senang. Setelah itu \textit{owner} akan \textit{merge}/menggabungkan perubahan tersebut. Untuk membuat \textit{Pull Request}, bukalah halaman \textit{'Branches'} dan buat \textit{Pull Request} baru. Sesudah itu, akan muncul sebuah laman yang meminta mengisi judul dan deskripsi \textit{Pull Request} tersebut. Ketika tombol \textit{'Create pull request'} diklik, maka pemilik proyek akan mendapatkan notifikasi bahwa seseorang menyarankan sebuah perubahan dan akan menghubungkan ke sebuah halaman yang memiliki semua informasi tersebut.\\ 
 
-Setelah kontributor sudah membuat Pull Request, pemilik proyek dapat melihat saran perubahan proyek dari orang lain, menggabungkan proyek, menolak perubahan proyek, dan memberikan komentar/keterangan pada perubahan tersebut. Sesudah pemilik proyek memberikan keterangan tentang perubahan tersebut, kontributor menjadi tahu apa yang harus dilakukan agar perubahan tersebut dapat disetujui. Apabila perubahan tersebut membuat pemilik proyek puas, pemilik proyek akan merge perubahan tersebut dengan proyek aslinya dan otomatis  akan menutup \textit{Pull Request}.
+Setelah kontributor sudah membuat \textit{Pull Request}, pemilik proyek dapat melihat saran perubahan proyek dari orang lain dan memberikan komentar/keterangan pada perubahan tersebut. Pemilik proyek dapat melihat perbedaan pada kode pemilik proyek dengan perubahan yang disarankan tersebut dan pemilik proyek dapat mengomentari baris pada kode tersebut. Orang lain dapat memberikan komentar pada \textit{Pull Request}. Sesudah pemilik proyek memberikan keterangan tentang perubahan tersebut, kontributor menjadi tahu apa yang harus dilakukan agar perubahan tersebut dapat disetujui. Apabila perubahan tersebut membuat pemilik proyek puas, pemilik proyek akan \textit{merge} perubahan tersebut dengan proyek aslinya dan otomatis akan menutup \textit{Pull Request}.\\ 
