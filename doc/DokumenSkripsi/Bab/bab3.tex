@@ -2,57 +2,57 @@
 \label{chap:analisis}
 
 \section{Analisis Permainan \textit{Snake} yang Sudah Ada}
-Permainan Snake yang akan dianalisis adalah Slither.io. Slither.io adalah permainan web yang dapat dimainkan oleh lebih dari 1 pemain(multiplayer). Cara bermainya mirip seperti permainan Snake pada umumnya yaitu ular harus memakan makanan untuk mendapatkan skor. Dalam permainan ini, setiap pemain berkompetisi untuk menjadi pemain terbaik dengan cara mendapatkan skor sebanyak-banyaknya. Pemain akan   kalah apabila ular milik pemain menabrak ular milik pemain lain. 
+Permainan \textit{Snake} yang akan dianalisis adalah \textit{Slither.io}. Slither.io adalah permainan \textit{web} yang dapat dimainkan oleh lebih dari 1 pemain(\textit{multiplayer}). Cara bermainya mirip seperti permainan \textit{Snake} pada umumnya yaitu ular harus memakan makanan untuk mendapatkan skor. Dalam permainan ini, setiap pemain berkompetisi untuk menjadi pemain terbaik dengan cara mendapatkan skor sebanyak-banyaknya. Pemain akan kalah apabila ular milik pemain menabrak ular milik pemain lain. 
 
 \subsection{Ular dan Makanan}
-Ular pada Slither.io dibentuk menggunakan sekumpulan lingkaran yang saling berdempetan satu sama lain seperti pada Gambar~\ref{fig:slitherUlar}. Bagian kepala pada ular ditandai menggunakan sepasang mata. Ketika memakan makanan, tubuh ular akan memanjang dengan menambahkan sebuah lingkaran pada bagian ekor ular. Setiap memulai permainan, tubuh ular akan memiliki warna yang dipilih secara acak.\\
+Ular pada \textit{Slither.io} dibentuk dengan menggunakan sekumpulan lingkaran yang saling berdempetan satu sama lain seperti pada Gambar~\ref{fig:slitherUlar}. Bagian kepala pada ular ditandai menggunakan sepasang mata. Ketika memakan makanan, tubuh ular akan memanjang dengan menambahkan sebuah lingkaran pada bagian ekor ular. Setiap memulai permainan, tubuh ular akan memiliki warna yang ditentukan secara acak.\\
 
-Makanan pada Slither.io berbentuk lingkaran. Makanan ini ada yang berukuran besar dan ada yang berukuran kecil. Makanan ini tersebar pada labirin, jumlahnya sangat banyak dan warnanya bermacam-macam. Gambar~\ref{fig:slitherMakanan} merupakan sekumpulan makanan yang terdapat pada labirin. Setiap makanan akan menambah skor sebanyak 1 poin.
+Makanan pada \textit{Slither.io} berbentuk lingkaran. Makanan ini ada yang berukuran besar dan ada yang berukuran kecil. Makanan ini tersebar pada labirin, jumlahnya sangat banyak dan warnanya bermacam-macam. Gambar~\ref{fig:slitherMakanan} merupakan sekumpulan makanan yang terdapat pada labirin. Setiap makanan akan menambah skor sebanyak 1 poin.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.7]{slitherUlar}  
-	\caption[Ular pada Silther.io]{Ular pada Silther.io}
+	\caption[Ular pada \textit{Silther.io}]{Ular pada \textit{Silther.io}}
 	\label{fig:slitherUlar} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.7]{slitherMakanan}  
-	\caption[Makanan pada Slither.io]{Makanan pada Slither.io}
+	\caption[Makanan pada \textit{Slither.io}]{Makanan pada \textit{Slither.io}}
 	\label{fig:slitherMakanan} 
 \end{figure}
 
 \subsection{Pergerakan Ular}
-Ular pada Slither.io digerakan dengan menggunakan keyboard dan mouse. Tombol ke kiri akan membuat ular bergerak berlawanan arah jarum jam dan tombol ke kanan akan membuat ular bergerak searah jarum jam. Semakin lama tombol ditekan, maka ular akan berbelok lebih cepat. Kursor pada mouse membuat ular bergerak ke arah posisi kursor tersebut. Ular dapat melaju dengan cepat(speed up) dengan menekan tombol mouse kiri seperti yang terdapat pada Gambar~\ref{fig:slitherSpeed}. Ketika ular sedang melaju dengan cepat, total skor yang didapat akan berkurang. 
+Ular pada \textit{Slither.io} digerakan dengan menggunakan keyboard dan \textit{mouse}. Tombol ke kiri akan membuat ular bergerak berlawanan arah jarum jam dan tombol ke kanan akan membuat ular bergerak searah jarum jam. Semakin lama tombol ditekan, maka ular akan berbelok lebih cepat. Kursor pada \textit{mouse} membuat ular bergerak ke arah posisi kursor tersebut. Ular dapat melaju dengan cepat(\textit{speed up}) dengan menekan tombol \textit{mouse} kiri seperti yang terdapat pada Gambar~\ref{fig:slitherSpeed}. Ketika ular sedang melaju dengan cepat, total skor yang didapat akan berkurang. 
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.7]{slitherSpeed}  
-	\caption[Ular sedang melaju dengan cepat(speed up)]{Ular sedang melaju dengan cepat(speed up)}
+	\caption[Ular sedang melaju dengan cepat(\textit{speed up})]{Ular sedang melaju dengan cepat(\textit{speed up})}
 	\label{fig:slitherSpeed} 
 \end{figure}
 
 \subsection{Labirin}
-Labirin pada Slither.io hanya ada 1 saja. Labirin ini berbentuk lingkaran yang sisinya merupakan dinding. Apabila ular menabrak dinding labirin, maka permainan akan berakhir. Labirin ini cukup besar sehingga sangat kecil kemungkinan ular untuk menabrak dinding labirin. Gambar~\ref{fig:slitherLabirin} menunjukan peta labirin pada Slither.io. Pada peta labirin tersebut terdapat sekumpulan titik bewarna abu-abu yang merepresentasikan makanan.
+Labirin pada \textit{Slither.io} hanya ada 1 saja. Labirin ini berbentuk lingkaran yang sisinya merupakan dinding. Apabila ular menabrak dinding labirin, maka permainan akan berakhir. Labirin ini cukup besar sehingga sangat kecil kemungkinan ular untuk menabrak dinding labirin. Gambar~\ref{fig:slitherLabirin} menunjukan peta labirin pada \textit{Slither.io}. Pada peta labirin tersebut terdapat sekumpulan titik bewarna abu-abu yang merepresentasikan makanan.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=1]{slitherLabirin}  
-	\caption[Peta labirin pada Slither.io]{Peta labirin pada Slither.io}
+	\caption[Peta labirin pada \textit{Slither.io}]{Peta labirin pada \textit{Slither.io}}
 	\label{fig:slitherLabirin} 
 \end{figure}
 
 \section{Analisis Sistem yang Dibangun}
-Permainan Snake 360 yang akan dibangun memiliki cara bermain yang mirip seperti permainan Snake pada umumnya. Perbedaan antara Snake 360 dengan permainan Snake pada umumnya adalah Snake 360 dapat menambahkan level dan labirin sendiri. 
+Permainan \textit{Snake} 360 yang akan dibangun memiliki cara bermain yang mirip seperti permainan Snake pada umumnya. Perbedaan antara \textit{Snake} 360 dengan permainan \textit{Snake} pada umumnya adalah \textit{Snake} 360 dapat menambahkan level dan labirin sendiri. 
 
-\subsubsection{Menggambar Ular dan Apel}
-Tubuh ular dibuat menggunakan sekumpulan line/garis pendek. Setiap bagian tubuh ular memiliki panjang sebesar 1 pixel dan lebar tubuhnya sebesar 5 pixel. Bagian tubuh ular dibuat pendek untuk memudahkan pengecekan jika terjadi ular menabrak tubuhnya sendiri. Untuk lebar ular, disesuaikan dengan besar apel yaitu 10 pixel. Setiap bagian tubuh ular memiliki koordinat masing-masing. Koordinat setiap bagian tubuh disimpan pada sebuah array agar menggambar ular menjadi lebih mudah. Dalam tahap ini, tubuh ular masih berupa sekumpulan titik-titik yang merupakan koordinat bagian tubuh ular seperti pada Gambar~\ref{fig:titikUlar}. Algoritma untuk menggambar ular adalah dengan mengambil koordinat bagian tubuh ular mulai dari elemen array paling pertama(arr[0]) dan elemen array selanjutnya(arr[1]) lalu buat garis yang start pointnya adalah elemen pertama(arr[0]) dan end pointnya adalah elemen array kedua(arr[1]). Setelah itu ambil koordinat elemen array yang merupakan end point pada garis sebelumnya(arr[1]) dengan elemen array selanjutnya(arr[2]) dan gambar garisnya. Lakukan hal tersebut sampai end point garis mencapai elemen array paling akhir. Setelah digambar maka ular akan terlihat seperti Gambar~\ref{fig:garisUlar}. Untuk menangani penggambaran ular jika ular telah mencapai ujung labirin, maka dilakukan pengecekan jarak antara start point dan end point sebuah garis. 
+\subsection{Menggambar Ular dan Apel}
+Tubuh ular dibuat menggunakan sekumpulan \textit{line}/garis pendek. Setiap bagian tubuh ular memiliki panjang sebesar 1 \textit{pixel} dan lebar tubuhnya sebesar 5 \textit{pixel}. Bagian tubuh ular dibuat pendek untuk memudahkan pengecekan jika terjadi ular menabrak tubuhnya sendiri. Untuk lebar ular, disesuaikan dengan besar apel yaitu 10 \textit{pixel}. Setiap bagian tubuh ular memiliki koordinat masing-masing. Koordinat setiap bagian tubuh disimpan pada sebuah \textit{array} agar menggambar ular menjadi lebih mudah. Dalam tahap ini, tubuh ular masih berupa sekumpulan titik-titik yang merupakan koordinat bagian tubuh ular seperti pada Gambar~\ref{fig:titikUlar}. Algoritma untuk menggambar ular adalah dengan mengambil koordinat bagian tubuh ular mulai dari elemen \textit{array} paling pertama(arr[0]) dan elemen \textit{array} selanjutnya(arr[1]) lalu buat garis yang \textit{start point}nya adalah elemen pertama(arr[0]) dan \textit{end point}nya adalah elemen \textit{array} kedua(arr[1]). Setelah itu ambil koordinat elemen \textit{array} yang merupakan \textit{end point} pada garis sebelumnya(arr[1]) dengan elemen \textit{array} selanjutnya(arr[2]) dan gambar garisnya. Lakukan hal tersebut sampai \textit{end point} garis mencapai elemen \textit{array} paling akhir. Setelah digambar maka ular akan terlihat seperti Gambar~\ref{fig:garisUlar}.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.7]{titikUlar}  
-	\caption[Koordinat bagian tubuh ular pada array]{Koordinat bagian tubuh ular pada array}
+	\caption[Koordinat bagian tubuh ular pada \textit{array}]{Koordinat bagian tubuh ular pada \textit{array}}
 	\label{fig:titikUlar} 
 \end{figure}
 
@@ -63,7 +63,7 @@ Tubuh ular dibuat menggunakan sekumpulan line/garis pendek. Setiap bagian tubuh 
 	\label{fig:garisUlar} 
 \end{figure}
 
-Untuk membuat apel digunakan \textit{quadratic Bezier curve}. Kurva ini digunakan untuk membuat bagian-bagian apel yang melengkung. Bagian tersebut ditandai dengan lingkaran bewarna merah seperti yang ditunjukan pada Gambar~\ref{fig:apel}.
+Untuk membuat apel digunakan \textit{quadratic B\'ezier curve}. Kurva ini digunakan untuk membuat bagian-bagian apel yang melengkung. Bagian tersebut ditandai dengan lingkaran bewarna merah seperti yang ditunjukan pada Gambar~\ref{fig:apel}(gambar diambil dari pinterest. Link:https://www.pinterest.com/pin/690317449105509454/).
 
 \begin{figure}[H]
 	\centering  
@@ -76,7 +76,7 @@ Pertama, tentukan besar apel yang ingin dibuat. Dalam permainan ini besar apel y
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{apel2}  
+	\includegraphics[scale=0.4]{apel2}  
 	\caption[Pembagian gambar apel dengan layout persegi beserta ukuran pada setiap bagian]{Pembagian gambar apel dengan layout persegi beserta ukuran pada setiap bagian}
 	\label{fig:apel2} 
 \end{figure}
@@ -85,19 +85,19 @@ Gambar bagian atas apel terlebih dahulu. Gunakan method moveTo() untuk menentuka
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{apel3}  
+	\includegraphics[scale=0.4]{apel3}  
 	\caption[Start point, control point dan end point untuk menggambar apel bagian kiri atas]{Start point, control point dan end point untuk menggambar apel bagian kiri atas}
 	\label{fig:apel3} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{apel4}  
+	\includegraphics[scale=0.4]{apel4}  
 	\caption[Start point, control point dan end point untuk menggambar apel bagian kiri bawah]{Start point, control point dan end point untuk menggambar apel bagian kiri bawah}
 	\label{fig:apel4} 
 \end{figure}
 
-\subsubsection{Pergerakan Ular}
+\subsection{Pergerakan Ular}
 Untuk membuat ular bergerak maju, dilakukan penambahan kepala dan pembuangan ekor secara bersamaan ketika ular sedang bergerak maju. Ilustrasinya dapat dilihat pada Gambar~\ref{fig:snakeMoveForward}. Untuk membuat ular bergerak dengan menggunakan cara pada Gambar~\ref{fig:snakeMoveForward}, algoritmanya adalah sebagai berikut : Pertama, semua elemen array akan dishift/digeser dan elemen pertama akan digantikan dengan koordinat yang baru. Setelah itu dilakukan pengecekan apakah panjang tubuh ular lebih besar dari jumlah elemen array tubuh ular. Jika benar, maka tidak dilakukan pembuangan elemen terakhir dan jika salah, maka tidak akan dilakukan apa-apa. 
 
 \begin{figure}[H]
@@ -107,26 +107,26 @@ Untuk membuat ular bergerak maju, dilakukan penambahan kepala dan pembuangan eko
 	\label{fig:snakeMoveForward} 
 \end{figure}
 
-Kecepatan ular pada permainan ini adalah 1 sampai 5 pixel per frame. Kecepatan maksimal ular tidak boleh melebihi lebar tubuh ular. Jika kecepatanya melebihi lebar ular, maka ketika terjadi tabrakan dengan tubuhnya sendiri, kepala ular tidak akan bertabrakan dengan tubuhnya. Kepala ular akan terlihat seolah-olah melompati tubuhnya sendiri. Dalam permainan ini, kecepatan ular adalah 2 pixel per frame, karena dengan kecepatan 1 pixel per frame, ular terlihat bergerak lebih lambat.\\
+Kecepatan ular pada permainan ini adalah 1 sampai 5 \textit{pixel per frame}. Kecepatan maksimal ular tidak boleh melebihi lebar tubuh ular. Jika kecepatanya melebihi lebar ular, maka ketika terjadi tabrakan dengan tubuhnya sendiri, kepala ular tidak akan bertabrakan dengan tubuhnya. Kepala ular akan terlihat seolah-olah melompati tubuhnya sendiri. Dalam permainan ini, kecepatan ular adalah 2 \textit{pixel per frame}, karena dengan kecepatan 1 \textit{pixel per frame}, ular terlihat bergerak lebih lambat.\\
 
-Ular digerakan dengan menggunakan tombol pada keyboard. Tombol ke kiri akan membuat ular bergerak melawan arah jarum jam dan tombol ke kanan akan membuat ular akan bergerak searah jarum jam. Pada permainan yang akan dibuat ini, digunakan sudut sebagai nilai untuk membuat ular dapat bergerak 360. Jika menekan tombol ke kiri maka sudut akan berkurang dan jika menekan tombol ke kanan maka sudut akan bertambah. Ketika menambahkan dan mengurangi sudut, perlu dilakukan pengecekan apabila nilai sudut valid atau tidak. Karena nilai sudut yang valid adalah antara nilai 0 sampai 360, maka apabila nilai sudut kurang dari 0, ubahlah sudut tersebut menjadi 360 dan apabila nilai sudut lebih besar dari 360, ubahlah nilai sudut tersebut menjadi 0. Dibutuhkan rumus trigonometri untuk menentukan posisi kepala ular. Untuk menghitung posisi koordinat x, digunakan sinus sedangkan untuk menghitung posisi koordinat y menggunakan cosinus. Jadi koordinat x dan y pada kepala ular akan ditambahkan dengan hasil perhitungan sinus dan cosinus.
+Ular dapat berbelok dengan menggunakan tombol pada \textit{keyboard}. Tombol ke kiri akan membuat ular bergerak melawan arah jarum jam dan tombol ke kanan akan membuat ular akan bergerak searah jarum jam. Pada permainan yang akan dibuat ini, digunakan sudut sebagai nilai untuk membuat ular dapat bergerak 360$^\circ$. Jika menekan tombol ke kiri maka sudut akan berkurang dan jika menekan tombol ke kanan maka sudut akan bertambah. Ketika menambahkan dan mengurangi sudut, perlu dilakukan pengecekan apabila nilai sudut valid atau tidak. Karena nilai sudut yang valid adalah antara nilai 0 sampai 360, maka apabila nilai sudut kurang dari 0, ubahlah sudut tersebut menjadi 360 dan apabila nilai sudut lebih besar dari 360, ubahlah nilai sudut tersebut menjadi 0. Dibutuhkan rumus trigonometri untuk menentukan posisi kepala ular. Untuk menghitung posisi koordinat x, digunakan \textit{sinus} sedangkan untuk menghitung posisi koordinat y menggunakan \textit{cosinus}. Jadi koordinat x dan y pada kepala ular akan ditambahkan dengan hasil perhitungan \textit{sinus} dan \textit{cosinus}.
 
-\subsubsection{Labirin}
-Dinding labirin akan dibuat dengan menggunakan garis. Cara pembuatanya sama dengan membuat tubuh ular yaitu dengan menggunakan titik-titik yang dihubungkan dengan garis yang pendek. Dinding labirin dapat juga dibuat dengan menggunakan kurva dikarenakan pergerakan ular yang sudah dapat bergerak 360. Level pada labirin dapat ditentukan berdasarkan kerumitan labirin. Labirin yang memiliki dinding yang banyak dan kompleks akan mendapatkan level yang lebih tinggi dibandingkan dengan labirin yang memiliki sedikit dinding dan lebih simpel. 
+\subsection{Labirin}
+Dinding labirin akan dibuat dengan menggunakan garis. Cara pembuatanya sama dengan membuat tubuh ular yaitu dengan menggunakan titik-titik yang dihubungkan dengan garis yang pendek. Dinding labirin dapat juga dibuat dengan menggunakan kurva dikarenakan pergerakan ular yang sudah dapat bergerak 360$^\circ$. Level pada labirin dapat ditentukan berdasarkan kerumitan labirin. Labirin yang memiliki dinding yang banyak dan kompleks akan mendapatkan level yang lebih tinggi dibandingkan dengan labirin yang memiliki sedikit dinding dan lebih simpel. 
 
-\subsubsection{Pengecekan tabrakan(Collision Detection)}
-Pada permainan ini terdapat pengecekan tabrakan yang dapat mengecek apakah ular sudah memakan makanan, ular menabrak tubuhnya sendiri, dan ular menabrak dinding labirin. Seluruh pengecekan ini akan dilakukan pada setiap frame. Pada pengecekan tabrakan pada apel dan ular, hanya perlu mengecek tabrakan antara kepala ular dengan apel. Karena jalur yang dilalui oleh kepala ular, akan selalu dilalui oleh bagian tubuh ular. Dengan kata lain, bagian tubuh ular akan mengikuti ke mana kepala ular akan bergerak. Dengan ini, tidak perlu dilakukan collision detection antara bagian tubuh ular dengan apel. Cukup hanya dengan mengecek tabrakan antara kepala ular dengan apel saja. Untuk mengetahui terjadinya tabrakan antara ular dengan apel, maka akan dibuat daerah tabrakan pada apel. Daerah tabrakan ini digunakan untuk mengecek apakah 2 benda saling bertabrakan satu sama lain. Daerah tabrakan pada apel ditandai dengan arsiran bewarna merah yang terdapat pada Gambar~\ref{fig:apelArsir}. Namun, untuk membuat daerah tabrakan ini cukup sulit karena harus mengecek adanya tabrakan antara ular dengan apel terutama pada bagian lengkungan pada apel. Karena itu, daerah tabrakan pada apel dibuat dengan menggunakan bentuk persegi seperti pada Gambar~\ref{fig:apelArsirPersegi}. Jika posisi kepala ular berada di dalam daerah tabrakan apel, maka dipastikan bahwa ular tersebut sudah memakan apel. Algoritma untuk mengecek tabrakan adalah sebagai berikut : cek apakah koordinat x dari kepala ular lebih besar dari posisi sisi kiri daerah tabrakan dan lebih kecil dari posisi sisi kanan daerah tabrakan. Kemudian cek apakah koordinat y dari kepala ular lebih besar dari posisi sisi atas daerah tabrakan dan lebih kecil dari posisi sisi bawah daerah tabrakan. Jika posisi kepala ular berada memenuhi ketentuan tersebut, maka kepala ular berada di dalam daerah tabrakan apel.\\
+\subsection{Pengecekan tabrakan(\textit{Collision Detection})}
+Pada permainan ini terdapat pengecekan tabrakan yang dapat mengecek apakah ular sudah memakan makanan, ular menabrak tubuhnya sendiri, dan ular menabrak dinding labirin. Seluruh pengecekan ini akan dilakukan pada setiap \textit{frame}. Pada pengecekan tabrakan pada apel dan ular, hanya perlu mengecek tabrakan antara kepala ular dengan apel. Karena jalur yang dilalui oleh kepala ular, akan selalu dilalui oleh bagian tubuh ular. Dengan kata lain, bagian tubuh ular akan mengikuti ke mana kepala ular akan bergerak. Dengan ini, tidak perlu dilakukan \textit{collision detection} antara bagian tubuh ular dengan apel. Cukup hanya dengan mengecek tabrakan antara kepala ular dengan apel saja. Untuk mengetahui terjadinya tabrakan antara ular dengan apel, maka akan dibuat daerah tabrakan pada apel. Daerah tabrakan ini digunakan untuk mengecek apakah 2 benda saling bertabrakan satu sama lain. Daerah tabrakan pada apel ditandai dengan arsiran bewarna merah yang terdapat pada Gambar~\ref{fig:apelArsir}. Namun, untuk membuat daerah tabrakan ini cukup sulit ketika mengecek adanya tabrakan antara ular dengan apel terutama pada bagian lengkungan pada apel. Karena itu, daerah tabrakan pada apel dibuat dengan menggunakan bentuk persegi seperti pada Gambar~\ref{fig:apelArsirPersegi}. Jika posisi kepala ular berada di dalam daerah tabrakan apel, maka dipastikan bahwa ular tersebut sudah memakan apel. Algoritma untuk mengecek tabrakan adalah sebagai berikut : cek apakah koordinat x dari kepala ular lebih besar dari posisi sisi kiri daerah tabrakan dan lebih kecil dari posisi sisi kanan daerah tabrakan. Kemudian cek apakah koordinat y dari kepala ular lebih besar dari posisi sisi atas daerah tabrakan dan lebih kecil dari posisi sisi bawah daerah tabrakan. Jika posisi kepala ular berada memenuhi ketentuan tersebut, maka kepala ular berada di dalam daerah tabrakan apel.\\
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{apelArsir}  
+	\includegraphics[scale=0.4]{apelArsir}  
 	\caption[Daerah tabrakan pada apel]{Daerah tabrakan pada apel}
 	\label{fig:apelArsir} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering  
-	\includegraphics[scale=0.5]{apelArsirPersegi}  
+	\includegraphics[scale=0.4]{apelArsirPersegi}  
 	\caption[Daerah tabrakan berbentuk persegi pada apel]{Daerah tabrakan berbentuk persegi pada apel}
 	\label{fig:apelArsirPersegi} 
 \end{figure}
@@ -137,13 +137,13 @@ Untuk mengecek tabrakan dengan labirin, algoritmanya sama dengan mengecek tabrak
 
 \section{Analisis Berorientasi Objek}
 
-\subsection{Diagram \textit{Use Case}}
-Pada bagian ini akan dijelaskan dan ditunjukkan diagram \textit{use case} dari permainan \textit{Snake} 360. Penjelasan meliputi skenario, aktor, prakondisi skenario normal dan eksepsi. Aktor yang melakukanya adalah pemain. Pada Gambar~\ref{fig:useCase} terdapat diagram use case dari permainan \textit{Snake} 360.
+\subsection{Skenario Permainan}
+Pada bagian ini akan dijelaskan dan ditunjukkan diagram \textit{use case} dari permainan \textit{Snake} 360. Penjelasan meliputi skenario, aktor, prakondisi skenario normal dan eksepsi. Aktor yang melakukanya adalah pemain. Pada Gambar~\ref{fig:useCase} terdapat diagram \textit{use case} dari permainan \textit{Snake} 360.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.4]{useCase}  
-	\caption[Diagram use case dari permainan Snake 360]{Diagram use case dari permainan Snake 360}
+	\caption[Diagram \textit{use case} dari permainan \textit{Snake} 360]{Diagram \textit{use case} dari permainan \textit{Snake} 360}
 	\label{fig:useCase} 
 \end{figure}
 
@@ -164,12 +164,12 @@ Eksepsi : - \\
 \end{enumerate}
 
 \subsection{Diagram Kelas}
-Pada Gambar~\ref{fig:classDiagram} terdapat diagram kelas dari Snake 360.
+Pada Gambar~\ref{fig:classDiagram} terdapat diagram kelas dari \textit{Snake} 360.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.4]{classDiagram}  
-	\caption[Diagram class dari permainan Snake 360]{Diagram kelas dari permainan Snake 360}
+	\caption[Diagram class dari permainan \textit{Snake} 360]{Diagram kelas dari permainan \textit{Snake} 360}
 	\label{fig:classDiagram} 
 \end{figure}
 

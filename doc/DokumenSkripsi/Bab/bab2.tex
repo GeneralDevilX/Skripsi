@@ -87,7 +87,7 @@ Canvas memiliki beberapa atribut diantaranya adalah:
 \end{itemize}
 
 
-\section{\textit{\textit{Javascript}}}
+\section{\textit{Javascript}}
 \label{sec:Javascript}
 \textit{Javascript} adalah bahasa pemrograman yang ringan, \textit{interpreted} dan berorientasi objek yang digunakan pada halaman \textit{web} \cite{MDN:05:Web}. \textit{Javascript} dapat membuat objek dengan menambahkan \textit{method} dan atributnya sama seperti bahasa pemrograman C++ dan \textit{Java}. Setelah objek diinisialisasi, maka objek tersebut dapat dijadikan \textit{blueprint} untuk membuat objek lain yang mirip. \textit{Javascript} dapat digunakan untuk mengimplementasi hal yang kompleks pada halaman web. Contohnya adalah menamplikan peta yang interaktif dan membuat animasi 2D/3D. Selain \textit{Javascript}, HTML(\textit{HyperText Markup Language}) dan CSS(\textit{Cascading Style Sheet}) merupakan bagian/komponen penting dalam pembuatan halaman \textit{web}.\\
 
@@ -153,12 +153,12 @@ Sesudah menuliskan \textit{tag} <canvas> pada HTML, canvas tidak bisa langsung d
 
 Berdasarkan potongan kode di atas, variabel myCanvas menyimpan objek dengan id = 'canvas'. Id ini mengacu ke objek \textit{canvas} pada HTML yang memilki id bernama canvas. Variabel myCanvas sekarang sudah menyimpan objek \textit{canvas}. Kemudian variabel context menyimpan \textit{drawing context} 2D. Sesudah itu, \textit{canvas} tersebut dapat digambar dengan bentuk 2D, garis, kurva, membuat tulisan, dan menambahkan gambar. Selain untuk menggambar, bentuk-bentuk tersebut dapat diberi warna sesuai dengan keinginan.\\
 
-Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat tersebut akan menempatkan gambar tersebut pada \textit{canvas}. Posisi awal/\textit{origin} pada \textit{canvas} adalah (0,0) yang terletak di ujung kiri atas \textit{canvas}. Gambar~\ref{fig:grid}\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Drawing\_shapes} adalah penempatan kotak biru pada \textit{canvas} terhadap \textit{origin}.
+Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat tersebut akan menempatkan gambar tersebut pada \textit{canvas}. Posisi awal/\textit{origin} pada \textit{canvas} adalah (0,0) yang terletak di ujung kiri atas \textit{canvas}. Gambar~\ref{fig:grid} adalah penempatan kotak biru pada \textit{canvas} terhadap \textit{origin}.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.7]{grid}
-	\caption[Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}]{Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}}
+	\caption[Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}]{Posisi kotak biru pada \textit{canvas} terhadap \textit{origin}\cite{MDN:05:Web}}
 	\label{fig:grid} 
 \end{figure} 
 
@@ -177,7 +177,7 @@ Ada 3 cara untuk menggambar persegi panjang:
 Fungsi tersebut memiliki parameter yang sama. Parameter x dan y untuk menentukan posisi pada canvas dari titik ujung kiri atas persegi panjang. \textit{Width} adalah lebar dari persegi panjang dan \textit{height} adalah tinggi dari persegi panjang.
 
 \subsubsection{Menggambar \textit{Path}}
-\textit{Path} adalah sekumpulan titik yang dihubungkan oleh segmen garis. \textit{Path} dapat membentuk kurva dan membuat bentuk 2D lainnya seperti segitiga, trapesium, belah ketupat dan lain-lain. Langkah-langkah untuk membuat bentuk menggunakan path adalah sebegai berikut : 
+\textit{Path} adalah sekumpulan titik yang dihubungkan oleh segmen garis. \textit{Path} dapat membentuk kurva dan membuat bentuk 2D lainnya seperti segitiga, trapesium, belah ketupat dan lain-lain. Langkah-langkah untuk membuat bentuk menggunakan path adalah sebagai berikut : 
 
 \begin{enumerate}
 	\item Buat \textit{path}.
@@ -199,24 +199,24 @@ Fungsi \textit{moveTo()} memiliki 2 parameter yaitu x dan y yang merupakan posis
 
 Fungsi \textit{lineTo()} memiliki 2 parameter yaitu x dan y yang merupakan titik akhir dari garis. Garis akan digambar mulai dari posisi titik awal sampai ke posisi titik akhir garis. Titik awal ini bergantung pada titik akhir dari \textit{path} sebelumya. Titik awal dapat diubah dengan menggunakan fungsi \textit{moveTo()}.
 
-Fungsi \textit{arc()} digunakan untuk menggambar lingkaran atau busur. Di bawah ini adalah fungsi arc().
+Fungsi \textit{arc()} digunakan untuk menggambar lingkaran atau busur. Di bawah ini adalah fungsi \textit{arc()}.
 
 \begin{lstlisting}[language=Javascript, caption=Fungsi \textit{arc()}]
 	arc(x,y,radius,startAngle,endAngle,anticlockwise);
 \end{lstlisting}
 
-Parameter x dan y adalah posisi titik tengah busur pada canvas. Radius adalah besar jari-jari busur. StartAngle dan endAngle adalah titik awal dan titik akhir busur dalam satuan radian yang diukur dari sumbu x. Anticlockwise adalah parameter yang bernilai boolean, apabila bernilai true, maka busur akan digambar berlawanan arah jarum jam dan jika bernilai false, busur akan digambar searah jarum jam. Karena fungsi arc() menerima input sudut dalam radian, maka perlu dilakukan konversi dari satuan derajat menjadi radian terlebih dahulu. Rumusnya adalah sebagai berikut :
+Parameter x dan y adalah posisi titik tengah busur pada \textit{canvas}. Radius adalah besar jari-jari busur. \textit{StartAngle} dan \textit{endAngle} adalah titik awal dan titik akhir busur dalam satuan radian yang diukur dari sumbu x. \textit{Anticlockwise} adalah parameter yang bernilai \textit{boolean}, apabila bernilai \textit{true}, maka busur akan digambar berlawanan arah jarum jam dan jika bernilai \textit{false}, busur akan digambar searah jarum jam. Karena fungsi \textit{arc()} menerima input sudut dalam radian, maka perlu dilakukan konversi dari satuan derajat menjadi radian terlebih dahulu. Rumusnya adalah sebagai berikut :
 
 \begin{displaymath}
 	radian = (Math.PI / 180) * besar sudut
 \end{displaymath}	
 
-\textit{B\'ezier curve} merupakan tipe \textit{path} yang digunakan untuk membuat kurva. \textit{B\'ezier curve} ada 2 jenis yaitu \textit{cubic} dan \textit{quadratic}. Perbedaanya adalah \textit{quadratic B\'ezier curve} memiliki sebuah \textit{control point}, sedangkan \textit{cubic B\'ezier curve} memiliki 2 buah \textit{control point}. Pada Gambar~\ref{fig:bezier}\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Drawing\_shapes} menunjukkan perbedaan antara \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}. Titik merah pada gambar merupakan \textit{control point} dari \textit{B\'ezier curve}.
+\textit{B\'ezier curve} merupakan tipe \textit{path} yang digunakan untuk membuat kurva. \textit{B\'ezier curve} ada 2 jenis yaitu \textit{cubic} dan \textit{quadratic}. Perbedaanya adalah \textit{quadratic B\'ezier curve} memiliki sebuah \textit{control point}, sedangkan \textit{cubic B\'ezier curve} memiliki 2 buah \textit{control point}. Pada Gambar~\ref{fig:bezier} menunjukkan perbedaan antara \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}. Titik merah pada gambar merupakan \textit{control point} dari \textit{B\'ezier curve}.
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=1]{bezier}
-	\caption[Perbedaan \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}]{Perbedaan \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}}
+	\caption[Perbedaan \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}]{Perbedaan \textit{quadratic B\'ezier curve} dan \textit{cubic B\'ezier curve}\cite{MDN:05:Web}}
 	\label{fig:bezier} 
 \end{figure} 
 
@@ -380,8 +380,7 @@ Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki
 	\item \textit{requestAnimationFrame(callback)}: memberitahu \textit{browser} untuk menjalankan animasi dan meminta \textit{browser} memanggil fungsi yang spesifik untuk memperbarui animasi.
 \end{itemize}
 
-Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi setTimeout()\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API/Tutorial/Basic\_animations}.
-
+Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi setTimeout()
 
 \section{\textit{Git}}
 \label{sec:Git}
