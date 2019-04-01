@@ -2,7 +2,7 @@
 \label{chap:analisis}
 
 \section{Analisis Permainan \textit{Snake} yang Sudah Ada}
-Permainan \textit{Snake} yang akan dianalisis adalah \textit{Slither.io} dan Snake pada telepon genggam Nokia. Slither.io adalah permainan \textit{web} yang dapat dimainkan oleh lebih dari 1 pemain(\textit{multiplayer}). Cara bermainya mirip seperti permainan \textit{Snake} pada umumnya yaitu ular harus memakan makanan untuk mendapatkan skor. Dalam permainan ini, setiap pemain berkompetisi untuk menjadi pemain terbaik dengan cara mendapatkan skor sebanyak-banyaknya. Pemain akan kalah apabila ular milik pemain menabrak ular milik pemain lain. 
+Permainan \textit{Snake} yang akan dianalisis adalah \textit{Slither.io} dan Snake pada telepon genggam Nokia. Slither.io adalah permainan \textit{web} yang dapat dimainkan oleh lebih dari 1 pemain(\textit{multiplayer}). Cara bermainya mirip seperti permainan \textit{Snake} pada umumnya yaitu ular harus memakan makanan untuk mendapatkan skor. Dalam permainan ini, setiap pemain berkompetisi untuk menjadi pemain terbaik dengan cara mendapatkan skor sebanyak-banyaknya. Pemain akan kalah apabila ular milik pemain menabrak ular milik pemain lain.\\
 
 Snake pada telepon genggam Nokia hanya dapat dimainkan oleh 1 pemain. Dalam permainan ini, ular harus mendapatkan skor sebanyak-banyaknya dengan memakan makanan. Setiap memakan makanan, skor akan bertambah sebanyak 1 poin. Pemain akan kalah apabila ular menabrak dinding labirin.
 
@@ -51,7 +51,7 @@ Ular pada \textit{Slither.io} digerakan dengan menggunakan keyboard dan \textit{
 	\label{fig:slitherSpeed} 
 \end{figure}
 
-Ular pada Snake Nokia hanya dapat bergerak ke atas, ke bawah, ke kiri dan ke kanan. Ular dapat digerakan menggunakan tombol angka pada telepon genggam Nokia yaitu tombol 8 untuk bergerak ke atas, tombol 4 untuk bergerak ke kiri, tombol 6 untuk bergerak ke kanan dan tombol 2 untuk bergerak ke bawah. 
+Ular pada Snake Nokia hanya dapat bergerak ke atas, ke bawah, ke kiri dan ke kanan. Ular dapat digerakan menggunakan tombol angka pada telepon genggam Nokia yaitu tombol 8 untuk bergerak ke atas, tombol 4 untuk bergerak ke kiri, tombol 6 untuk bergerak ke kanan dan tombol 2 untuk bergerak ke bawah. Kecepatan ular juga dapat dipilih. Semakin tinggi tingkat, maka ular akan bergerak semakin cepat.
 
 \subsection{Labirin}
 Labirin pada \textit{Slither.io} hanya ada 1 saja. Labirin ini berbentuk lingkaran yang sisinya merupakan dinding. Apabila ular menabrak dinding labirin, maka permainan akan berakhir. Labirin ini cukup besar sehingga sangat kecil kemungkinan ular untuk menabrak dinding labirin. Gambar~\ref{fig:slitherLabirin} menunjukan peta labirin pada \textit{Slither.io}. Pada peta labirin tersebut terdapat sekumpulan titik bewarna abu-abu yang merepresentasikan makanan.
@@ -63,10 +63,13 @@ Labirin pada \textit{Slither.io} hanya ada 1 saja. Labirin ini berbentuk lingkar
 	\label{fig:slitherLabirin} 
 \end{figure}
 
-Labirin pada Snake Nokia lebih bervariasi dibandingkan dengan Slither.io. Pada permainan ini pemain dapat memilih labirin yang tersedia. Labirin dengan level yang lebih tinggi akan memiliki labirin yang rumit dan memiliki banyak dinding. 
+Labirin pada Snake Nokia lebih bervariasi dibandingkan dengan Slither.io. Pada permainan ini pemain dapat memilih labirin yang tersedia. Labirin dengan level yang lebih tinggi akan memiliki labirin yang rumit dan memiliki lebih banyak dinding. 
 
 \section{Analisis Sistem yang Dibangun}
 Permainan \textit{Snake} 360 yang akan dibangun memiliki cara bermain yang mirip seperti permainan Snake pada umumnya. Perbedaan antara \textit{Snake} 360 dengan permainan \textit{Snake} pada umumnya adalah \textit{Snake} 360 dapat menambahkan level dan labirin sendiri. 
+
+\subsection{Menentukan Besar \textit{Canvas}}
+Pada permainan Open Source Snake 360 ini, pemain dapat memainkan permainan tersebut di smartphone dan browser pada desktop. Hal ini akan memunculkan sebuah kesulitan yaitu menentukan dimensi canvas yang cocok apabila permainan tersebut dimainkan pada smartphone dan browser pada desktop. Apabila besar canvas disesuaikan dengan besar layar pada desktop, maka objek yang ditampilkan(ular dan apel) akan menjadi sangat kecil. Selain itu, apabila besar canvas disesuaikan dengan besar layar smartphone, maka besar canvas akan terlihat terlalu tinggi bila dilihat pada desktop. Maka dari itu, besar canvas tidak sesuai jika bentuk canvas adalah persegi panjang. Bentuk canvas yang sesuai adalah bentuk persegi dengan dimensi 600px x 600px. Dimensi ini sesuai jika permainan ini dimainkan pada smartphone dan desktop. Selain menentukan dimensi, besar objek yang ada pada canvas juga harus diperbesar agar objek-objek pada canvas tidak terlihat kecil bagi pemain bermain menggunakan smartphone.
 
 \subsection{Menggambar Ular dan Apel}
 Tubuh ular dibuat menggunakan sekumpulan \textit{line}/garis pendek. Setiap bagian tubuh ular memiliki panjang sebesar 1 \textit{pixel} dan lebar tubuhnya sebesar 5 \textit{pixel}. Bagian tubuh ular dibuat pendek untuk memudahkan pengecekan jika terjadi ular menabrak tubuhnya sendiri. Untuk lebar ular, disesuaikan dengan besar apel yaitu 10 \textit{pixel}. Setiap bagian tubuh ular memiliki koordinat masing-masing. Koordinat setiap bagian tubuh disimpan pada sebuah \textit{array} agar menggambar ular menjadi lebih mudah. Dalam tahap ini, tubuh ular masih berupa sekumpulan titik-titik yang merupakan koordinat bagian tubuh ular seperti pada Gambar~\ref{fig:titikUlar}. Algoritma untuk menggambar ular adalah dengan mengambil koordinat bagian tubuh ular mulai dari elemen \textit{array} paling pertama(arr[0]) dan elemen \textit{array} selanjutnya(arr[1]) lalu buat garis yang \textit{start point}nya adalah elemen pertama(arr[0]) dan \textit{end point}nya adalah elemen \textit{array} kedua(arr[1]). Setelah itu ambil koordinat elemen \textit{array} yang merupakan \textit{end point} pada garis sebelumnya(arr[1]) dengan elemen \textit{array} selanjutnya(arr[2]) dan gambar garisnya. Lakukan hal tersebut sampai \textit{end point} garis mencapai elemen \textit{array} paling akhir. Setelah digambar maka ular akan terlihat seperti Gambar~\ref{fig:garisUlar}.
@@ -134,12 +137,32 @@ Kecepatan ular pada permainan ini adalah 1 sampai 5 \textit{pixel per frame}. Ke
 Ular dapat berbelok dengan menggunakan tombol pada \textit{keyboard}. Tombol ke kiri akan membuat ular bergerak melawan arah jarum jam dan tombol ke kanan akan membuat ular akan bergerak searah jarum jam. Pada permainan yang akan dibuat ini, digunakan sudut sebagai nilai untuk membuat ular dapat bergerak 360$^\circ$. Jika menekan tombol ke kiri maka sudut akan berkurang dan jika menekan tombol ke kanan maka sudut akan bertambah. Ketika menambahkan dan mengurangi sudut, perlu dilakukan pengecekan apabila nilai sudut valid atau tidak. Karena nilai sudut yang valid adalah antara nilai 0 sampai 360, maka apabila nilai sudut kurang dari 0, ubahlah sudut tersebut menjadi 360 dan apabila nilai sudut lebih besar dari 360, ubahlah nilai sudut tersebut menjadi 0. Dibutuhkan rumus trigonometri untuk menentukan posisi kepala ular. Untuk menghitung posisi koordinat x, digunakan \textit{sinus} sedangkan untuk menghitung posisi koordinat y menggunakan \textit{cosinus}. Jadi koordinat x dan y pada kepala ular akan ditambahkan dengan hasil perhitungan \textit{sinus} dan \textit{cosinus}.
 
 \subsection{Mengacak posisi apel}
-Untuk mengacak posisi apel, digunakan fungsi Math.random(). Nilai yang akan diacak adalah posisi x dan y dari apel. Hasil dari fungsi Math.random() akan dikalikan dengan lebar canvas untuk mendapatkan nilai x dan dikalikan dengan tinggi canvas untuk mendapatkan nilai y. Karena apel ini dibuat dengan menggunakan layout persegi, maka posisi x dan y pada apel terletak di titik sudut kiri atas. Hal ini akan memungkinkan gambar apel akan terpotong seperti yang terlihat pada Gambar... Maka dari itu, kurangilah lebar dan tinggi canvas sebesar ukuran apel tersebut kemudian dikalikan dengan nilai acak yang sudah dibuat oleh fungsi Math.random(). Nilai yang dihasilkan adalah nilai yang bertipe float sedangkan posisi x dan y pada apel membutuhkan input bilangan bulat. Untuk mendapatkan bilangan bulat tersebut, nilai yang sudah dihitung tadi dibulatkan ke bawah. Mengacak posisi apel tidak hanya mengacak posisi pada canvas saja, tetapi harus mengecek apakah posisi apel tersebut tidak bertabrakan dengan tubuh ular atau dinding labirin.  
+Posisi apel akan diacak di daerah canvas. Untuk mengacak posisi apel, digunakan fungsi Math.random(). Nilai yang akan diacak adalah posisi x dan y dari apel. Hasil dari fungsi Math.random() akan dikalikan dengan lebar canvas untuk mendapatkan nilai x dan dikalikan dengan tinggi canvas untuk mendapatkan nilai y. Karena apel ini dibuat dengan menggunakan layout persegi, maka posisi x dan y pada apel terletak di titik sudut kiri atas. Hal ini akan memungkinkan gambar apel akan terpotong seperti yang terlihat pada Gambar~\ref{fig:apelTerpotong}. Misal, besar canvas adalah 500 x 500 dan besar apel adalah 10 dan mendapatkan posisi apel adalah (495,10). Posisi x apel ditambah dengan besar apel hasilnya akan melebihi besar canvas sehingga membuat sebagian gambar apel terlihat terpotong. Maka dari itu, lebar dan tinggi canvas yang dikalikan dengan bilangan acak, akan dikurangi sebesar ukuran apel tersebut.  Nilai yang dihasilkan adalah nilai yang bertipe float sedangkan posisi x dan y pada apel membutuhkan input bilangan bulat. Untuk mendapatkan bilangan bulat tersebut, nilai yang sudah dihitung tadi dibulatkan ke bawah. Mengacak posisi apel tidak hanya mengacak posisi pada canvas saja, tetapi harus mengecek apakah posisi apel tersebut tidak bertabrakan dengan tubuh ular atau dinding labirin. 
 
-\subsection{Labirin}
-Labirin pada permainan ini dibuat pada file text. Permainan ini dapat mengambil file text labirin sesuai dengan yang pemain inginkan. Pada file text, daerah yang merupakan dinding labirin ditulis dengan menggunakan simbol '\#' sedangkan untuk daerah yang bukan merupakan dinding labirin ditulis dengan menggunakan simbol '-'. Dinding labirin akan digambar menggunakan garis.  Setiap simbol merepresentasikan posisi pada canvas yang akan digambar atau tidak. Penggambaran dinding bergantung pada lebar dinding. Jika lebar dinding adalah 5 pixel, maka sebuah simbol '\#' akan menggambar dinding sepanjang 5 pixel. 
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{apelTerpotong}  
+	\caption[Gambar apel yang terpotong sesudah mengacak posisi apel]{Gambar apel yang terpotong sesudah mengacak posisi apel}
+	\label{fig:apelTerpotong} 
+\end{figure}
 
-Dinding labirin akan dibuat dengan menggunakan garis. Cara pembuatanya sama dengan membuat tubuh ular yaitu dengan menggunakan titik-titik yang dihubungkan dengan garis.  Level pada labirin dapat ditentukan berdasarkan kerumitan labirin. Labirin yang memiliki dinding yang banyak dan kompleks akan mendapatkan level yang lebih tinggi dibandingkan dengan labirin yang memiliki sedikit dinding dan lebih simpel. 
+\subsection{Menggambar Labirin}
+Labirin pada permainan ini dibuat pada file text. Permainan ini dapat mengambil file text labirin sesuai dengan yang pemain inginkan. Pada file text, daerah yang merupakan dinding labirin ditulis dengan menggunakan simbol '\#' sedangkan untuk daerah yang bukan merupakan dinding labirin ditulis dengan menggunakan simbol '-'. Sebuah simbol merepresentasikan besar dinding. Jika pada file tersebut terdapat text '\#-\#', itu artinya mengammbar dinding, tidak menggambar dinding dan menggambar dinding lagi. Hasilnya dapat dilihat pada Gambar~\ref{fig:gambarDinding}. Besar canvas untuk permainan ini adalah 500 pixel x 500 pixel dan besar dinding labirin sebesar 5 pixel. Besar dinding tidak boleh lebih kecil dari lebar tubuh ular. Apabila besar dinding lebih kecil dari ular, ular tidak akan dapat melewati jalur yang diapit oleh 2 buah dinding seperti yang terlihat pada Gambar~\ref{fig:ularDinding}. Oleh karena itu, jumlah baris pada file text akan disamakan dengan jumlah kolomnya Sesuai dengan besar canvas dan besar dinding labirin, maka dapat ditentukan bahwa sebuah file text memiliki 100 baris. Setiap baris akan menggambar garis yang memiliki lebar 5 pixel. Untuk menggambar dinding secara horizontal, maka hanya menggambar garis dengan panjang 5 pixel dari titik awal ke titik akhir. Sebagai contoh, apabila karakter pada baris pertama dan kolom pertama adalah '\#', maka dinding akan digambar pada canvas dari titik(0,0) sampai titik(5,0) dengan lebar dinding 5 pixel. Level pada labirin dapat ditentukan berdasarkan kerumitan labirin. Labirin yang memiliki dinding yang banyak dan kompleks akan mendapatkan level yang lebih tinggi dibandingkan dengan labirin yang memiliki sedikit dinding dan lebih simpel. 
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{gambarDinding}  
+	\caption[Menggambar dinding menggunakan simbol pada file text]{Menggambar dinding menggunakan simbol pada file text}
+	\label{fig:gambarDinding} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.5]{ularDinding}  
+	\caption[Ular ingin melewati jalur yang diapit oleh 2 buah dinding]{Ular ingin melewati jalur yang diapit oleh 2 buah dinding}
+	\label{fig:ularDinding} 
+\end{figure}
+
 
 \subsection{Pengecekan tabrakan(\textit{Collision Detection})}
 Pada permainan ini terdapat pengecekan tabrakan yang dapat mengecek apakah ular sudah memakan makanan, ular menabrak tubuhnya sendiri, dan ular menabrak dinding labirin. Seluruh pengecekan ini akan dilakukan pada setiap \textit{frame}. Pada pengecekan tabrakan pada apel dan ular, hanya perlu mengecek tabrakan antara kepala ular dengan apel. Karena jalur yang dilalui oleh kepala ular, akan selalu dilalui oleh bagian tubuh ular. Dengan kata lain, bagian tubuh ular akan mengikuti ke mana kepala ular akan bergerak. Dengan ini, tidak perlu dilakukan \textit{collision detection} antara bagian tubuh ular dengan apel. Cukup hanya dengan mengecek tabrakan antara kepala ular dengan apel saja. Untuk mengetahui terjadinya tabrakan antara ular dengan apel, maka akan dibuat daerah tabrakan pada apel. Daerah tabrakan ini digunakan untuk mengecek apakah 2 benda saling bertabrakan satu sama lain. Daerah tabrakan pada apel ditandai dengan arsiran bewarna merah yang terdapat pada Gambar~\ref{fig:apelArsir}. Namun, untuk membuat daerah tabrakan ini cukup sulit ketika mengecek adanya tabrakan antara ular dengan apel terutama pada bagian lengkungan pada apel. Karena itu, daerah tabrakan pada apel dibuat dengan menggunakan bentuk persegi seperti pada Gambar~\ref{fig:apelArsirPersegi}. Jika posisi kepala ular berada di dalam daerah tabrakan apel, maka dipastikan bahwa ular tersebut sudah memakan apel. Algoritma untuk mengecek tabrakan adalah sebagai berikut : cek apakah koordinat x dari kepala ular lebih besar dari posisi sisi kiri daerah tabrakan dan lebih kecil dari posisi sisi kanan daerah tabrakan. Kemudian cek apakah koordinat y dari kepala ular lebih besar dari posisi sisi atas daerah tabrakan dan lebih kecil dari posisi sisi bawah daerah tabrakan. Jika posisi kepala ular berada memenuhi ketentuan tersebut, maka kepala ular berada di dalam daerah tabrakan apel.\\
@@ -236,8 +259,8 @@ Berikut adalah atribut yang dimiliki setiap kelas :
 \begin{itemize}
 	\item sudut, merupakan besar sudut yang digunakan untuk ular berbelok.
 	\item score, merupakan skor yang didapat pada permainan.
-	\item CANVAS_SIZE, merupakan lebar dan tinggi canvas.
-	\item GRID_SIZE, merupakan besar grid.
+	\item CANVAS\_SIZE, merupakan lebar dan tinggi canvas.
+	\item GRID\_SIZE, merupakan besar grid.
 \end{itemize}
 
 \textbf{boolean}
