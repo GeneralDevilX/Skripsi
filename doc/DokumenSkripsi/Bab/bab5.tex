@@ -73,3 +73,53 @@ Gambar~\ref{fig:GUIBermain} merupakan tampilan antarmuka mulai bermain. Tampilan
 \end{figure}
 
 \section{Pengujian}
+Pengujian terhadap permainan Open Source Snake 360 ini bertujuan untuk mengetahui apakah permainan yang dibangun sudah berjalan sesuai dengan rancangan. Pengujian yang dilakukan meliputi pengujian fungsional. 
+
+\subsection{Pengujian Fungsional}
+Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat lunak menjalankan fungsi-fungsi yang ada. Berikut akan ditunjukan pengujian pada tampilan: 
+
+\begin{enumerate}
+	\item Pengujian fungsionalitas pada tampilan menu utama.
+	
+	\begin{table}[H]
+		\caption{Pengujian Fungsional pada Tampilan Menu Utama} \label{tab:table1}
+		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
+			\hline
+			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
+			Pemain memilih labirin dan kecepatan berbelok & Jika pemain salah memasukkan data level labirin, maka akan ditampilkan sebuah text bahwa data yang diisi tidak valid & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Pemain menekan tombol "mulai bermain" & Pemain dapat memulai permainan. Kondisi untuk dapat memulai permainan adalah data level labirn dan kecepatan berbelok sudah valid. & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Berdasarkan tabel~\ref{tab:table1}, dapat disimpulkan bahwa kasus uji pada tampilan menu utama membawakan hasil sesuai dengan yang diharapkan. 
+	
+	\item Pengujian fungsionalitas tampilan bermain pada desktop.
+	
+	\begin{table}[H]
+		\caption{Pengujian Fungsional Tampilan Bermain pada Desktop} \label{tab:table2}
+		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
+			\hline
+			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
+			Tombol arah kiri ditekan & Ular akan bergerak melawan arah jarum jam & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Tombol arah kanan ditekan & Ular akan bergerak searah jarum jam & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular memakan apel & Pemain akan mendapatkan skor & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular menabrak dinding & Tampilan "game over" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular menabrak tubuh sendiri & Tampilan "game over" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
+		\end{tabular}
+	\end{table}
+	
+	Berdasarkan tabel~\ref{tab:table2}, dapat disimpulkan bahwa kasus uji tampilan bermain pada desktop membawakan hasil sesuai dengan yang diharapkan. 
+	
+	\item Pengujian fungsionalitas pada tampilan "game over" 
+	
+	\begin{table}[H]
+		\caption{Pengujian Fungsional pada Tampilan "game over"} \label{tab:table3}
+		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
+			\hline
+			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
+			Tombol "enter" ditekan & Pemain akan diarahkan ke tampilan menu utama & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Berdasarkan tabel~\ref{tab:table3}, dapat disimpulkan bahwa kasus uji pada tampilan "game over" membawakan hasil sesuai dengan yang diharapkan. 
+\end{enumerate}

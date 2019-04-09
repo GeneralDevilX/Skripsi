@@ -372,7 +372,7 @@ Ketika menggambar sebuah bentuk pada \textit{canvas}, bentuk tersebut tidak berp
 	\item Mengembalikan \textit{state canvas} : jika state sudah disimpan, kembalikan \textit{state} tersebut sebelum menggambar di \textit{frame} yang baru.
 \end{enumerate}
 
-Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki oleh \textit{canvas} atau dengan membuat fungsi sendiri. Hasil yang ada pada \textit{canvas} akan muncul setelah \textit{script} selesai mengeksekusi. Jadi dibutuhkan cara untuk mengeksekusi fungsi untuk menggambar dalam waktu tertentu. Ada 3 fungsi yang dapat digunakan untuk memanggil fungsi dalam kurun waktu tertentu diantaranya adalah :
+Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki oleh \textit{canvas} atau dengan membuat fungsi sendiri. Hasil yang ada pada \textit{canvas} akan muncul setelah \textit{script} selesai dieksekusi. Jadi dibutuhkan cara mengeksekusi fungsi untuk menggambar dalam waktu tertentu. Ada 3 fungsi yang dapat digunakan untuk memanggil fungsi dalam kurun waktu tertentu diantaranya adalah :
 
 \begin{itemize}
 	\item \textit{setInterval(function,delay)}: mengeksekusi fungsi \textit{function} berulang kali setiap \textit{delay} milidetik.
@@ -380,7 +380,7 @@ Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki
 	\item \textit{requestAnimationFrame(callback)}: memberitahu \textit{browser} untuk menjalankan animasi dan meminta \textit{browser} memanggil fungsi yang spesifik untuk memperbarui animasi.
 \end{itemize}
 
-Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan game yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi \textit{setTimeout()}.
+Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan \textit{game} yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi \textit{setTimeout()}.
 
 \section{\textit{jQuery}}
 \textit{jQuery} merupakan sebuah \textit{file Javascript} yang dimasukkan pada halaman \textit{web} \cite{duckett2014javascript}. \textit{jQuery} dapat memilih elemen pada halaman \textit{web} menggunakan \textit{CSS-style selector} dan elemen tersebut dapat melakukan sesuatu dengan menggunakan \textit{method jQuery}. Sebuah fungsi yaitu \textit{jQuery()} digunakan untuk menemukan satu atau lebih elemen yang berada pada halaman \textit{web}. Fungsi ini membuat objek yang bernama \textit{jQuery} untuk menyimpan referensi dari elemen yang akan dipilih. \$() sering digunakan sebagai pengganti fungsi \textit{jQuery()} dikarenakan penulisanya yang pendek. Fungsi \textit{jQuery()} hanya memiliki sebuah parameter yaitu sebuah \textit{selector}.
@@ -389,27 +389,27 @@ Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk 
 	$('li.hot');
 \end{lstlisting}
 
-Pada \textit{listing} ~\ref{lst:jQuery1}, \textit{selector} akan mencari elemen <li> yaitu \textit{list} yang merupakan bagian dari kelas 'hot'. \textit{jQuery} memiliki banyak \textit{method} yang dapat digunakan oleh elemen yang sudah dipilih menggunakan \textit{selector}. \textit{Method} ini merepresentasikan tugas yang akan dilakukan oleh elemen tersebut. Setelah memilih elemen, tambahkan \textit{method} yang diawali dengan tanda baca '.' kemudian diikuti dengan nama \textit{method} beserta parameternya. Tanda baca '.' disebut sebagai member operator. Setiap \textit{method} memiliki parameter untuk memberikan detail tentang bagaimana cara untuk mengubah elemen tersebut. Ada beberapa \textit{method} yang memiliki parameter lebih dari 1.  Member operator menunjukkan bahwa \textit{method} yang terletak setelah member operator digunakan untuk mengubah elemen objek \textit{jQuery} yang terletak pada sebelah kiri member operator. Pada \textit{listing} ~\ref{lst:jQuery2}, terdapat contoh untuk mengubah kelas dari elemen yang sudah dipilih. Method \textit{addClass} digunakan untuk mengubah atribut kelas dari elemen \textit{list} menjadi kelas yang bernama \textit{'complete'}. 
+Pada \textit{listing} ~\ref{lst:jQuery1}, \textit{selector} akan mencari elemen <li> yaitu \textit{list} yang merupakan bagian dari kelas 'hot'. \textit{jQuery} memiliki banyak \textit{method} yang dapat digunakan oleh elemen yang sudah dipilih menggunakan \textit{selector}. \textit{Method} ini merepresentasikan tugas yang akan dilakukan oleh elemen tersebut. Setelah memilih elemen, tambahkan \textit{method} yang diawali dengan titik kemudian diikuti dengan nama \textit{method} beserta parameternya. Titik ini disebut sebagai \textit{member operator}. Setiap \textit{method} memiliki parameter untuk memberikan detail tentang bagaimana cara untuk mengubah elemen tersebut. Ada beberapa \textit{method} yang memiliki parameter lebih dari 1.  Member operator menunjukkan bahwa \textit{method} yang terletak setelah \textit{member operator} digunakan untuk mengubah elemen objek \textit{jQuery} yang terletak pada sebelah kiri \textit{member operator}. Pada \textit{listing} ~\ref{lst:jQuery2}, terdapat contoh untuk mengubah kelas dari elemen yang sudah dipilih. Method \textit{addClass} digunakan untuk mengubah atribut kelas dari elemen \textit{list} menjadi kelas yang bernama \textit{'complete'}. 
 
 \begin{lstlisting}[language=Javascript, caption=Mengubah kelas dari elemen yang sudah dipilih, label={lst:jQuery2}]
 	$('li.hot').addClass('complete');
 \end{lstlisting}
 
-Ketika membuat sebuah jQuery selection, objek jQuery akan menyimpan referensi elemen pada DOM yang dipilih. Maksud dari menyimpan referensi adalah objek jQuery menyimpan lokasi elemen tersebut di memori browser. Membuat objek jQuery membutuhkan beberapa langkah yaitu: 
+Ketika membuat sebuah \textit{jQuery selection}, objek \textit{jQuery} akan menyimpan referensi elemen pada DOM yang dipilih. Maksud dari menyimpan referensi adalah objek \textit{jQuery} menyimpan lokasi elemen tersebut di memori \textit{browser}. Membuat objek \textit{jQuery} membutuhkan beberapa langkah yaitu: 
 
 \begin{enumerate}
-	\item Menemukan node-node yang sesuai di DOM tree
-	\item Membuat objek jQuery
-	\item Menyimpan referensi di node objek jQuery
+	\item Menemukan \textit{node-node} yang sesuai di DOM \textit{tree}
+	\item Membuat objek \textit{jQuery}
+	\item Menyimpan referensi di \textit{node} objek \textit{jQuery}
 \end{enumerate}
 
-Jika ingin menggunakan selection yang sama, maka lebih baik menggunakan objek jQuery yang sama daripada mengulang langkah-langkah yang sudah dijelaskan. Objek jQuery tersebut dapat disimpan pada sebuah variabel. Cara untuk menyimpan referensi objek jQuery tersebut pada variabel adalah membuat variabel yang diawali dengan simbol '\$'. Kemudian variabel tersebut diisi dengan objek jQuery yang diinginkan. Pada listing~\ref{lst:jQuery3}, variabel \$listItems menyimpan objek jQuery yang berisi lokasi dari semua elemen list pada DOM tree.
+Jika ingin menggunakan \textit{selection} yang sama, maka lebih baik menggunakan objek \textit{jQuery} yang sama daripada mengulang langkah-langkah yang sudah dijelaskan. Objek \textit{jQuery} tersebut dapat disimpan pada sebuah variabel. Cara untuk menyimpan referensi objek \textit{jQuery} tersebut pada variabel adalah membuat variabel yang diawali dengan simbol '\$'. Kemudian variabel tersebut diisi dengan objek \textit{jQuery} yang diinginkan. Pada listing~\ref{lst:jQuery3}, variabel \$listItems menyimpan objek \textit{jQuery} yang berisi lokasi dari semua elemen list ada pada DOM \textit{tree}.
 
 \begin{lstlisting}[language=Javascript, caption=Menyimpan objek jQuery , label={lst:jQuery3}]
 	$listItems = $('li');
 \end{lstlisting}
 
-Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program yang dibuat, maka gunakan method ready(). Listing~\ref{lst:jQuery4} adalah potongan kode untuk mengecek apakah halaman sudah siap. Pada listing ~\ref{lst:jQuery4}, \$(document) merepresentasikan halaman web. Jika halaman sudah siap, maka kode program yang ada di dalam method ready() akan dijalankan. Listing ~\ref{lst:jQuery5} adalah pintasan dari method ready pada objek document.
+Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program yang dibuat, maka gunakan \textit{method ready()}. Maksud dari halaman sudah siap adalah DOM sudah ada pada halaman \textit{web}. Listing~\ref{lst:jQuery4} adalah potongan kode untuk mengecek apakah halaman sudah siap. Pada listing ~\ref{lst:jQuery4}, \$(document) merepresentasikan halaman web. Jika halaman sudah siap, maka kode program yang ada di dalam \textit{method ready()} akan dijalankan. Listing ~\ref{lst:jQuery5} adalah pintasan dari \textit{method ready()} pada objek \textit{document}.
 
 \begin{lstlisting}[language=Javascript, caption=Mengecek apakah halaman sudah siap , label={lst:jQuery4}]
 	$(document).ready(function(){
@@ -423,33 +423,33 @@ Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program y
 	});
 \end{lstlisting}
 
-\subsection{Mendapatkan dan Mengubahs konten elemen}
-Untuk mendapatkan konten dari elemen, dapat digunakan 2 method yaitu method .html() dan method .text(). Method .html() berfungsi untuk mendapatkan HTML yang sesuai dengan elemen pertama yang sesuai dengan jQuery selection. Method .text() berfungsi untuk mendapatkan text/tulisan dari semua elemen yang sesuai dengan jQuery selection. Untuk mengganti/update konten dari semua elemen terdapat 4 method yaitu:
+\subsection{Mendapatkan dan Mengubah Konten Elemen}
+Untuk mendapatkan konten dari elemen, dapat digunakan 2 \textit{method} yaitu \textit{method html()} dan \textit{method text()}. \textit{Method html()} berfungsi untuk mendapatkan HTML yang sesuai dengan elemen pertama yang sesuai dengan \textit{jQuery selection}. \textit{Method .text()} berfungsi untuk mendapatkan \textit{text}/tulisan dari semua elemen yang sesuai dengan \textit{jQuery selection}. Untuk mengganti konten dari semua elemen terdapat 4 \textit{method} yaitu:
 
 \begin{enumerate}
-	\item .html() : method ini memberikan konten HTML yang baru kepada semua elemen yang sesuai dengan jQuery selection.
-	\item .text() : method ini memberikan text/tulisan yang baru kepada setiap elemen.
-	\item .replaceWith() : method ini menggantikan konten setiap elemen yang sesuai dengan jQuery selection dengan kontan yang baru. Method ini juga mengembalikan elemen-elemen yang sudah diganti.
-	\item .remove() : method ini akan menbuang semua elemen yang sesuai dengan jQuery selection.
+	\item \textit{html()} : \textit{method} ini memberikan konten HTML yang baru kepada semua elemen yang sesuai dengan \textit{jQuery selection}.
+	\item \textit{text()} : \textit{method} ini memberikan \textit{text}/tulisan yang baru kepada setiap elemen yang sesuai dengan \textit{jQuery selection}.
+	\item \textit{replaceWith()} : \textit{method} ini menggantikan konten setiap elemen yang sesuai dengan \textit{jQuery selection} dengan kontan yang baru. \textit{Method} ini juga mengembalikan elemen-elemen yang sudah diganti.
+	\item \textit{remove()} : \textit{method} ini akan menbuang semua elemen yang sesuai dengan \textit{jQuery selection}.
 \end{enumerate}
 
-Selain mengubah konten dari elemen, atribut dari elemen yag dipilih dapat diakses dan diubah dengan menggunakan 4 method, diantaranya adalah :
+Selain mengubah konten dari elemen, atribut dari elemen yag dipilih dapat diakses dan diubah dengan menggunakan 4 \textit{method}, diantaranya adalah :
 
 \begin{enumerate}
-	\item .attr() : method ini berfungsi untuk mendapatkan atau mengubah atribut secara spesifik dan isi dari atribut.
-	\item .removeAttr() : method ini berfungsi untuk membuang atribut secara spesifik.
-	\item .addClass() : method ini berfungsi untuk menambah nilai dari atribut class. Method ini tidak menggantikan nilai atribut yang sudah ada.
-	\item removeClass() : method ini berfungsi untuk membuang nilai dari atribut class. Method ini tidak membuang nilai atribut kelas lainnya.
+	\item attr() : \textit{method} ini berfungsi untuk mendapatkan atau mengubah atribut secara spesifik dan isi dari atribut.
+	\item removeAttr() : \textit{method} ini berfungsi untuk membuang atribut dari sebuah elemen.
+	\item addClass() : \textit{method} ini berfungsi untuk menambah nilai dari atribut \textit{class}. \textit{Method} ini tidak menggantikan nilai atribut yang sudah ada.
+	\item removeClass() : method ini berfungsi untuk membuang nilai dari atribut \textit{class}. Method ini tidak membuang nilai atribut kelas lainnya.
 \end{enumerate}
 
 \subsection{Mendapatkan dan Mengubah Properti CSS}
-Method untuk mengubah dan mendapatkan properti CSS adalah method .css(). Untuk mendapatkan nilai properti CSS, tentukan nama properti yang ingin didapat pada method CSS. Apabila pada hasil selection memiliki elemen lebih dari 1, maka hasil yang dikembalikan adalah nilai properti CSS dari elemen pertama. Listing~\ref{lst:jQuery7} merupakan cara untuk mendapatkan nilai background color dari elemen list pertama dan akan disimpan pada variabel bernama backgroundColor. Hasil dari warna tersebut akan dikembalikan dalam nilai RGB. 
+\textit{Method} untuk mengubah dan mendapatkan properti CSS adalah \textit{method css()}. Untuk mendapatkan nilai properti CSS, tentukan nama properti yang ingin didapat pada method CSS. Apabila pada hasil selection memiliki elemen lebih dari 1, maka hasil yang dikembalikan adalah nilai properti CSS dari elemen pertama. \textit{Listing}~\ref{lst:jQuery7} merupakan cara untuk mendapatkan nilai background color dari elemen list pertama dan akan disimpan pada variabel bernama \textit{'backgroundColor'}. Hasil dari warna tersebut akan dikembalikan dalam nilai RGB. 
 
-\begin{lstlisting}[language=Javascript, caption=Mendapatkan nilai warna background color dari elemen list pertama, label={lst:jQuery7}]
+\begin{lstlisting}[language=Javascript, caption=Mendapatkan nilai warna \textit{background color} dari elemen \textit{list} pertama, label={lst:jQuery7}]
 	var backgroundColor = $('li').css('background-color');
 \end{lstlisting}
 
-Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertama dan tentukan nilai untuk properti yang sudah dipilih pada argumen pertama sebagai argumen kedua. Antara argumen pertama dan kedua dipisahkan dengan koma (','). Method ini akan mengubah semua elemen yang sesuai dengan selection. Dengan object literal notation, kita dapat mengubah sejumlah properti lainnya dalam method yang sama. Ada 3 cara penulisan pada object listeral notation, properti dan nilai properti dituliskan di dalam kurung kurawal, antara properti dan nilainya dipisahkan dengan titik dua(:), dan koma(',') memisahkan setiap pasangan properti. Listing.. merupakan cara untuk background color semua elemen list dan listing.. merupakan cara mengubah sejumlah properti menggunakan object literal notation.
+Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertama dan tentukan nilai untuk properti yang sudah dipilih pada argumen pertama sebagai argumen kedua. Antara argumen pertama dan kedua dipisahkan dengan koma (,). \textit{Method} ini akan mengubah semua elemen yang sesuai dengan \textit{selection}. Dengan \textit{object literal notation}, kita dapat mengubah sejumlah properti lainnya dalam \textit{method} yang sama. Ada 3 cara penulisan pada \textit{object listeral notation}, properti dan nilai properti dituliskan di dalam kurung kurawal, antara properti dan nilainya dipisahkan dengan titik dua(:), dan koma(,) memisahkan setiap pasangan properti. \textit{Listing}~\ref{lst:jQuery8} merupakan cara untuk background color semua elemen \textit{list} dan \textit{listing}~\ref{lst:jQuery9} merupakan cara mengubah sejumlah properti menggunakan \textit{object literal notation}.
 
 \begin{lstlisting}[language=Javascript, caption=Mengubah warna background color semua elemen list, label={lst:jQuery8}]
 	$('li').css('background-color','red');
@@ -463,7 +463,7 @@ Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertam
 \end{lstlisting}
 
 \subsection{Looping}
-Pada jQuery, dapat dilakukan looping untuk mendapatkan informasi dari setiap elemen atau untuk memberikan aksi pada setiap elemen. Method yang digunakan untuk looping adalah .each(). Method ini akan memberikan sebuah atau lebih aksi pada setiap elemen. Method ini memiliki sebuah parameter yaitu sebuah fungsi yang isinya adalah perintah-perintah yang akan dijalankan oleh setiap elemen. Contohnya terdapat pada listing~\ref{lst:jQuery6}. Pada listing~\ref{lst:jQuery6} akan dipilih elemen list. Method .each() akan menjalankan kode program yang sama untuk setiap elemen list tersebut. 'this.id' mengacu kepada id milik sebuah elemen list yang sekarang berada dalam loop. Kemudian variabel yang bernama ids akan menyimpan id setiap elemen list. \$(this) digunakan untuk membuat sebuah objek jQuery yang baru yang isinya adalah sebuah elemen yang ada sekarang. \$(this) memungkinan kita untuk menggunakan method pada elemen yang ada sekarang. Elemen list yang ada pada loop akan ditambahkan sebuah elemen span yang isinya adalah id dari elemen tersebut. Perintah ini akan dilakukan untuk setiap elemen list.
+Pada \textit{jQuery} dapat dilakukan \textit{looping} untuk mendapatkan informasi dari setiap elemen atau untuk memberikan aksi pada setiap elemen. \textit{Method} yang digunakan untuk looping adalah \textit{each()}. \textit{Method} ini akan memberikan sebuah atau lebih aksi pada setiap elemen. \textit{Method} ini memiliki sebuah parameter yaitu sebuah fungsi yang isinya adalah perintah-perintah yang akan dijalankan oleh setiap elemen. Contohnya terdapat pada listing~\ref{lst:jQuery6}. Pada listing~\ref{lst:jQuery6} akan dipilih elemen list. \textit{Method .each()} akan menjalankan kode program yang sama untuk setiap elemen \textit{list} tersebut. \textit{'this.id'} mengacu kepada id milik sebuah elemen list yang sekarang berada dalam \textit{loop}. Kemudian variabel yang bernama ids akan menyimpan id setiap elemen \textit{list}. \$(this) digunakan untuk membuat sebuah objek \textit{jQuery} yang baru yang isinya adalah sebuah elemen yang ada sekarang. \$(this) memungkinan kita untuk menggunakan \textit{method} pada elemen yang ada sekarang. Elemen \textit{list} yang ada pada \textit{loop} akan ditambahkan sebuah elemen \textit{span} yang isinya adalah id dari elemen tersebut. Perintah ini akan dilakukan untuk setiap elemen \textit{list}.
 
 \begin{lstlisting}[language=Javascript, caption=Menambah setiap elemen list dengan id list masing-masing , label={lst:jQuery6}]
 	$('li').each(function(){
@@ -473,57 +473,115 @@ Pada jQuery, dapat dilakukan looping untuk mendapatkan informasi dari setiap ele
 \end{lstlisting}
 
 \subsection{Event}
-Sama seperti Javascript, pada jQuery juga dapat ditambahkan event. Method yang digunakan untuk menambahkan event adalah .on(). Untuk memperjelas cara menggunakan method .on(), terdapat potongan kode pada listing~\ref{lst:jQuery7}. Untuk menambahkan event, maka pertama harus memilih elemen yang akan ditambahkan event dengan menggunakan selector. Pada listing~\ref{lst:jQuery10}, elemen yang dipilih adalah semua elemen list, kemudian tambahkan method .on(). Method .on() memiliki 2 parameter yaitu event yang akan digunakan dan perintah yang akan dilakukan apabila event tersebut terjadi pada elemen yang dipilih. Perintah dapat berupa sebuah fungsi anonim yaitu fungsi yang dibuat langsung atau memanggil sebuah fungsi yang sudah ada. Pada listing~\ref{lst:jQuery10}, event yang digunakan adalah 'click' dan akan diberikan sebuah fungsi anonim yang tugasnya adalah menambahkan atribut class yang bernilai 'complete'. 
+Sama seperti \textit{Javascript}, pada \textit{jQuery} juga dapat ditambahkan \textit{event}. \textit{Method} yang digunakan untuk menambahkan \textit{event} adalah \textit{on()}. Untuk memperjelas cara menggunakan \textit{method on()}, terdapat potongan kode pada \textit{listing}~\ref{lst:jQuery7}. Untuk menambahkan \textit{event}, maka pertama harus memilih elemen yang akan ditambahkan \textit{event} dengan menggunakan \textit{selector}. Pada \textit{listing}~\ref{lst:jQuery10}, elemen yang dipilih adalah semua elemen \textit{list}, kemudian tambahkan \textit{method on()}. \textit{Method .on()} memiliki 2 parameter yaitu \textit{event} yang akan digunakan dan perintah yang akan dilakukan apabila \textit{event} tersebut terjadi pada elemen yang dipilih. Perintah dapat berupa sebuah fungsi anonim yaitu fungsi yang dibuat langsung atau memanggil sebuah fungsi yang sudah ada. Pada \textit{listing}~\ref{lst:jQuery10}, \textit{event} yang digunakan adalah \textit{'click'} dan akan diberikan sebuah fungsi anonim yang tugasnya adalah menambahkan atribut \textit{class} yang bernilai \textit{'complete'}. 
 
-\begin{lstlisting}[language=Javascript, caption=Menambahkan atribut class pada setiap list menggunakan event 'click', label={lst:jQuery10}]
+\begin{lstlisting}[language=Javascript, caption=Menambahkan atribut \textit{class} pada setiap \textit{list} menggunakan event \textit{'click'}, label={lst:jQuery10}]
 	$('li').on('click',function(){
 		$(this).addClass('complete');
 	});
 \end{lstlisting}
 
-Event yang dimiliki jQuery cukup banyak. Berikut adalah event yang sering digunakan :
+Event yang dimiliki \textit{jQuery} cukup banyak. Berikut adalah \textit{event} yang sering digunakan :
 \begin{itemize}
-	\item UI : focus, blur, change
-	\item Keyboard : input, keydown, keyup, keypress
-	\item Mouse : click, dblclick, mouseup, mousedown, mouseover, mouseout, hover
-	\item Form : submit, select, change
-	\item Document : ready, load, unload
-	\item Browser : error, resize, scroll
+	\item UI : \textit{focus, blur, change}
+	\item \textit{Keyboard} : \textit{input, keydown, keyup, keypress}
+	\item \textit{Mouse} : \textit{click, dblclick, mouseup, mousedown, mouseover, mouseout, hover}
+	\item \textit{Form} : \textit{submit, select, change}
+	\item \textit{Document} : \textit{ready, load, unload}
+	\item \textit{Browser} : \textit{error, resize, scroll}
 \end{itemize}
 
-Setiap fungsi event handling menerima sebuah event object. Event object memiliki properti dan method yang berhubungan dengan event yang sudah terjadi. Contoh kode program dapat dilihat pada listing~\ref{lst:jQuery11}. Pada listing~\ref{lst:jQuery11}, pada parameter function terdapat parameter yang bernama event. Parameter yang bernama event ini adalah event object. Kemudian tipe dari event object tersebut disimpan pada variabel yang bernama eventType. 
+Setiap fungsi \textit{event handling} menerima sebuah \textit{event object}. \textit{Event object} memiliki properti dan \textit{method} yang berhubungan dengan \textit{event} yang sudah terjadi. Contoh kode program dapat dilihat pada \textit{listing}~\ref{lst:jQuery11}. Pada \textit{listing}~\ref{lst:jQuery11}, pada parameter \textit{function} terdapat parameter yang bernama \textit{event}. Parameter yang bernama \textit{event} ini adalah \textit{event object}. Kemudian tipe dari \textit{event object} tersebut disimpan pada variabel yang bernama \textit{eventType}. 
 
-\begin{lstlisting}[language=Javascript, caption=Mendapatkan tipe event dari event object, label={lst:jQuery11}]
+\begin{lstlisting}[language=Javascript, caption=Mendapatkan tipe \textit{event} dari \textit{event object}, label={lst:jQuery11}]
 	$('li').on('click',function(event){
 		eventType = event.type;
 	});
 \end{lstlisting}
 
-Event object memiliki 7 properti, diantaranya adalah:
+\textit{Event object} memiliki 7 properti, diantaranya adalah:
 
 \begin{itemize}
-	\item type : tipe dari event contohnya adalah click, mouseover
-	\item which : tombol atau key yang sudah ditekan
-	\item data : sebuah object literal yang mengandung informasi tambahan yang diberikan ke fungsi lain ketika event terjadi
-	\item target : elemen pada DOM yang memulai event
-	\item pageX : posisi mouse dihitung dari ujung kiri viewport 
-	\item pageY : posisi mouse dihitung dari viewport paling atas
-	\item timeStamp : jumlah milisekon dihitung dari 1 Januari 1970 sampai event terjadi
+	\item \textit{type} : tipe dari \textit{event} contohnya adalah \textit{click, mouseover}
+	\item \textit{which} : tombol atau key yang sudah ditekan
+	\item \textit{data} : sebuah \textit{object literal} yang mengandung informasi tambahan yang diberikan ke fungsi lain ketika \textit{event} terjadi
+	\item \textit{target} : elemen pada DOM yang memulai \textit{event}
+	\item \textit{pageX} : posisi \textit{mouse} dihitung dari ujung kiri \textit{viewport} 
+	\item \textit{pageY} : posisi \textit{mouse} dihitung dari \textit{viewport} paling atas
+	\item \textit{timeStamp} : jumlah milisekon dihitung dari 1 Januari 1970 sampai \textit{event} terjadi
 \end{itemize}
 
-Event object hanya memiliki 2 method yaitu .preventDefault() dan .stopPropagation(). Method .preventDefault() akan mencegah pengguna untuk submit form dan method .stopPropagation() akan memberhentikan event dari bubbling sampai ancestor.
+\textit{Event object} hanya memiliki 2 \textit{method} yaitu \textit{preventDefault()} dan \textit{stopPropagation()}. \textit{Method preventDefault()} akan mencegah pengguna untuk \textit{submit form} dan \textit{method stopPropagation()} akan memberhentikan \textit{event} dari \textit{bubbling} sampai \textit{ancestor}.
 
 \subsection{AJAX}
-AJAX(Asynchronous Javascript and XML) adalah sebuah teknik pengembangan web yang digunakan untuk memuat data pada bagian halaman web tanpa memuat ulang/refresh halaman web. Penggunaan AJAX yang umum adalah sebagai berikut:
+AJAX(Asynchronous Javascript and XML) adalah sebuah teknik pengembangan \textit{web} yang digunakan untuk memuat data pada bagian halaman \textit{web} tanpa memuat ulang/\textit{refresh} halaman \textit{web}. Penggunaan AJAX yang umum adalah sebagai berikut:
 
 \begin{itemize}
-	\item Live search/autocomplete yang dapat ditemukan pada Google search.
+	\item \textit{Live search/autocomplete} yang dapat ditemukan pada \textit{Google search}.
 	\item Website dengan konten user-generated yang dapat menampilkan informasi pada website, contohnya adalah Twitter dan Flickr
 	\item Menambah barang ke keranjang pada situs belanja online. Barang yang ditambahkan akan diupdate tanpa meninggalkan halaman tersebut.
 	\item Register username pada website yang akan mengecek apakah username sudah digunakan oleh orang lain atau tidak.
 \end{itemize}
 
-AJAX menggunakan asynchronous processing model yang artinya adalah user dapat melakukan hal lain ketika browser sedang menunggu data untuk dimuat. Ketika halaman web sudah dimuat dan jika pengguna ingin mengupdate apa yang ingin dilihat pada browser, maka pengguna biasanya akan memuat ulang halaman web. Hal ini akan membuat pengguna harus menunggu halaman web selesai dimuat dan dirender oleh browser. Dengan menggunakan AJAX, kita dapat mengubah konten sebuah elemen jika ingin mengupdate sebagian halaman web. Caranya adalah dengan menambahkan event dan request konten baru ke server menggunakan asynchronous request. Ketika data sedang dimuat, maka halaman web akan tetap dimuat dan pengguna dapat tetap berinteraksi dengan halaman web. Setelah server merespon request, event special AJAX akan trigger bagian lain dari script yang membaca data dari server dan mengupdate hanya sebuah bagian dari halaman web. Hal ini akan membuat data dimuat lebih cepat dan pengguna dapat berinteraksi dengan halaman web ketika menunggu dapat untuk dimuat.
+AJAX menggunakan \textit{asynchronous processing model} yang artinya adalah pengguna dapat melakukan hal lain ketika \textit{browser} sedang menunggu data untuk dimuat. Ketika halaman \textit{web} sudah dimuat dan jika pengguna ingin mengubah sesuatu pada \textit{browser}, maka pengguna biasanya akan memuat ulang halaman \textit{web}. Hal ini akan membuat pengguna harus menunggu halaman \textit{web} selesai dimuat dan di\textit{render} oleh \textit{browser}. Dengan menggunakan AJAX, kita dapat mengubah konten sebuah elemen jika ingin memperbarui sebagian halaman \textit{web}. Caranya adalah dengan menambahkan \textit{event} dan request konten baru ke server menggunakan \textit{asynchronous request}. Ketika data sedang dimuat, maka halaman \textit{web} akan tetap dimuat dan pengguna dapat tetap berinteraksi dengan halaman \textit{web}. Setelah server merespon \textit{request}, \textit{event special} AJAX akan \textit{trigger} bagian lain dari \textit{script} yang membaca data dari server dan \textit{memperbarui} hanya sebuah bagian dari halaman \textit{web}. Hal ini akan membuat data dimuat lebih cepat dan pengguna dapat berinteraksi dengan halaman \textit{web} ketika menunggu dapat untuk dimuat.
+
+Langkah-langkah AJAX mengirim \textit{request} dan menerima respon dari server adalah : Pertama, \textit{browser} meminta informasi dari server. Permintaan tersebut dapat mengandung informasi yang dibutuhkan oleh server untuk diproses. Browser mengimplemen sebuah objek yang bernama \textit{XMLHttpRequest} untuk menangani \textit{Ajax request}. Browser tidak menunggu respon dari server. Setelah mengirim \textit{request} dan server menerima \textit{Ajax request}, server akan mengirmkan HTML atau data dalam format lainnya seperti JSON atau XML. Setelah server selesai merespon \textit{request} tersebut, \textit{browser} akan menjalankan \textit{event}. Event ini dapat digunakan untuk \textit{trigger} fungsi-fungsi \textit{Javascript} yang akan memproses data dan memnambahkanya ke sebuah bagian/elemen dari halaman \textit{web}.
+
+\subsubsection{Ajax \textit{Request} dan \textit{Response}}
+Untuk membuat \textit{Ajax request}, \textit{browser} menggunakan objek \textit{XMLHttpRequest}. Ketika server merespon \textit{request} dari browser, objek \textit{XMLHttpRequest} yang sama akan memproses hasilnya. Pada \textit{listing}~\ref{lst:jQuery12} terdapat potongan kode untuk membuat \textit{Ajax request}. 
+
+\begin{lstlisting}[language=Javascript, caption=Membuat \textit{Ajax request} , label={lst:jQuery12}]
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'data/test.json',true);
+	xhr.send();
+\end{lstlisting}
+
+Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adalah membuat objek \textit{XMLHttpRequest} yang disimpan pada variabel bernama xhr. Kemudian \textit{method open()} berfungsi untuk menyiapkan request. \textit{Method open} memiliki 3 parameter yaitu HTTP \textit{method}, \textit{url} dari halaman yang akan menangani \textit{request}, dan tipe data \textit{boolean} yang menentukan apakah \textit{request} tersebut \textit{asynchronous} atau tidak. Pada \textit{listing}~\ref{lst:jQuery12} \textit{request} tersebut menggunakan HTTP \textit{method} yaitu GET, \textit{url} halamanya adalah '\textit{data/test.json}', dan asynchronous. Method .send() digunakan untuk mengirimkan \textit{request} yang sudah disiapkan. Informasi tambahan dapat dikirimkan ke server yang ditulliskan pada parameter method .send(). Sesudah mengirimkan request dan menerima respon dari server, data yang diterima akan diproses. Pada \textit{listing}~\ref{lst:jQuery13} terdapat potongan kode untuk menerima respon dan memproses data dari server. Setelah \textit{browser} menerima dan memuat respon dari server, event \textit{onload} akan dijalankan dan akan \textit{trigger} sebuah fungsi. Di dalam fungsi tersebut, akan dicek status dari objek tersebut untuk memastikan apakah respon dari server tidak ada masalah. 
+
+\begin{lstlisting}[language=Javascript, caption=Memproses respon yang didapat dari server, label={lst:jQuery13}]
+	xhr.onload = function(){
+		if(xhr.status === 200){
+			//proses data yang sudah diterima dari server
+		}
+	}
+\end{lstlisting}
+
+\textit{jQuery} menyediakan beberapa \textit{method} untuk menangani \textit{Ajax request} diantaranya adalah :
+
+\begin{itemize}
+	\item load() : memuat HTML dalam sebuah elemen.
+	\item \$.get() : memuat data menggunakan method HTTP GET. Method ini digunakan untuk request data dari server.
+	\item \$.post() : memuat data menggunakan method HTTP POST. Method ini digunakan untuk mengirim data ke server yang mengubah data pada server.
+	\item \$.getJSON() : memuat data JSON menggunakan GET. 
+	\item \$.getScript() : memuat dan mengeksekusi data pada Javascript menggunakan GET.
+	\item \$.ajax(): method ini digunakan untuk menjalankan semua request. 
+\end{itemize}
+
+Ketika menggunakan method load(), HTML yang dikirim dari server dan dimasukkan ke jQuery selection. jQuery memiliki objek yaitu jqXHR yang mempermudah untuk menangani data yang dikirim dari server. Berikut adalah properti dan method dari jqXHR :
+
+\begin{itemize}
+	\item responseText : mengembalikan data text
+	\item responseXML : mengembalikan data XML
+	\item status : kode status
+	\item statusText : deskripsi dari status
+	\item done() : method yang digunakan untuk mengeksekusi kode apabila request berhasil
+	\item fail() : method yang digunakan untuk mengeksekusi kode apabila request gagal
+	\item always() : method yang digunakan untuk mengeksekusi kode apabila request berhasil atau gagal
+	\item abort() : menghentikan komunikasi
+\end{itemize} 
+
+Method \$.ajax() memberikan kontrol lebih terhadap Ajax request. Maksud dari memberi kontrol lebih adalah method ini memiliki lebih dari 30 setting yang digunakan untuk mengontrol Ajax request. Semua setting dituliskan menggunakan object literal notation. Berikut adalah setting yang sering dipakai dalam method \$.ajax() :
+
+\begin{itemize}
+	\item type : mendapatkan nilai GET dan POST tergantung dari request. Request tersebut dapat dibuat menggunakan HTTP GET atau POST.
+	\item url : request yang akan dikirimkan
+	\item data : data yang akan dikirimkan ke server bersama dengan request
+	\item success : sebuah fungsi yang akan dijalankan apabila Ajax request berhasil. 
+	\item error : sebuah fungsi yang akan dijalankan apabila terdapat error pada Ajax request. 
+	\item beforeSend : sebuah fungsi yang akan dijalankan sebelum Ajax request dikirmkan.
+	\item complete : setting yang akan dijalankan setelah event success atau error
+	\item timeout : angka dalam milisekon untuk menunggu sebelum event akan gagal
+\end{itemize}
 
 \section{\textit{Git}}
 \label{sec:Git}
