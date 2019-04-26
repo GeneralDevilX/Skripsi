@@ -41,7 +41,7 @@
 \label{sec:snake}
 \textit{Snake} merupakan permainan mengendalikan ular untuk mendapatkan makanan yang terdapat pada labirin. Dalam permainan ini, pemain mengendalikan ular untuk mendapatkan makanan sebanyak-banyaknya. Setiap ular memakan makanan, maka skor akan bertambah 1 poin dan tubuh ular akan bertambah panjang. Biasanya makanan hanya ada 1 saja pada sebuah labirin. Ketika makanan itu sudah termakan oleh ular, makanan tersebut akan ditempatkan secara acak. Ular dapat bergerak ke atas, bawah, kiri, dan kanan. Permainan akan berakhir jika ular menabrak dinding yang terdapat pada labirin atau ular tersebut menabrak tubuhnya sendiri. \\
 
-Permainan \textit{Snake} ini dapat dimainkan secara \textit{singleplayer} atau \textit{multiplayer}. \textit{Singleplayer game} adalah permainan yang dapat dimainkan oleh 1 pemain. \textit{Multiplayer game} adalah permainan yang dapat dimainkan oleh beberapa pemain. Pada umumnya, permainan \textit{Snake} dimainkan secara \textit{singleplayer}. Contoh \textit{singleplayer game Snake} adalah \textit{Snake} pada telepon genggam \textit{Nokia} yang dapat dilihat pada Gambar~\ref{fig:nokiaSnake}\footnote{https://en.wikipedia.org/wiki/Snake\_(video\_game\_genre)} dan contoh \textit{multiplayer game Snake} adalah \textit{Slither.io} yang dapat dilihat Gambar~\ref{fig:slither}\footnote{https://play.google.com/store/apps/details?id=air.com.hypah.io.slither}. \textit{Snake} dapat dimainkan menggunakan \textit{smartphone} dan \textit{web browser}.  
+Permainan \textit{Snake} ini dapat dimainkan secara \textit{singleplayer} atau \textit{multiplayer}. \textit{Singleplayer game} adalah permainan yang dapat dimainkan oleh 1 pemain. \textit{Multiplayer game} adalah permainan yang dapat dimainkan oleh beberapa pemain. Pada umumnya, permainan \textit{Snake} dimainkan secara \textit{singleplayer}. Contoh \textit{singleplayer game Snake} adalah \textit{Snake} pada telepon genggam \textit{Nokia} yang dapat dilihat pada Gambar~\ref{fig:nokiaSnake}\footnote{https://en.wikipedia.org/wiki/Snake\_(video\_game\_genre)} dan contoh \textit{multiplayer game Snake} adalah \textit{Slither.io} yang dapat dilihat Gambar~\ref{fig:slither}\footnote{https://play.google.com/store/apps/details?id=air.com.hypah.io.slither}. \textit{Snake} sudah dapat dimainkan menggunakan \textit{smartphone} dan \textit{web browser}.  
 
 \begin{figure}[H]
 	\centering  
@@ -59,7 +59,7 @@ Permainan \textit{Snake} ini dapat dimainkan secara \textit{singleplayer} atau \
 
 \section{HTML5 \textit{Canvas}}
 \label{sec:HTML5Canvas}
-HTML5 Canvas adalah sebuah daerah \textit{bitmap} yang dapat dimanipulasi oleh \textit{Javascript} \cite{fulton2013html5}. Pada daerah \textit{bitmap} tersebut, \textit{pixel-pixel} akan di\textit{render} oleh canvas. Setiap \textit{frame}, HTML5 Canvas akan menggambar pada area \textit{bitmap} tersebut menggunakan \textit{Canvas} API(\textit{Application Programming Interface}) yang dipanggil pada \textit{Javascript}. API dari HTML5 Canvas yang umum adalah 2D \textit{Context}. Dengan adanya 2D \textit{Context}, \textit{programmer} dapat membuat bentuk 2D, menampilkan gambar, \textit{render} tulisan, memberi warna, membuat garis dan kurva, dan manipulasi \textit{pixel}. HTML5 Canvas tidak hanya digunakan untuk menggambar dan menampilkan gambar serta tulisan. HTML5 Canvas dapat digunakan untuk membuat animasi, aplikasi pada \textit{web} dan permainan. 
+HTML5 Canvas adalah sebuah daerah \textit{bitmap} yang dapat dimanipulasi oleh \textit{Javascript} \cite{fulton2013html5}. Pada daerah \textit{bitmap} tersebut, \textit{pixel-pixel} akan di\textit{render} oleh canvas. Setiap \textit{frame}, HTML5 Canvas akan menggambar pada area \textit{bitmap} tersebut menggunakan \textit{Canvas} API(\textit{Application Programming Interface}) yang dipanggil pada \textit{Javascript}. API dari HTML5 Canvas yang umum adalah 2D \textit{Context}. Dengan adanya 2D \textit{Context}, \textit{programmer} dapat membuat bentuk 2D, menampilkan gambar, \textit{render} tulisan, memberi warna, membuat garis dan kurva, dan manipulasi \textit{pixel}. HTML5 Canvas tidak hanya digunakan untuk menggambar dan menampilkan gambar serta tulisan. HTML5 Canvas juga dapat digunakan untuk membuat animasi, aplikasi pada \textit{web} dan permainan. 
 
 Untuk menambahkan \textit{canvas} pada halaman HTML, diperlukan \textit{tag} <canvas>. Pada \textit{listing} ~\ref{lst:canvas} terdapat potongan kode untuk menambahkan \textit{canvas} pada halaman HTML. 
 
@@ -89,19 +89,51 @@ Canvas memiliki beberapa atribut diantaranya adalah:
 
 \section{\textit{Javascript}}
 \label{sec:Javascript}
-\textit{Javascript} adalah bahasa pemrograman yang ringan, \textit{interpreted} dan berorientasi objek yang digunakan pada halaman \textit{web} \cite{MDN:05:Web}. \textit{Javascript} dapat membuat objek dengan menambahkan \textit{method} dan atributnya sama seperti bahasa pemrograman C++ dan \textit{Java}. Setelah objek diinisialisasi, maka objek tersebut dapat dijadikan \textit{blueprint} untuk membuat objek lain yang mirip. \textit{Javascript} dapat digunakan untuk mengimplementasi hal yang kompleks pada halaman web. Contohnya adalah menamplikan peta yang interaktif dan membuat animasi 2D/3D. Selain \textit{Javascript}, HTML(\textit{HyperText Markup Language}) dan CSS(\textit{Cascading Style Sheet}) merupakan bagian/komponen penting dalam pembuatan halaman \textit{web}.\\
+\textit{Javascript} adalah bahasa pemrograman yang ringan, \textit{interpreted} dan berorientasi objek yang digunakan pada halaman \textit{web} \cite{MDN:05:Web}. \textit{Javascript} dapat membuat objek dengan menambahkan \textit{method} dan atributnya sama seperti bahasa pemrograman C++ dan \textit{Java}. Setelah objek diinisialisasi, maka objek tersebut dapat dijadikan \textit{blueprint} untuk membuat objek lain yang mirip. \textit{Javascript} dapat digunakan untuk mengimplementasi hal yang kompleks pada halaman \textit{web}. Contohnya adalah menamplikan peta yang interaktif dan membuat animasi 2D/3D. Selain \textit{Javascript}, HTML(\textit{HyperText Markup Language}) dan CSS(\textit{Cascading Style Sheet}) merupakan bagian/komponen penting dalam pembuatan halaman \textit{web}.\\
 
-Untuk menambahkan \textit{Javascript} pada sebuah halaman web yang dibuat, gunakan \textit{tag} <script>. Ada 2 cara untuk menambahkan Javascript yaitu menambahkan langsung di halaman web tersebut(\textit{Internal Javascript}) atau menambahkan \textit{file Javascript} terpisah(\textit{External Javascript}).
+Untuk menambahkan \textit{Javascript} pada sebuah halaman web yang dibuat, gunakan \textit{tag} <script>. Ada 2 cara untuk menambahkan Javascript yaitu menambahkan langsung di halaman web tersebut(\textit{Internal Javascript}) atau menambahkan \textit{file Javascript} terpisah(\textit{External Javascript}). Pada \textit{Listing}~\ref{lst:script1} dan \textit{Listing}~\ref{lst:script2} terdapat potongan kode untuk menambah \textit{script} secara langsung di halaman \textit{web} dan menambah \textit{script} secara terpisah.
+
+\begin{lstlisting}[language=HTML, caption=\textit{Internal Javascript}, label={lst:script1}]
+	<!DOCTYPE html>
+		<html>
+			<body> 
+
+			<h1>A Web Page</h1>
+			<p id="demo">A Paragraph</p>
+
+			<script>
+				// tuliskan script di sini
+			</script>
+
+			</body>
+		</html>
+		
+\end{lstlisting}
+
+\begin{lstlisting}[language=HTML, caption=\textit{External Javascript}, label={lst:script2}]
+	<!DOCTYPE html>
+		<html>
+			<body> 
+
+			<h1>A Web Page</h1>
+			<p id="demo">A Paragraph</p>
+
+			<script src="myScript1.js"></script>
+
+			</body>
+		</html>
+	
+\end{lstlisting}
 
 \subsection{Variabel}
-Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variabel pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel pada \textit{Javascript} tidak perlu menuliskan tipe datanya ketika mendeklarasikan variabel. Pada \textit{listing} ~\ref{lst:var1} terdapat potongan kode untuk mendeklarasikan variabel.
+Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variabel pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel pada \textit{Javascript} tidak perlu menuliskan tipe datanya ketika mendeklarasikan variabel karena tipe data variabel akan otomatis mengikuti tipe data nilai yang di\textit{assign} ke variabel tersebut.  Pada \textit{listing} ~\ref{lst:var1} terdapat potongan kode untuk mendeklarasikan variabel.
 
 \begin{lstlisting}[language=Javascript, caption=Deklarasi variabel, label={lst:var1}]
 	var myVariable;
 	
 \end{lstlisting}
 
-Nilai variabel pada potongan kode di atas adalah \textit{undifined} karena variabel tersebut tidak diberi nilai/\textit{value}. Pada \textit{listing} ~\ref{lst:var2} terdapat potongan kode untuk mengisi nilai pada variabel. 
+Nilai variabel pada listing~\ref{var1} adalah \textit{undifined} karena variabel tersebut tidak diberi nilai/\textit{value}. Pada \textit{listing} ~\ref{lst:var2} terdapat potongan kode untuk mengisi nilai pada variabel. 
 
 \begin{lstlisting}[language=Javascript, caption=Mengisi nilai sebuah variabel, label={lst:var2}]
 	myVariable = 3;	
@@ -126,7 +158,7 @@ Variabel dapat menyimpan beberapa tipe data diantaranya adalah:
 \end{lstlisting}
 
 \subsection{\textit{Function}}
-\textit{Function} adalah sekumpulan perintah/\textit{statements} untuk menjalankan suatu tugas atau menghitung nilai. Untuk membuat \textit{function}, digunakan \textit{keyword 'function'}, kemudian diikuti dengan nama \textit{function} tersebut, parameter yang dituliskan di dalam kurung, dan \textit{statement}/perintah \textit{Javascript} yang ditulis di dalam kurung kurawal. Parameter pada \textit{function} bisa lebih dari 1 yang penulisanya dipisahkan oleh tanda koma (,). \textit{Function} bisa memiliki parameter atau tidak. Pada \textit{listing} ~\ref{lst:func1} terdapat potongan kode untuk membuat \textit{function} penjumlahan 2 buah bilangan.
+\textit{Function} adalah sekumpulan perintah/\textit{statements} untuk menjalankan suatu tugas atau menghitung nilai. Untuk membuat \textit{function}, digunakan \textit{keyword 'function'}, kemudian diikuti dengan nama \textit{function} tersebut, parameter yang dituliskan di dalam kurung, dan \textit{statement}/perintah \textit{Javascript} yang ditulis di dalam kurung kurawal. Parameter pada \textit{function} bisa lebih dari 1 yang penulisanya dipisahkan oleh koma. \textit{Function} bisa memiliki parameter atau tidak. Pada \textit{Listing}~\ref{lst:func1} terdapat potongan kode untuk membuat \textit{function} penjumlahan 2 buah bilangan.
 
 \begin{lstlisting}[language=Javascript, caption=\textit{Function} penjumlahan 2 buah bilangan, label={lst:func1}]
 	function penjumlahan(angka1,angka2){
@@ -136,7 +168,7 @@ Variabel dapat menyimpan beberapa tipe data diantaranya adalah:
 	
 \end{lstlisting}
 
-Setelah membuat \textit{function}, \textit{function} tersebut tidak langsung dieksekusi. Membuat \textit{function} hanya memberi nama \textit{function} tersebut dan mendeskripsikan apa yang akan dilakukan oleh \textit{function} tersebut apabila dipanggil. Dengan memanggil \textit{function}, maka \textit{function} akan dieksekusi. Pada \textit{listing} ~\ref{lst:func2} terdapat potongan kode untuk memanggil \textit{function} dengan nama penjumlahan.
+Setelah membuat \textit{function}, \textit{function} tersebut tidak langsung dieksekusi. Membuat \textit{function} hanya memberi nama \textit{function} tersebut dan mendeskripsikan apa yang akan dilakukan oleh \textit{function} tersebut apabila dipanggil. Dengan memanggil \textit{function}, maka \textit{function} akan dieksekusi. Pada \textit{listing}~\ref{lst:func2} terdapat potongan kode untuk memanggil \textit{function} dengan nama penjumlahan.
 
 \begin{lstlisting}[language=Javascript, caption=Memanggil \textit{function} penjumlahan, label={lst:func2}]
 	penjumlahan(10,5);
@@ -144,14 +176,14 @@ Setelah membuat \textit{function}, \textit{function} tersebut tidak langsung die
 \end{lstlisting}
 
 \subsection{Menggambar pada \textit{Canvas}}
-Sesudah menuliskan \textit{tag} <canvas> pada HTML, \textit{canvas} tidak bisa langsung digambar. Karena itu perlu ditambahkan \textit{drawing context} pada \textit{Javascript}. Pada \textit{listing} ~\ref{lst:drawcontx} terdapat potongan kode untuk menambahkan \textit{drawing context}.
+Sesudah menuliskan \textit{tag} <canvas> pada HTML, \textit{canvas} tidak bisa langsung digambar. Karena itu perlu ditambahkan \textit{drawing context} pada \textit{Javascript}. Pada \textit{listing}~\ref{lst:drawcontx} terdapat potongan kode untuk menambahkan \textit{drawing context}.
 
 \begin{lstlisting}[language=Javascript, caption=Menambahkan \textit{drawing context canvas}, label={lst:drawcontx} ]
 	var myCanvas = document.getElementById('canvas');
 	var context = myCanvas.getContext('2d');
 \end{lstlisting}
 
-Berdasarkan \textit{listing} ~\ref{lst:drawcontx}, variabel myCanvas menyimpan objek dengan id = 'canvas'. Id ini mengacu ke objek \textit{canvas} pada HTML yang memilki id bernama canvas. Variabel myCanvas sekarang sudah menyimpan objek \textit{canvas}. Kemudian variabel context menyimpan \textit{drawing context} 2D. Sesudah itu, \textit{canvas} tersebut dapat digambar dengan bentuk 2D, garis, kurva, membuat tulisan, dan menambahkan gambar. Selain untuk menggambar, bentuk-bentuk tersebut dapat diberi warna sesuai dengan keinginan.\\
+Berdasarkan \textit{listing}~\ref{lst:drawcontx}, variabel \textit{myCanvas} menyimpan objek dengan \textit{id = 'canvas'}. \textit{Id} ini mengacu ke objek \textit{canvas} pada HTML yang memilki \textit{id} bernama \textit{canvas}. Variabel \textit{myCanvas} sekarang sudah menyimpan objek \textit{canvas}. Kemudian variabel \textit{context} menyimpan \textit{drawing context} 2D. Sesudah itu, \textit{canvas} tersebut dapat digambar dengan bentuk 2D, garis, kurva, membuat tulisan, dan menambahkan gambar. Selain untuk menggambar, bentuk-bentuk tersebut dapat diberi warna sesuai dengan keinginan.\\
 
 Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat tersebut akan menempatkan gambar tersebut pada \textit{canvas}. Posisi awal/\textit{origin} pada \textit{canvas} adalah (0,0) yang terletak di ujung kiri atas \textit{canvas}. Gambar~\ref{fig:grid} adalah penempatan kotak biru pada \textit{canvas} terhadap \textit{origin}.
 
@@ -162,7 +194,7 @@ Untuk menggambar bentuk 2D atau garis, diperlukan koordinat x dan y. Koordinat t
 	\label{fig:grid} 
 \end{figure} 
 
-Pada di atas, titik ujung kiri kotak biru tersebut berjarak x \textit{pixel} dari kiri dan berjarak y \textit{pixel} dari atas. 
+Pada Gambar~\ref{fig:grid} di atas, titik ujung kiri kotak biru tersebut berjarak x \textit{pixel} dari sumbu y dan berjarak y \textit{pixel} dari sumbu x. 
 
 \subsubsection{Menggambar Persegi Panjang}
 Ada 3 cara untuk menggambar persegi panjang:
@@ -185,21 +217,21 @@ Fungsi tersebut memiliki parameter yang sama. Parameter x dan y untuk menentukan
 	\item Sesudah \textit{path} tersebut sudah dibuat, \textit{path} tersebut dapat di\textit{render} menggunakan \textit{stroke} atau \textit{fill}.
 \end{enumerate}
 
-Langkah pertama untuk membuat \textit{path} baru adalah dengan menggunakan fungsi \textit{beginPath()}. Setelah itu, perintah-perintah untuk menggambar dapat digunakan untuk membuat bentuk-bentuk yang diinginkan. Apabila sudah selesai menggambar, gunakan fungsi \textit{stroke()} untuk menggambar outline dari \textit{path} tersebut atau \textit{fill()} untuk mengisi area path tersebut. Setelah itu, gunakan fungsi \textit{closePath()} untuk menutup bentuk tersebut dengan cara menggambar garis lurus dari posisi titik terakhir ke titik awal. Fungsi lainnya yang menjadi bagian dari membuat \textit{path} adalah fungsi \textit{moveTo()}. Fungsi ini diibaratkan seperti mengangkat sebuah pensil dari sebuah titik pada kertas kemudian menempatkanya pada titik yang diinginkan. \textit{Listing} ~\ref{lst:move} merupakan fungsi \textit{moveTo()}.
+Langkah pertama untuk membuat \textit{path} baru adalah dengan menggunakan fungsi \textit{beginPath()}. Setelah itu, perintah-perintah untuk menggambar dapat digunakan untuk membuat bentuk-bentuk yang diinginkan. Apabila sudah selesai menggambar, gunakan fungsi \textit{stroke()} untuk menggambar outline dari \textit{path} tersebut atau \textit{fill()} untuk mengisi area path tersebut. Setelah itu, gunakan fungsi \textit{closePath()} untuk menutup bentuk tersebut dengan cara menggambar garis lurus dari posisi titik terakhir ke titik awal. Fungsi lainnya yang menjadi bagian dari membuat \textit{path} adalah fungsi \textit{moveTo()}. Fungsi ini diibaratkan seperti mengangkat sebuah pensil dari sebuah titik pada kertas kemudian menempatkanya pada titik yang diinginkan. \textit{Listing}~\ref{lst:move} merupakan fungsi \textit{moveTo()}.
 
 \begin{lstlisting}[language=Javascript, caption=Fungsi \textit{moveTo()}, label={lst:move}]
 	moveTo(x,y);
 \end{lstlisting}
 
-Fungsi \textit{moveTo()} memiliki 2 parameter yaitu x dan y yang merupakan posisi titik pada \textit{canvas}. Ketika canvas sudah diinisialsasi dan fungsi \textit{beginPath()} sudah dipanggil, fungsi \textit{moveTo()} berguna sebagai penempatan titik awal untuk menggambar. Fungsi \textit{lineTo()} digunakan untuk menggambar sebuah garis. \textit{Listing} ~\ref{lst:line} merupakan fungsi \textit{lineTo()}.
+Fungsi \textit{moveTo()} memiliki 2 parameter yaitu x dan y yang merupakan posisi titik pada \textit{canvas}. Ketika \textit{canvas} sudah diinisialisasi dan fungsi \textit{beginPath()} sudah dipanggil, fungsi \textit{moveTo()} berguna sebagai penempatan titik awal untuk menggambar. Fungsi \textit{lineTo()} digunakan untuk menggambar sebuah garis. \textit{Listing}~\ref{lst:line} merupakan fungsi \textit{lineTo()}.
 
 \begin{lstlisting}[language=Javascript, caption=Fungsi \textit{lineTo()}, label={lst:line}]
 	lineTo(x,y);
 \end{lstlisting}
 
-Fungsi \textit{lineTo()} memiliki 2 parameter yaitu x dan y yang merupakan titik akhir dari garis. Garis akan digambar mulai dari posisi titik awal sampai ke posisi titik akhir garis. Titik awal ini bergantung pada titik akhir dari \textit{path} sebelumya. Titik awal dapat diubah dengan menggunakan fungsi \textit{moveTo()}.
+Fungsi \textit{lineTo()} memiliki 2 parameter yaitu x dan y yang merupakan titik akhir dari garis. Garis akan digambar mulai dari posisi titik awal sampai ke posisi titik akhir garis. Titik awal ini bergantung pada titik akhir dari \textit{path} sebelumya. Titik awal dapat diubah dengan menggunakan fungsi \textit{moveTo()}.\\
 
-Fungsi \textit{arc()} digunakan untuk menggambar lingkaran atau busur. \textit{Listing} ~\ref{lst:arc} merupakan fungsi \textit{arc()}.
+Fungsi \textit{arc()} digunakan untuk menggambar lingkaran atau busur. \textit{Listing}~\ref{lst:arc} merupakan fungsi \textit{arc()}.
 
 \begin{lstlisting}[language=Javascript, caption=Fungsi \textit{arc()}, label={lst:arc}]
 	arc(x,y,radius,startAngle,endAngle,anticlockwise);
@@ -222,14 +254,14 @@ Parameter x dan y adalah posisi titik tengah busur pada \textit{canvas}. Radius 
 
 Berikut adalah fungsi \textit{quadratic} dan \textit{cubic B\'ezier curve} :
 \begin{itemize}
-	\item \textit{quadraticCurveTo(cp1,cp2,x,y)} : menggambar \textit{quadratic B\'ezier curve} dari posisi pensil sekarang ke titik akhir yaitu x dan y, dengan titik control point yaitu cp1 dan cp2.
-	\item bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y) : menggambar \textit{cubic B\'ezier curve} dari posisi pensil sekarang ke titik akhir yaitu x dan y, dengan 2 titik control point yaitu (cp1x,cp1y) dan (cp2x,cp2y).
+	\item \textit{quadraticCurveTo(cp1,cp2,x,y)} : menggambar \textit{quadratic B\'ezier curve} dari posisi pensil sekarang ke titik akhir yaitu x dan y, dengan \textit{control point} yaitu cp1 dan cp2.
+	\item \textit{bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y)} : menggambar \textit{cubic B\'ezier curve} dari posisi pensil sekarang ke titik akhir yaitu x dan y, dengan 2  \textit{control point} yaitu (cp1x,cp1y) dan (cp2x,cp2y).
 \end{itemize}
 
 \subsection{\textit{Object Oriented Programming Javascript}}
 OOP (\textit{Object Oriented Programming}) adalah sebuah paradigma \textit{programming} yang menggunakan abstraksi untuk membuat objek-objek yang ada pada dunia nyata. Bahasa pemrograman seperti \textit{Java}, C++, \textit{Ruby, Phyton}, PHP, dan \textit{Objective-C} sudah mendukung OOP. Dalam OOP, setiap objek dapat menerima pesan, memproses data dan mengirim pesan ke objek lain. Program yang menggunakan konsep OOP ini mudah untuk dimengerti dan lebih mudah untuk dikembangkan oleh \textit{programmer}. \\
 
-Ide umum pada OOP adalah menggunakan objek untuk memodelkan benda-benda yang ada pada dunia nyata. Objek tersebut kemudian direpresentasi pada program yang dibuat. Objek-objek dapat berisi data, fungsionalitas dan \textit{behaviour} yang merepresentasikan informasi tentang objek tersebut dan tugas objek. Contohnya, bila ingin membuat objek sebuah mobil. Mobil memiliki beberapa informasi diantaranya adalah merk mobil, berat mobil, warna mobil dan tahun produksi. Informasi tersebut dapat disebut sebagai properti dari objek. Mobil dapat bergerak maju, berbelok ke kanan, berbelok ke kiri, bergerak mundur dan berhenti. Hal-hal yang dapat dilakukan oleh objek disebut sebagai method dari objek. 
+Ide umum pada OOP adalah menggunakan objek untuk memodelkan benda-benda yang ada pada dunia nyata. Objek tersebut kemudian direpresentasi pada program yang dibuat. Objek-objek dapat berisi data, fungsionalitas dan \textit{behaviour} yang merepresentasikan informasi tentang objek tersebut dan tugas objek. Contohnya, membuat objek sebuah mobil. Mobil memiliki beberapa informasi diantaranya adalah merk mobil, berat mobil, warna mobil dan tahun produksi. Informasi tersebut dapat disebut sebagai properti dari objek. Mobil dapat bergerak maju, berbelok ke kanan, berbelok ke kiri, bergerak mundur dan berhenti. Hal-hal yang dapat dilakukan oleh objek disebut sebagai \textit{method} dari objek. 
 
 \subsubsection{Kelas}
 \textit{Javascript} tidak memiliki \textit{statement 'class'} yang dapat digunakan pada bahasa pemrograman C++ atau \textit{Java}. Untuk membuat kelas, \textit{Javascript} menggunakan \textit{function} sebagai konstruktor untuk kelas. Karena itu, membuat kelas sama dengan membuat \textit{function} pada \textit{Javascript}. Pada \textit{listing} ~\ref{lst:class} terdapat potongan kode untuk membuat kelas bernama Mobil.
@@ -242,14 +274,14 @@ Ide umum pada OOP adalah menggunakan objek untuk memodelkan benda-benda yang ada
 \end{lstlisting}
 
 \subsubsection{Objek}
-Untuk membuat instansi baru dari objek, gunakan \textit{statement 'new'} yang nantinya akan disimpan pada variabel. Pada \textit{listing} ~\ref{lst:object} terdapat potongan kode untuk membuat instansi.
+Untuk membuat instansi baru dari objek, gunakan \textit{statement 'new'} yang nantinya akan disimpan pada variabel. Pada \textit{listing}~\ref{lst:object} terdapat potongan kode untuk membuat instansi.
 
-\begin{lstlisting}[language=Javascript, caption=Membuat \textit{instance} mobil, label={lst:object}]
+\begin{lstlisting}[language=Javascript, caption=Membuat instansi mobil, label={lst:object}]
 	var mobil1 = new Mobil();
 \end{lstlisting}
 
 \subsubsection{Konstruktor}
-Konstruktor adalah \textit{method} yang ada pada kelas. Konstruktor akan dipanggil ketika pertama kali inisialisasi atau saat instansi baru dari objek dibuat. \textit{Function} pada \textit{Javascript} berfungsi sebagai konstruktor sehingga tidak perlu membuat method konstruktor lagi. Semua aksi yang terdapat pada kelas akan dieksekusi pada saat instansiasi.
+Konstruktor adalah \textit{method} yang ada pada kelas. Konstruktor akan dipanggil ketika pertama kali inisialisasi atau saat instansi baru dari objek dibuat. \textit{Function} pada \textit{Javascript} berfungsi sebagai konstruktor sehingga tidak perlu membuat \textit{method} konstruktor lagi. Semua aksi yang terdapat pada kelas akan dieksekusi pada saat instansiasi.
 
 \subsubsection{Properti/Atribut}
 Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstruktor kelas sehingga setiap properti pada kelas akan dibuat ketika membuat instansi baru. Untuk membuat properti, gunakan \textit{statement 'this'}. Cara ini mirip dengan bahasa pemrograman \textit{Java} ketika membuat sebuah properti pada objek. Sintaks untuk mengakses properti di luar kelas adalah : namaInstansi.properti. Pada \textit{listing} ~\ref{lst:attr} terdapat potongan kode untuk mendefinisikan properti pada kelas Mobil pada saat instansiasi.
@@ -267,7 +299,7 @@ Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstru
 \end{lstlisting}
 
 \subsubsection{\textit{Method}}
-\textit{Method} adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat \textit{method}, tuliskan nama \textit{method} terlebih dahulu kemudian \textit{assign} fungsi pada nama method tersebut. Untuk memanggil \textit{method} sebuah objek, tuliskan nama objek/kelas terlebih dahulu, kemudian tuliskan nama \textit{method} sesuai dengan yang sudah dibuat beserta tanda kurung. Tanda kurung berisi parameter. Pada \textit{listing} ~\ref{lst:method} terdapat potongan kode untuk membuat dan memanggil method bergerakMaju() pada kelas Mobil.
+\textit{Method} adalah hal yang dapat dilakukan oleh sebuah objek. Untuk membuat \textit{method}, tuliskan nama \textit{method} terlebih dahulu kemudian \textit{assign} fungsi pada nama \textit{method} tersebut. Untuk memanggil \textit{method} sebuah objek, tuliskan nama objek/kelas terlebih dahulu, kemudian tuliskan nama \textit{method} sesuai dengan yang sudah dibuat beserta tanda kurung. Tanda kurung berisi parameter. Pada \textit{listing}~\ref{lst:method} terdapat potongan kode untuk membuat dan memanggil \textit{method} bergerakMaju() pada kelas Mobil.
 
 \begin{lstlisting}[language=Javascript, caption=Membuat dan memanggil method bergerakMaju(), label={lst:method}]
 	function Mobil(merkMobil,beratMobil,warnaMobil,tahunProduksi){
@@ -287,7 +319,7 @@ Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstru
 \end{lstlisting}
 
 \subsection{\textit{Event}}
-\textit{Event} adalah kejadian/peristiwa yang terjadi pada sistem yang diprogram. Sistem akan memberitahu apabila kejadian tersebut sudah terjadi dan akan melakukan suatu aksi ketika kejadian sudah terjadi. Misalnya, di bandara ketika landasan pacu sudah bersih untuk pesawat lepas landas, sinyal akan dikomunikasikan kepada pilot bahwa pesawat sudah boleh untuk lepas landas. Dalam \textit{web}, \textit{event} ditembakan di dalam \textit{browser window} dan dikaitkan pada objek yang spesifik seperti sekumpulan elemen, dokumen HTML yang dimuat atau keseluruhan \textit{browser window}. Ada beberapa \textit{event} yang dapat terjadi diantaranya adalah : 
+\textit{Event} adalah kejadian/peristiwa yang terjadi pada sistem yang diprogram. Sistem akan memberitahu apabila kejadian tersebut sudah terjadi dan akan melakukan suatu aksi jika kejadian sudah terjadi. Misalnya, di bandara ketika landasan pacu sudah bersih untuk pesawat lepas landas, sinyal akan dikomunikasikan kepada pilot bahwa pesawat sudah boleh untuk lepas landas. Dalam \textit{web}, \textit{event} ditembakan di dalam \textit{browser window} dan dikaitkan pada objek yang spesifik seperti sekumpulan elemen, dokumen HTML yang dimuat atau keseluruhan \textit{browser window}. Ada beberapa \textit{event} yang dapat terjadi diantaranya adalah : 
 
 \begin{itemize}
 	\item Pengguna mengklik sebuah element atau mengarahkan kursor ke sebuah elemen.
@@ -299,7 +331,7 @@ Properti adalah variabel yang terdapat pada kelas. Properti ditulis pada konstru
 	\item Ketika \textit{error} terjadi.
 \end{itemize}
 
-Setiap \textit{event} memiliki \textit{event handler}, yang berisikan sekumpulan kode yang akan dijalankan ketika \textit{event} sudah terjadi. \textit{Event handler} juga sering disebut sebagai \textit{event listener}. \textit{Listener} menunggu \textit{event} yang terjadi dan \textit{handler} adalah kode yang dijalankan ketika \textit{listener} mendapatkan \textit{event}/ketika \textit{event} terjadi. Untuk memperjelas bagaimana cara menggunakan \textit{event}, pada \textit{listing} ~\ref{lst:event1} terdapat contoh kode untuk menambahkan event pada button/tombol.
+Setiap \textit{event} memiliki \textit{event handler}, yang berisikan sekumpulan kode yang akan dijalankan ketika \textit{event} sudah terjadi. \textit{Event handler} juga sering disebut sebagai \textit{event listener}. \textit{Listener} menunggu \textit{event} yang terjadi dan \textit{handler} adalah kode yang dijalankan ketika \textit{listener} mendapatkan \textit{event}/ketika \textit{event} terjadi. Untuk memperjelas cara menggunakan \textit{event}, pada \textit{listing}~\ref{lst:event1} terdapat contoh kode untuk menambahkan event pada button/tombol.
 
 \begin{lstlisting}[language=Javascript,{alsolanguage=HTML}, caption=Menambahkan event pada button, label={lst:event1}]
 	<html>
@@ -324,10 +356,10 @@ Setiap \textit{event} memiliki \textit{event handler}, yang berisikan sekumpulan
 	
 \end{lstlisting}
 
-Berdasarkan kode di atas, objek \textit{button} dengan id='tombol' disimpan di dalam variabel bernama 'btn'. Ada fungsi bernama \textit{'random'} untuk mengembalikan sebuah nilai acak. Setelah itu ada \textit{event handler}. \textit{Event handler property} yang digunakan adalah \textit{onclick}. \textit{Event handler property onclick} mengecek apakah objek(dalam kasus ini objeknya adalah button) sudah ditekan/diklik. Bila tombol sudsh diklik, maka akan mengeksekusi fungsi untuk mengubah warna \textit{background}. Warna RGB tersebut di\textit{generate} secara acak menggunakan fungsi \textit{random} yang sudah dibuat sebelumnya. Tidak hanya \textit{event handler property onclick} saja yang dapat digunakan pada halaman web. Berikut ini adalah beberapa \textit{event handler property} lainnya:
+Berdasarkan listing~\ref{lst:event1}, objek \textit{button} dengan id='tombol' disimpan di dalam variabel bernama 'btn'. Ada fungsi bernama \textit{'random'} untuk mengembalikan sebuah nilai acak. Setelah itu ada \textit{event handler}. \textit{Event handler property} yang digunakan adalah \textit{onclick}. \textit{Event handler property onclick} mengecek apakah objek(dalam kasus ini objeknya adalah button) sudah ditekan/diklik. Bila tombol sudah diklik, maka fungsi akan dieksekusi untuk mengubah warna \textit{background}. Warna RGB tersebut di\textit{generate} secara acak menggunakan fungsi \textit{random} yang sudah dibuat sebelumnya. Tidak hanya \textit{event handler property onclick} saja yang dapat digunakan pada halaman web. Berikut ini adalah beberapa \textit{event handler property} lainnya:
 
 \begin{itemize}
-	\item \textit{onfocus} dan \textit{onblur} : event akan terjadi apabila sebuah objek difokuskan/tidak. Biasanya digunakan untuk menampilkan informasi tentang bagaimana cara mengisi \textit{form} ketika difokuskan atau menampilkan pesan \textit{error} ketika \textit{form} tersebut diisi dengan nilai yang salah/tidak valid.
+	\item \textit{onfocus} dan \textit{onblur} : event akan terjadi apabila sebuah objek difokuskan/tidak. Biasanya digunakan untuk menampilkan informasi tentang cara mengisi \textit{form} ketika difokuskan atau menampilkan pesan \textit{error} ketika \textit{form} tersebut diisi dengan nilai yang salah/tidak valid.
 	\item \textit{ondblclick} : \textit{event} akan terjadi ketika objek diklik 2 kali/\textit{double click}.
 	\item \textit{window.keypress, window.onkeydown, window.onkeyup} : \textit{event} akan terjadi apabila sebuah tombol pada \textit{keyboard} ditekan. \textit{Keypress} adalah \textit{event} ketika tombol ditekan kemudian dilepas. \textit{Keydown} adalah \textit{event} ketika tombol ditekan dan \textit{keyup} adalah \textit{event} ketika tombol dalam keadaan tidak ditekan. Untuk ketiga \textit{event} ini, event tersebut harus di\textit{register} pada objek \textit{window} yang merepresentasikan \textit{browser window}.
 	\item \textit{onmouseover} dan \textit{onmouseout} : event akan terjadi ketika posisi kursor \textit{mouse} berada luar objek lalu ditempatkan di atas objek dan ketika posisi kursor \textit{mouse} berada di atas objek lalu keluar dari objek. 
@@ -335,9 +367,9 @@ Berdasarkan kode di atas, objek \textit{button} dengan id='tombol' disimpan di d
 
 Beberapa \textit{event handler property} tersebut sangat umum dan tersedia di manapun, sedangkan beberapa \textit{event handler property} lainnya sangat spesifik dan hanya digunakan untuk elemen tertentu, contohnya adalah menggunakan \textit{onplay} untuk elemen tertentu yaitu <video>.\\
 
-Mekanisme event terbaru dalam spesifikasi DOM(\textit{Document Object Model}) \textit{level} 2 \textit{Events} yang memberikan \textit{browser} sebuah fungsi baru yaitu \textit{addEventListener()}. Fungsi ini mirip seperti \textit{event handler property} namun memiliki sintaks yang berbeda. Pada \textit{listing} ~\ref{lst:event2} terdapat potongan kode untuk menggunakan fungsi \textit{addEventListener()}.
+Mekanisme event terbaru dalam spesifikasi DOM(\textit{Document Object Model}) \textit{level} 2 \textit{Events} yang memberikan \textit{browser} sebuah fungsi baru yaitu \textit{addEventListener()}. Fungsi ini mirip seperti \textit{event handler property} namun memiliki sintaks yang berbeda. Pada \textit{listing}~\ref{lst:event2} terdapat potongan kode untuk menggunakan fungsi \textit{addEventListener()}.
 
-\begin{lstlisting}[language=Javascript, caption=Menggunakan fungsi addEventListener(), label={lst:event2}]
+\begin{lstlisting}[language=Javascript, caption=Menggunakan fungsi \textit{addEventListener()}, label={lst:event2}]
 
 	var btn = document.getElementById('tombol');
 
@@ -350,9 +382,9 @@ Mekanisme event terbaru dalam spesifikasi DOM(\textit{Document Object Model}) \t
 	
 \end{lstlisting}
 
-Pada fungsi \textit{addEventListener()}, ada 2 buah parameter yaitu \textit{event} yang ingin digunakan(dalam potongan kode di atas menggunakan \textit{event click}) dan kode sebagai \textit{handler} yang ingin dijalankan ketika \textit{event} tersebut terjadi. Selain cara di atas, dapat juga menuliskan semua kode di dalam fungsi \textit{addEventListener()} seperti potongan kode pada \textit{listing} ~\ref{lst:event3}.
+Pada fungsi \textit{addEventListener()}, ada 2 buah parameter yaitu \textit{event} yang ingin digunakan(dalam potongan kode di atas menggunakan \textit{event click}) dan nama fungsi sebagai \textit{handler} yang ingin dijalankan ketika \textit{event} tersebut terjadi. Selain cara di atas, dapat juga menuliskan semua kode di dalam fungsi anonim \textit{addEventListener()} seperti potongan kode pada \textit{listing}~\ref{lst:event3}.
 
-\begin{lstlisting}[language=Javascript, caption=Menuliskan kode di dalam fungsi addEventListener(), label={lst:event3}]
+\begin{lstlisting}[language=Javascript, caption=Menuliskan kode di dalam fungsi anonim pada \textit{method addEventListener()}, label={lst:event3}]
 
 	btn.addEventListener('click', function() {
   		var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
@@ -361,9 +393,21 @@ Pada fungsi \textit{addEventListener()}, ada 2 buah parameter yaitu \textit{even
 	
 \end{lstlisting}
 
+\textit{Event} tidak hanya digunakan untuk \textit{browser} pada \textit{desktop} saja. Ada \textit{event} yang dapat digunakan pada \textit{smartphone}, yaitu \textit{touch event}. \textit{Touch event} dapat mengintepretasi aktivitas jari atau \textit{stylus} pada permukaan layar seperti layar sentuh atau \textit{trackpads}. \textit{Interface} pada touch event merupakan API tingkat rendah yang dapat digunakan untuk aplikasi yang mendukung interaksi \textit{multi-touch} seperti \textit{2-finger gesture}. Interaksi \textit{multi touch} dimulai ketika sebuah jari menyentuh permukaan layar sentuh terlebih dahulu. Jari yang lain dapat menyentuh permukaan dan dapat menggerakkan jari di sekitar permukaan layar sentuh. Interaksi akan berakhir ketika jari tidak lagi menyentuh permukaan layar.\\
+
+\textit{Touch event} mirip seperti \textit{mouse event}. Perbedaanya adalah \textit{touch event} mendukung banyak sentuhan dalam lokasi yang berbeda pada permukaan layar. \textit{Touch event} mengenkapsulasi semua \textit{touch points} yang sedang aktif. \textit{Interface touch} yang merepresentasikan sebuah \textit{touch point} memiliki informasi seperti posisi \textit{touch point} pada \textit{viewport browser}.\\
+
+\textit{Touch event} memiliki beberapa event handler properti diantaranya adalah :
+
+\begin{itemize}
+	\item \textit{touchstart} : \textit{event} ini akan ditembakkan apabila sebuah jari/\textit{stylus} menyentuh permukaan layar.
+	\item \textit{touchend} : \textit{event} ini akan ditembakkan apabila sebuah atau banyak jari tidak menyentuh permukaan layar/\textit{trackpads}.
+	\item \textit{touchcancel} : event ini akan ditembakkan apabila sebuah atau banyak \textit{touch points} yang terganggu dalam implementasi khusus. Contohnya adalah ketika terlalu banyak \textit{touch points} yang dibuat.
+	\item \textit{touchmove} : \textit{event} ini akan ditembakkan apabila sebuah atau banyak \textit{touch points} yang berpindah di sekitar permukaan layar. 
+\end{itemize}
 
 \subsection{Membuat Animasi}
-Ketika menggambar sebuah bentuk pada \textit{canvas}, bentuk tersebut tidak berpindah tempat. Agar bentuk dapat bergerak, bentuk tersebut harus digambar ulang dan semua yang sudah digambar sebelumnya. Langkah-langkah untuk membuat animasi adalah sebagai berikut :
+Ketika menggambar sebuah bentuk pada \textit{canvas}, bentuk tersebut tidak berpindah tempat. Agar bentuk dapat bergerak, bentuk tersebut harus digambar ulang berdasarkan semua yang sudah digambar sebelumnya. Langkah-langkah untuk membuat animasi adalah sebagai berikut :
 
 \begin{enumerate}
 	\item Membersihkan \textit{canvas} : hilangkan semua bentuk-bentuk yang sudah tergambar di canvas. Untuk menghapus keseluruhan \textit{canvas}, gunakan fungsi \textit{clearRect()}.
@@ -383,13 +427,13 @@ Bentuk yang digambar pada \textit{canvas} dapat menggunakan fungsi yang dimiliki
 Jika tidak ingin ada iteraksi user, gunakan fungsi \textit{setInterval()} untuk mengeksekusi fungsi berulang kali. Bila ingin ada interaksi user, terutama dalam pembuatan \textit{game} yang membutuhkan input \textit{keyboard} atau \textit{mouse} untuk mengontrol animasi, gunakan fungsi \textit{setTimeout()}.
 
 \section{\textit{jQuery}}
-\textit{jQuery} merupakan sebuah \textit{file Javascript} yang dimasukkan pada halaman \textit{web} \cite{duckett2014javascript}. \textit{jQuery} dapat memilih elemen pada halaman \textit{web} menggunakan \textit{CSS-style selector} dan elemen tersebut dapat melakukan sesuatu dengan menggunakan \textit{method jQuery}. Sebuah fungsi yaitu \textit{jQuery()} digunakan untuk menemukan satu atau lebih elemen yang berada pada halaman \textit{web}. Fungsi ini membuat objek yang bernama \textit{jQuery} untuk menyimpan referensi dari elemen yang akan dipilih. \$() sering digunakan sebagai pengganti fungsi \textit{jQuery()} dikarenakan penulisanya yang pendek. Fungsi \textit{jQuery()} hanya memiliki sebuah parameter yaitu sebuah \textit{selector}.
+\textit{jQuery} merupakan sebuah \textit{file Javascript} yang sudah termasuk pada halaman \textit{web} \cite{duckett2014javascript}. \textit{jQuery} dapat memilih elemen pada halaman \textit{web} menggunakan \textit{CSS-style selector} dan elemen tersebut dapat melakukan sesuatu dengan menggunakan \textit{method jQuery}. Sebuah fungsi yaitu \textit{jQuery()} digunakan untuk menemukan satu atau lebih elemen yang berada pada halaman \textit{web}. Fungsi ini membuat objek yang bernama \textit{jQuery} untuk menyimpan referensi dari elemen yang akan dipilih. \$() sering digunakan sebagai pengganti fungsi \textit{jQuery()} dikarenakan penulisanya yang pendek. Fungsi \textit{jQuery()} hanya memiliki sebuah parameter yaitu sebuah \textit{selector}.
 
 \begin{lstlisting}[language=Javascript, caption=Mendapatkan elemen menggunakan \textit{CSS-style selector}, label={lst:jQuery1}]
 	$('li.hot');
 \end{lstlisting}
 
-Pada \textit{listing} ~\ref{lst:jQuery1}, \textit{selector} akan mencari elemen <li> yaitu \textit{list} yang merupakan bagian dari kelas 'hot'. \textit{jQuery} memiliki banyak \textit{method} yang dapat digunakan oleh elemen yang sudah dipilih menggunakan \textit{selector}. \textit{Method} ini merepresentasikan tugas yang akan dilakukan oleh elemen tersebut. Setelah memilih elemen, tambahkan \textit{method} yang diawali dengan titik kemudian diikuti dengan nama \textit{method} beserta parameternya. Titik ini disebut sebagai \textit{member operator}. Setiap \textit{method} memiliki parameter untuk memberikan detail tentang bagaimana cara untuk mengubah elemen tersebut. Ada beberapa \textit{method} yang memiliki parameter lebih dari 1.  Member operator menunjukkan bahwa \textit{method} yang terletak setelah \textit{member operator} digunakan untuk mengubah elemen objek \textit{jQuery} yang terletak pada sebelah kiri \textit{member operator}. Pada \textit{listing} ~\ref{lst:jQuery2}, terdapat contoh untuk mengubah kelas dari elemen yang sudah dipilih. Method \textit{addClass} digunakan untuk mengubah atribut kelas dari elemen \textit{list} menjadi kelas yang bernama \textit{'complete'}. 
+Pada \textit{listing}~\ref{lst:jQuery1}, \textit{selector} akan mencari elemen <li> yaitu \textit{list} yang merupakan bagian dari kelas 'hot'. \textit{jQuery} memiliki banyak \textit{method} yang dapat digunakan oleh elemen yang sudah dipilih menggunakan \textit{selector}. \textit{Method} ini merepresentasikan tugas yang akan dilakukan oleh elemen tersebut. Setelah memilih elemen, tambahkan \textit{method} yang diawali dengan titik kemudian diikuti dengan nama \textit{method} beserta parameternya. Titik ini disebut sebagai \textit{member operator}. Setiap \textit{method} memiliki parameter untuk memberikan detail tentang bagaimana cara untuk mengubah elemen tersebut. Ada beberapa \textit{method} yang memiliki parameter lebih dari 1.  Member operator menunjukkan bahwa \textit{method} yang terletak setelah \textit{member operator} digunakan untuk mengubah elemen objek \textit{jQuery} yang terletak pada sebelah kiri \textit{member operator}. Pada \textit{listing}~\ref{lst:jQuery2}, terdapat contoh untuk mengubah kelas dari elemen yang sudah dipilih. Method \textit{addClass} digunakan untuk mengubah atribut kelas dari elemen \textit{list} menjadi kelas yang bernama \textit{'complete'}. 
 
 \begin{lstlisting}[language=Javascript, caption=Mengubah kelas dari elemen yang sudah dipilih, label={lst:jQuery2}]
 	$('li.hot').addClass('complete');
@@ -403,13 +447,13 @@ Ketika membuat sebuah \textit{jQuery selection}, objek \textit{jQuery} akan meny
 	\item Menyimpan referensi di \textit{node} objek \textit{jQuery}
 \end{enumerate}
 
-Jika ingin menggunakan \textit{selection} yang sama, maka lebih baik menggunakan objek \textit{jQuery} yang sama daripada mengulang langkah-langkah yang sudah dijelaskan. Objek \textit{jQuery} tersebut dapat disimpan pada sebuah variabel. Cara untuk menyimpan referensi objek \textit{jQuery} tersebut pada variabel adalah membuat variabel yang diawali dengan simbol '\$'. Kemudian variabel tersebut diisi dengan objek \textit{jQuery} yang diinginkan. Pada listing~\ref{lst:jQuery3}, variabel \$listItems menyimpan objek \textit{jQuery} yang berisi lokasi dari semua elemen list ada pada DOM \textit{tree}.
+Jika ingin menggunakan \textit{selection} yang sama, maka lebih baik menggunakan objek \textit{jQuery} yang sama daripada mengulang langkah-langkah yang sudah dijelaskan. Objek \textit{jQuery} tersebut dapat disimpan pada sebuah variabel. Cara untuk menyimpan referensi objek \textit{jQuery} tersebut pada variabel adalah membuat variabel yang diawali dengan simbol '\$'. Kemudian variabel tersebut diisi dengan objek \textit{jQuery} yang diinginkan. Pada listing~\ref{lst:jQuery3}, variabel \textit{\$listItems} menyimpan objek \textit{jQuery} yang berisi lokasi dari semua elemen list ada pada DOM \textit{tree}.
 
 \begin{lstlisting}[language=Javascript, caption=Menyimpan objek jQuery , label={lst:jQuery3}]
 	$listItems = $('li');
 \end{lstlisting}
 
-Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program yang dibuat, maka gunakan \textit{method ready()}. Maksud dari halaman sudah siap adalah DOM sudah ada pada halaman \textit{web}. Listing~\ref{lst:jQuery4} adalah potongan kode untuk mengecek apakah halaman sudah siap. Pada listing ~\ref{lst:jQuery4}, \$(document) merepresentasikan halaman web. Jika halaman sudah siap, maka kode program yang ada di dalam \textit{method ready()} akan dijalankan. Listing ~\ref{lst:jQuery5} adalah pintasan dari \textit{method ready()} pada objek \textit{document}.
+Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program yang dibuat, maka gunakan \textit{method ready()}. Maksud dari halaman sudah siap adalah DOM sudah ada pada halaman \textit{web}. Listing~\ref{lst:jQuery4} adalah potongan kode untuk mengecek apakah halaman sudah siap. Pada listing~\ref{lst:jQuery4}, \textit{\$(document)} merepresentasikan halaman \textit{web}. Jika halaman sudah siap, maka kode program yang ada di dalam \textit{method ready()} akan dijalankan. Listing~\ref{lst:jQuery5} adalah pintasan dari \textit{method ready()} pada objek \textit{document}.
 
 \begin{lstlisting}[language=Javascript, caption=Mengecek apakah halaman sudah siap , label={lst:jQuery4}]
 	$(document).ready(function(){
@@ -424,7 +468,7 @@ Untuk mengecek apakah sebuah halaman sudah siap untuk menjalankan kode program y
 \end{lstlisting}
 
 \subsection{Mendapatkan dan Mengubah Konten Elemen}
-Untuk mendapatkan konten dari elemen, dapat digunakan 2 \textit{method} yaitu \textit{method html()} dan \textit{method text()}. \textit{Method html()} berfungsi untuk mendapatkan HTML yang sesuai dengan elemen pertama yang sesuai dengan \textit{jQuery selection}. \textit{Method .text()} berfungsi untuk mendapatkan \textit{text}/tulisan dari semua elemen yang sesuai dengan \textit{jQuery selection}. Untuk mengganti konten dari semua elemen terdapat 4 \textit{method} yaitu:
+Untuk mendapatkan konten dari elemen, dapat digunakan 2 \textit{method} yaitu \textit{method html()} dan \textit{method text()}. \textit{Method html()} berfungsi untuk mendapatkan HTML yang sesuai dengan elemen pertama yang sesuai dengan \textit{jQuery selection}. \textit{Method text()} berfungsi untuk mendapatkan teks/tulisan dari semua elemen yang sesuai dengan \textit{jQuery selection}. Untuk mengganti konten dari semua elemen terdapat 4 \textit{method} yaitu:
 
 \begin{enumerate}
 	\item \textit{html()} : \textit{method} ini memberikan konten HTML yang baru kepada semua elemen yang sesuai dengan \textit{jQuery selection}.
@@ -433,7 +477,7 @@ Untuk mendapatkan konten dari elemen, dapat digunakan 2 \textit{method} yaitu \t
 	\item \textit{remove()} : \textit{method} ini akan menbuang semua elemen yang sesuai dengan \textit{jQuery selection}.
 \end{enumerate}
 
-Selain mengubah konten dari elemen, atribut dari elemen yag dipilih dapat diakses dan diubah dengan menggunakan 4 \textit{method}, diantaranya adalah :
+Selain mengubah konten dari elemen, atribut dari elemen yang dipilih dapat diakses dan diubah dengan menggunakan 4 \textit{method}, diantaranya adalah :
 
 \begin{enumerate}
 	\item attr() : \textit{method} ini berfungsi untuk mendapatkan atau mengubah atribut secara spesifik dan isi dari atribut.
@@ -449,7 +493,7 @@ Selain mengubah konten dari elemen, atribut dari elemen yag dipilih dapat diakse
 	var backgroundColor = $('li').css('background-color');
 \end{lstlisting}
 
-Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertama dan tentukan nilai untuk properti yang sudah dipilih pada argumen pertama sebagai argumen kedua. Antara argumen pertama dan kedua dipisahkan dengan koma (,). \textit{Method} ini akan mengubah semua elemen yang sesuai dengan \textit{selection}. Dengan \textit{object literal notation}, kita dapat mengubah sejumlah properti lainnya dalam \textit{method} yang sama. Ada 3 cara penulisan pada \textit{object listeral notation}, properti dan nilai properti dituliskan di dalam kurung kurawal, antara properti dan nilainya dipisahkan dengan titik dua(:), dan koma(,) memisahkan setiap pasangan properti. \textit{Listing}~\ref{lst:jQuery8} merupakan cara untuk background color semua elemen \textit{list} dan \textit{listing}~\ref{lst:jQuery9} merupakan cara mengubah sejumlah properti menggunakan \textit{object literal notation}.
+Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertama dan tentukan nilai untuk properti yang sudah dipilih pada argumen pertama sebagai argumen kedua. Antara argumen pertama dan kedua dipisahkan dengan koma. \textit{Method} ini akan mengubah semua elemen yang sesuai dengan \textit{selection}. Dengan \textit{object literal notation}, kita dapat mengubah sejumlah properti lainnya dalam \textit{method} yang sama. Ada 3 cara penulisan pada \textit{object listeral notation}, properti dan nilai properti dituliskan di dalam kurung kurawal, antara properti dan nilainya dipisahkan dengan titik dua(:), dan koma memisahkan setiap pasangan properti. \textit{Listing}~\ref{lst:jQuery8} merupakan cara untuk mendapatkan \textit{background color} dari semua elemen \textit{list} dan \textit{listing}~\ref{lst:jQuery9} merupakan cara mengubah sejumlah properti menggunakan \textit{object literal notation}.
 
 \begin{lstlisting}[language=Javascript, caption=Mengubah warna background color semua elemen list, label={lst:jQuery8}]
 	$('li').css('background-color','red');
@@ -462,10 +506,10 @@ Untuk mengubah nilai properti CSS, tentukan nama properti sebagai argumen pertam
 	});
 \end{lstlisting}
 
-\subsection{Looping}
-Pada \textit{jQuery} dapat dilakukan \textit{looping} untuk mendapatkan informasi dari setiap elemen atau untuk memberikan aksi pada setiap elemen. \textit{Method} yang digunakan untuk looping adalah \textit{each()}. \textit{Method} ini akan memberikan sebuah atau lebih aksi pada setiap elemen. \textit{Method} ini memiliki sebuah parameter yaitu sebuah fungsi yang isinya adalah perintah-perintah yang akan dijalankan oleh setiap elemen. Contohnya terdapat pada listing~\ref{lst:jQuery6}. Pada listing~\ref{lst:jQuery6} akan dipilih elemen list. \textit{Method .each()} akan menjalankan kode program yang sama untuk setiap elemen \textit{list} tersebut. \textit{'this.id'} mengacu kepada id milik sebuah elemen list yang sekarang berada dalam \textit{loop}. Kemudian variabel yang bernama ids akan menyimpan id setiap elemen \textit{list}. \$(this) digunakan untuk membuat sebuah objek \textit{jQuery} yang baru yang isinya adalah sebuah elemen yang ada sekarang. \$(this) memungkinan kita untuk menggunakan \textit{method} pada elemen yang ada sekarang. Elemen \textit{list} yang ada pada \textit{loop} akan ditambahkan sebuah elemen \textit{span} yang isinya adalah id dari elemen tersebut. Perintah ini akan dilakukan untuk setiap elemen \textit{list}.
+\subsection{\textit{Looping}}
+Pada \textit{jQuery} dapat dilakukan \textit{looping} untuk mendapatkan informasi dari setiap elemen atau untuk memberikan aksi pada setiap elemen. \textit{Method} yang digunakan untuk looping adalah \textit{each()}. \textit{Method} ini akan memberikan sebuah atau lebih aksi pada setiap elemen. \textit{Method} ini memiliki sebuah parameter yaitu sebuah fungsi yang isinya adalah perintah-perintah yang akan dijalankan oleh setiap elemen. Contohnya terdapat pada listing~\ref{lst:jQuery6}. Pada listing~\ref{lst:jQuery6} akan dipilih elemen list. \textit{Method .each()} akan menjalankan kode program yang sama untuk setiap elemen \textit{list} tersebut. \textit{'this.id'} mengacu kepada id milik sebuah elemen \textit{list} yang sekarang berada dalam \textit{loop}. Kemudian variabel yang bernama ids akan menyimpan id setiap elemen \textit{list}. \textit{\$(this)} digunakan untuk membuat sebuah objek \textit{jQuery} baru yang isinya adalah sebuah elemen yang ada sekarang. \textit{\$(this)} memungkinan kita untuk menggunakan \textit{method} pada elemen yang ada sekarang. Elemen \textit{list} yang ada pada \textit{loop} akan ditambahkan sebuah elemen \textit{span} yang isinya adalah id dari elemen tersebut. Perintah ini akan dilakukan untuk setiap elemen \textit{list}.
 
-\begin{lstlisting}[language=Javascript, caption=Menambah setiap elemen list dengan id list masing-masing , label={lst:jQuery6}]
+\begin{lstlisting}[language=Javascript, caption=Menambah setiap elemen \textit{list} dengan id \textit{list} masing-masing , label={lst:jQuery6}]
 	$('li').each(function(){
 		var ids = this.id;
 		$(this).append('<span class="order">'+ids+'</span>');
@@ -503,7 +547,7 @@ Setiap fungsi \textit{event handling} menerima sebuah \textit{event object}. \te
 
 \begin{itemize}
 	\item \textit{type} : tipe dari \textit{event} contohnya adalah \textit{click, mouseover}
-	\item \textit{which} : tombol atau key yang sudah ditekan
+	\item \textit{which} : tombol atau \textit{key} yang sudah ditekan
 	\item \textit{data} : sebuah \textit{object literal} yang mengandung informasi tambahan yang diberikan ke fungsi lain ketika \textit{event} terjadi
 	\item \textit{target} : elemen pada DOM yang memulai \textit{event}
 	\item \textit{pageX} : posisi \textit{mouse} dihitung dari ujung kiri \textit{viewport} 
@@ -518,9 +562,9 @@ AJAX(Asynchronous Javascript and XML) adalah sebuah teknik pengembangan \textit{
 
 \begin{itemize}
 	\item \textit{Live search/autocomplete} yang dapat ditemukan pada \textit{Google search}.
-	\item Website dengan konten user-generated yang dapat menampilkan informasi pada website, contohnya adalah Twitter dan Flickr
-	\item Menambah barang ke keranjang pada situs belanja online. Barang yang ditambahkan akan diupdate tanpa meninggalkan halaman tersebut.
-	\item Register username pada website yang akan mengecek apakah username sudah digunakan oleh orang lain atau tidak.
+	\item \textit{Website} dengan konten \textit{user-generated} yang dapat menampilkan informasi pada \textit{website}, contohnya adalah \textit{Twitter} dan \textit{Flickr}
+	\item Menambah barang ke keranjang pada situs belanja \textit{online}. Barang yang ditambahkan akan diperbarui tanpa meninggalkan halaman tersebut.
+	\item \textit{Register username} pada \textit{website} yang akan mengecek apakah \textit{username} sudah digunakan oleh orang lain atau tidak.
 \end{itemize}
 
 AJAX menggunakan \textit{asynchronous processing model} yang artinya adalah pengguna dapat melakukan hal lain ketika \textit{browser} sedang menunggu data untuk dimuat. Ketika halaman \textit{web} sudah dimuat dan jika pengguna ingin mengubah sesuatu pada \textit{browser}, maka pengguna biasanya akan memuat ulang halaman \textit{web}. Hal ini akan membuat pengguna harus menunggu halaman \textit{web} selesai dimuat dan di\textit{render} oleh \textit{browser}. Dengan menggunakan AJAX, kita dapat mengubah konten sebuah elemen jika ingin memperbarui sebagian halaman \textit{web}. Caranya adalah dengan menambahkan \textit{event} dan request konten baru ke server menggunakan \textit{asynchronous request}. Ketika data sedang dimuat, maka halaman \textit{web} akan tetap dimuat dan pengguna dapat tetap berinteraksi dengan halaman \textit{web}. Setelah server merespon \textit{request}, \textit{event special} AJAX akan \textit{trigger} bagian lain dari \textit{script} yang membaca data dari server dan \textit{memperbarui} hanya sebuah bagian dari halaman \textit{web}. Hal ini akan membuat data dimuat lebih cepat dan pengguna dapat berinteraksi dengan halaman \textit{web} ketika menunggu dapat untuk dimuat.
@@ -536,7 +580,7 @@ Untuk membuat \textit{Ajax request}, \textit{browser} menggunakan objek \textit{
 	xhr.send();
 \end{lstlisting}
 
-Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adalah membuat objek \textit{XMLHttpRequest} yang disimpan pada variabel bernama xhr. Kemudian \textit{method open()} berfungsi untuk menyiapkan request. \textit{Method open} memiliki 3 parameter yaitu HTTP \textit{method}, \textit{url} dari halaman yang akan menangani \textit{request}, dan tipe data \textit{boolean} yang menentukan apakah \textit{request} tersebut \textit{asynchronous} atau tidak. Pada \textit{listing}~\ref{lst:jQuery12} \textit{request} tersebut menggunakan HTTP \textit{method} yaitu GET, \textit{url} halamanya adalah '\textit{data/test.json}', dan asynchronous. Method .send() digunakan untuk mengirimkan \textit{request} yang sudah disiapkan. Informasi tambahan dapat dikirimkan ke server yang ditulliskan pada parameter method .send(). Sesudah mengirimkan request dan menerima respon dari server, data yang diterima akan diproses. Pada \textit{listing}~\ref{lst:jQuery13} terdapat potongan kode untuk menerima respon dan memproses data dari server. Setelah \textit{browser} menerima dan memuat respon dari server, event \textit{onload} akan dijalankan dan akan \textit{trigger} sebuah fungsi. Di dalam fungsi tersebut, akan dicek status dari objek tersebut untuk memastikan apakah respon dari server tidak ada masalah. 
+Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adalah membuat objek \textit{XMLHttpRequest} yang disimpan pada variabel bernama xhr. Kemudian \textit{method open()} berfungsi untuk menyiapkan request. \textit{Method open} memiliki 3 parameter yaitu HTTP \textit{method}, \textit{url} dari halaman yang akan menangani \textit{request}, dan tipe data \textit{boolean} yang menentukan apakah \textit{request} tersebut \textit{asynchronous} atau tidak. Pada \textit{listing}~\ref{lst:jQuery12} \textit{request} tersebut menggunakan HTTP \textit{method} yaitu \textit{GET}, \textit{url} halamanya adalah '\textit{data/test.json}', dan \textit{asynchronous}. \textit{Method .send()} digunakan untuk mengirimkan \textit{request} yang sudah disiapkan. Informasi tambahan dapat dikirimkan ke server yang ditulliskan pada parameter \textit{method .send()}. Sesudah mengirimkan \textit{request} dan menerima respon dari server, data yang diterima akan diproses. Pada \textit{listing}~\ref{lst:jQuery13} terdapat potongan kode untuk menerima respon dan memproses data dari server. Setelah \textit{browser} menerima dan memuat respon dari server, event \textit{onload} akan dijalankan dan akan \textit{trigger} sebuah fungsi. Di dalam fungsi tersebut, akan dicek status dari objek tersebut untuk memastikan apakah respon dari server tidak ada masalah. 
 
 \begin{lstlisting}[language=Javascript, caption=Memproses respon yang didapat dari server, label={lst:jQuery13}]
 	xhr.onload = function(){
@@ -549,38 +593,38 @@ Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adal
 \textit{jQuery} menyediakan beberapa \textit{method} untuk menangani \textit{Ajax request} diantaranya adalah :
 
 \begin{itemize}
-	\item load() : memuat HTML dalam sebuah elemen.
-	\item \$.get() : memuat data menggunakan method HTTP GET. Method ini digunakan untuk request data dari server.
-	\item \$.post() : memuat data menggunakan method HTTP POST. Method ini digunakan untuk mengirim data ke server yang mengubah data pada server.
-	\item \$.getJSON() : memuat data JSON menggunakan GET. 
-	\item \$.getScript() : memuat dan mengeksekusi data pada Javascript menggunakan GET.
-	\item \$.ajax(): method ini digunakan untuk menjalankan semua request. 
+	\item \textit{load()} : memuat HTML dalam sebuah elemen.
+	\item \textit{\$.get()} : memuat data menggunakan \textit{method} \textit{HTTP GET}. \textit{Method} ini digunakan untuk \textit{request} data dari server.
+	\item \textit{\$.post()} : memuat data menggunakan \textit{method} \textit{HTTP POST}. \textit{Method} ini digunakan untuk mengirim data ke server yang mengubah data pada server.
+	\item \textit{\$.getJSON()} : memuat data JSON menggunakan \textit{GET}. 
+	\item \textit{\$.getScript()} : memuat dan mengeksekusi data pada \textit{Javascript} menggunakan \textit{GET}.
+	\item \$.ajax(): \textit{method} ini digunakan untuk menjalankan semua \textit{request} yang sudah dijelaskan pada poin sebelumnya. 
 \end{itemize}
 
-Ketika menggunakan method load(), HTML yang dikirim dari server dan dimasukkan ke jQuery selection. jQuery memiliki objek yaitu jqXHR yang mempermudah untuk menangani data yang dikirim dari server. Berikut adalah properti dan method dari jqXHR :
+Ketika menggunakan \textit{method load()}, HTML yang dikirim dari server akan dimasukkan ke \textit{jQuery selection}. \textit{jQuery} memiliki objek yaitu \textit{jqXHR} yang mempermudah untuk menangani data yang dikirim dari server. Berikut adalah properti dan method dari \textit{jqXHR} :
 
 \begin{itemize}
-	\item responseText : mengembalikan data text
-	\item responseXML : mengembalikan data XML
-	\item status : kode status
-	\item statusText : deskripsi dari status
-	\item done() : method yang digunakan untuk mengeksekusi kode apabila request berhasil
-	\item fail() : method yang digunakan untuk mengeksekusi kode apabila request gagal
-	\item always() : method yang digunakan untuk mengeksekusi kode apabila request berhasil atau gagal
-	\item abort() : menghentikan komunikasi
+	\item \textit{responseText} : mengembalikan data text
+	\item \textit{responseXML} : mengembalikan data XML
+	\item \textit{status} : kode status
+	\item \textit{statusText} : deskripsi dari status
+	\item \textit{done()} : \textit{method} yang digunakan untuk mengeksekusi kode apabila \textit{request} berhasil
+	\item \textit{fail()} : \textit{method} yang digunakan untuk mengeksekusi kode apabila \textit{request} gagal
+	\item \textit{always()} : \textit{method} yang digunakan untuk mengeksekusi kode apabila \textit{request} berhasil atau gagal
+	\item \textit{abort()} : menghentikan komunikasi
 \end{itemize} 
 
-Method \$.ajax() memberikan kontrol lebih terhadap Ajax request. Maksud dari memberi kontrol lebih adalah method ini memiliki lebih dari 30 setting yang digunakan untuk mengontrol Ajax request. Semua setting dituliskan menggunakan object literal notation. Berikut adalah setting yang sering dipakai dalam method \$.ajax() :
+\textit{Method \$.ajax()} memberikan kontrol lebih terhadap \textit{Ajax request}. Maksud dari memberi kontrol lebih adalah \textit{method} ini memiliki lebih dari 30 pengaturan yang digunakan untuk mengontrol \textit{Ajax request}. Semua pengaturan dituliskan menggunakan \textit{object literal notation}. Berikut adalah pengaturan yang sering dipakai dalam \textit{method \$.ajax()} :
 
 \begin{itemize}
-	\item type : mendapatkan nilai GET dan POST tergantung dari request. Request tersebut dapat dibuat menggunakan HTTP GET atau POST.
-	\item url : request yang akan dikirimkan
-	\item data : data yang akan dikirimkan ke server bersama dengan request
-	\item success : sebuah fungsi yang akan dijalankan apabila Ajax request berhasil. 
-	\item error : sebuah fungsi yang akan dijalankan apabila terdapat error pada Ajax request. 
-	\item beforeSend : sebuah fungsi yang akan dijalankan sebelum Ajax request dikirmkan.
-	\item complete : setting yang akan dijalankan setelah event success atau error
-	\item timeout : angka dalam milisekon untuk menunggu sebelum event akan gagal
+	\item \textit{type} : mendapatkan nilai \textit{GET} dan \textit{POST} tergantung dari \textit{request}. \textit{Request} tersebut dapat dibuat menggunakan \textit{HTTP GET} atau \textit{POST}.
+	\item \textit{url} : \textit{request} yang akan dikirimkan
+	\item \textit{data} : data yang akan dikirimkan ke server bersama dengan \textit{request}
+	\item \textit{success} : sebuah fungsi yang akan dijalankan apabila \textit{Ajax request} berhasil. 
+	\item \textit{error} : sebuah fungsi yang akan dijalankan apabila terdapat \textit{error} pada \textit{Ajax request}. 
+	\item \textit{beforeSend} : sebuah fungsi yang akan dijalankan sebelum \textit{Ajax request} dikirmkan.
+	\item \textit{complete} : pengaturan yang akan dijalankan setelah \textit{event success} atau \textit{error}
+	\item \textit{timeout} : angka dalam milisekon untuk menunggu sebelum \textit{event} akan gagal
 \end{itemize}
 
 \section{\textit{Git}}
