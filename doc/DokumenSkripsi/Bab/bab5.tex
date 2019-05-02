@@ -1,7 +1,7 @@
 \chapter{Implementasi dan Pengujian}
 \label{chap:implementasipengujian}
 
-Pada bab ini akan dibahas mengenai hasil implementasi dan pengujian dari Open Source Snake 360. Permainan ini dapat dimainkan pada \textit{link} ini : https://generaldevilx.github.io/Snake360/
+Pada bab ini akan dibahas mengenai hasil implementasi dan pengujian dari Open Source Snake 360. Permainan ini dapat dimainkan pada \textit{link} ini : \url{https://generaldevilx.github.io/Snake360/}
 
 \section{Implementasi}
 Pada bagian ini akan dijelaskan mengenai lingkungan yang digunakan untuk membangun dan implementasi antarmuka dari Open Source Snake 360.
@@ -18,9 +18,9 @@ Berikut adalah lingkungan perangkat keras yang digunakan dalam pembangunan perma
 	\item \textit{Storage} : 1TB
 \end{enumerate}
 
-Pada pengujian digunakan 1 buah perangkat \textit{mobile} berbasis android dan 1 buah perangkat \textit{desktop}. Berikut adalah lingkungan perangkat keras yang digunakan dalam pengujian permainan ini:
+Pada pengujian digunakan 1 buah perangkat \textit{mobile} berbasis \textit{Android} dan 1 buah perangkat \textit{desktop}. Berikut adalah lingkungan perangkat keras yang digunakan dalam pengujian permainan ini:
 
-\textbf{Perangkat 1}\\
+\textbf{Perangkat 1}
 \begin{enumerate}
 	\item Perangkat : Laptop
 	\item \textit{Processor} : Intel Core i5-7200U 2.5GHz
@@ -30,7 +30,7 @@ Pada pengujian digunakan 1 buah perangkat \textit{mobile} berbasis android dan 1
 	\item \textit{Storage} : 1TB
 \end{enumerate}
 
-\textbf{Perangkat 2}\\
+\textbf{Perangkat 2}
 \begin{enumerate}
 	\item Perangkat : SM-J730G
 	\item \textit{Processor} : Exynos 7870 Octa 1600MHz Cortex-A53
@@ -53,7 +53,7 @@ Berikut adalah lingkungan perangkat lunak yang digunakan dalam pembangunan perma
 Pada subbab ini akan ditampilkan dan dijelaskan tampilan antarmuka dari Open Source Snake 360. 
 
 \subsubsection{Tampilan Menu Utama}
-Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampilan antarmuka menu utama pada \textit{desktop} dan \textit{smartphone}. Pada tampilan ini terdapat judul dari permainan, \textit{input} untuk mengisi \textit{level} labirin, kecepatan ular berbelok, kecepatan ular, dan tombol '\textit{Play Game}'. Jika pemain salah memasukkan data, maka terdapat pesan kesalahan yang ditandai dengan tulisan bewarna merah. Misal, pada Gambar~\ref{fig:GUIUtamaSalah}, pemain salah memasukkan data untuk level labirin sehingga muncul pesan kesalahan bahwa \textit{input} yang dimasukkan salah.
+Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampilan antarmuka menu utama pada \textit{desktop} dan \textit{smartphone}. Pada tampilan ini terdapat judul dari permainan, \textit{input} untuk mengisi \textit{level} labirin, kecepatan ular berbelok, kecepatan ular, dan tombol '\textit{Play Game}'. Jika pemain salah memasukkan data, maka terdapat pesan kesalahan yang ditandai dengan tulisan bewarna merah. Misal, pada Gambar~\ref{fig:GUIUtamaSalah} dan Gambar~\ref{fig:GUIUtamaSalahAndroid}, pemain salah memasukkan data untuk level labirin sehingga muncul pesan kesalahan bahwa \textit{input} yang dimasukkan salah.
 
 \begin{figure}[H]
 	\centering  
@@ -72,8 +72,15 @@ Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampila
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.4]{GUIUtamaSalah}  
-	\caption[Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin]{Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin}
+	\caption[Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{desktop}]{Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{desktop}}
 	\label{fig:GUIUtamaSalah} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.2]{GUIUtamaSalahAndroid}  
+	\caption[Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{smartphone}]{Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{smartphone}}
+	\label{fig:GUIUtamaSalahAndroid} 
 \end{figure}
 
 \subsubsection{Tampilan Bermain}
@@ -94,7 +101,7 @@ Gambar~\ref{fig:GUIBermain} dan Gambar~\ref{fig:GUIBermainAndroid} merupakan tam
 \end{figure}
 
 \subsubsection{Tampilan Permainan Berakhir}
-Gambar~\ref{fig:GUIBerakhir} dan Gambar~\ref{fig:GUIBerakhirAndroid} merupakan tampilan antarmuka jika permainan berakhir. Tampilan ini muncul apabila ular menabrak dinding labirin dan menabrak tubuhnya sendiri. Pemain akan diarahkan ke tampilan utama jika pemain menekan tombol '\textit{Enter}' pada tampilan ini.
+Gambar~\ref{fig:GUIBerakhir} dan Gambar~\ref{fig:GUIBerakhirAndroid} merupakan tampilan antarmuka jika permainan berakhir pada \textit{desktop} dan \textit{smartphone}. Tampilan ini muncul apabila ular menabrak dinding labirin dan menabrak tubuhnya sendiri. Pemain akan diarahkan ke tampilan utama jika pemain menekan tombol '\textit{Enter}' pada tampilan ini. Karena pada smartphone tidak memiliki tombol 'Enter', maka pemain hanya memuat ulang/refresh halaman tersebut.
 
 \begin{figure}[H]
 	\centering  
@@ -125,11 +132,11 @@ Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat l
 			\hline
 			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
 			Pemain memilih labirin dan kecepatan berbelok & Jika pemain salah memasukkan data level labirin, maka akan ditampilkan sebuah text bahwa data yang diisi tidak valid & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
-			Pemain menekan tombol "mulai bermain" & Pemain dapat memulai permainan. Kondisi untuk dapat memulai permainan adalah data level labirn dan kecepatan berbelok sudah valid. & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Pemain menekan tombol "Play Game" & Pemain akan diarahkan ke tampilan bermain. Kondisi untuk dapat memulai permainan adalah data level labirin, kecepatan berbelok dan kecepatan laju ular sudah valid. Posisi ular dan dinding labirin sesuai dengan level labirin yang dipilih. Posisi apel tidak berada di atas dinding labirin atau tubuh ular. & Umumnya, posisi apel tidak berada tepat di atas dinding labirin. Pada beberapa kasus, posisi apel tepat berada di atas dinding labirin.\\ \hline
 		\end{tabular}
 	\end{table}
 	
-	Berdasarkan tabel~\ref{tab:table1}, dapat disimpulkan bahwa kasus uji pada tampilan menu utama membawakan hasil sesuai dengan yang diharapkan. 
+	Berdasarkan tabel~\ref{tab:table1}, dapat disimpulkan bahwa kasus uji pada tampilan menu utama belum membawakan hasil sesuai dengan yang diharapkan ketika pemain menekan tombol "Play Game". Hal ini disebabkan karena pengecekan tabrakan antara apel dengan dinding labirin kurang akurat. 
 	
 	\item Pengujian fungsionalitas tampilan bermain pada \textit{desktop}.
 	
@@ -141,33 +148,50 @@ Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat l
 			Tombol arah kiri ditekan & Ular akan bergerak melawan arah jarum jam & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 			Tombol arah kanan ditekan & Ular akan bergerak searah jarum jam & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 			Ular memakan apel & Pemain akan mendapatkan skor & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
-			Ular menabrak dinding & Tampilan "game over" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
-			Ular menabrak tubuh sendiri & Tampilan "game over" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
+			Ular menabrak dinding & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular menabrak tubuh sendiri & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
 		\end{tabular}
 	\end{table}
 	
 	Berdasarkan tabel~\ref{tab:table2}, dapat disimpulkan bahwa kasus uji tampilan bermain pada desktop membawakan hasil sesuai dengan yang diharapkan. 
 	
-	\item Pengujian fungsionalitas pada tampilan "\textit{Game Over}" 
+	\item Pengujian fungsionalitas tampilan bermain pada \textit{smartphone}.
 	
 	\begin{table}[H]
-		\caption{Pengujian Fungsional pada Tampilan "\textit{Game Over}"} \label{tab:table3}
+		\caption{Pengujian Fungsional Tampilan Bermain pada \textit{Smartphone}} \label{tab:table3}
 		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
 			\hline
 			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
-			Tombol "\textit{Enter}" ditekan & Pemain akan diarahkan ke tampilan menu utama & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Bagian kiri layar ditekan & Ular akan bergerak melawan arah jarum jam & Ketika menekan layar lebih lama, akan muncul sebuah menu yang menginterupsi. Ular akan terus bergerak melawan arah jarum jam meskipun bagian kiri layar tidak ditekan sama sekali.\\ \hline
+			Bagian kanan layar ditekan & Ular akan bergerak searah jarum jam & Ketika menekan layar lebih lama, akan muncul sebuah menu yang menginterupsi. Ular akan terus bergerak searah arah jarum jam meskipun bagian kanan layar tidak ditekan sama sekali.\\ \hline
+			Ular memakan apel & Pemain akan mendapatkan skor & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular menabrak dinding & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Ular menabrak tubuh sendiri & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
 		\end{tabular}
 	\end{table}
 	
-	Berdasarkan tabel~\ref{tab:table3}, dapat disimpulkan bahwa kasus uji pada tampilan "game over" membawakan hasil sesuai dengan yang diharapkan. 
+	Berdasarkan tabel~\ref{tab:table3}, dapat disimpulkan bahwa kasus uji tampilan bermain pada \textit{smartphone} belum membawakan hasil sesuai dengan yang diharapkan. Hal ini dikarenakan \textit{web browser} pada  smartphone akan otomatis memunculkan menu jika layar \textit{smartphone} ditekan lebih lama.
+	
+	\item Pengujian fungsionalitas tampilan permainan berakhir
+	
+	\begin{table}[H]
+		\caption{Pengujian Fungsional Tampilan Permainan Berakhir} \label{tab:table4}
+		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
+			\hline
+			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
+			Tombol "\textit{Enter}" ditekan (pada \textit{desktop}) atau pemain memuat ulang halaman (pada \textit{smartphone})& Pemain akan diarahkan ke tampilan menu utama & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Berdasarkan tabel~\ref{tab:table4}, dapat disimpulkan bahwa kasus uji pada tampilan "game over" membawakan hasil sesuai dengan yang diharapkan. 
 \end{enumerate}
 
 \subsection{Pengujian Eksperimental}
-Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada pengujian ini terdapat 5 orang yang akan menambahkan labirin menggunakan \textit{pull request Github}. Berikut adalah hasil pengujian eksperimental : 
+Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada pengujian ini terdapat 5 orang yang akan menambahkan labirin menggunakan \textit{pull request GitHub}. Setiap penguji diminta untuk membaca file \textit{readme} (lampiran ~\ref{lamp:B}) yang berisikan tentang cara menambah labirin. Berikut adalah hasil pengujian eksperimental : 
 
 \begin{enumerate}
-	\item Penguji 1\\
-	Penguji 1 menambahkan labirin level 6 dengan menggunakan pull request berhasil dilakukan seperti yang terlihat pada Gambar~\ref{fig:pullReq1}. Dinding labirin yang dibuat sudah sesuai dengan besar canvas. Namun posisi ular yang dimasukkan tidak sesuai. Posisi ular tersebut berada pada daerah dinding labirin. Hasilnya adalah ketika permainan dimulai, permainan akan berakhir. Gambar~\ref{fig:pengujian1} merupakan hasil pengujian menggunakan labirin yang dibuat oleh penguji 1.
+	\item Penguji 1 : EllenaAngelica\\
+	Penguji 1 berhasil menambahkan labirin \textit{level} 6 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq1}. Link untuk file teks yang dibuat penguji 1 :  \url{https://github.com/GeneralDevilX/Snake360/pull/3/files}. Labirin yang dibuat sudah sesuai dengan besar \textit{canvas}. Namun posisi ular yang dimasukkan tidak sesuai. Penguji 1 menambahkan sebuah baris kosong di akhir file tersebut sehingga menyebabkan permainan menjadi error. Hal ini disebabkan karena pembacaan posisi ular selalu mengambil teks baris paling terakhir. Karena itu, penulis harus memperbaiki labirin yang dibuat oleh penguji 1. Gambar~\ref{fig:pengujian1} merupakan hasil pengujian menggunakan labirin yang dibuat oleh penguji 1. 
 	
 	\begin{figure}[H]
 		\centering  
@@ -183,8 +207,8 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 		\label{fig:pengujian1} 
 	\end{figure}	
 	
-	\item Penguji 2\\
-	Penguji 2 menambahkan labirin level 7 dengan menggunakan pull request berhasil dilakuka seperti yang terlihat pada Gambar~\ref{fig:pullReq2}. Penguji 2 menambah labirin yang sudah dibuat oleh penguji 1 dan penguji 2 berhasil mengganti nama labirin tersebut. Labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar canvas sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin yang seluruhnya adalah dinding. Hasilnya sama seperti pengujian 1, pada saat permainan dimulai, permainan akan berakhir.
+	\item Penguji 2 : adamadamadamadamadam\\
+	Penguji 2 berhasil menambahkan labirin level 7, 8 dan 9 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq2}. Link untuk file teks yang dibuat penguji 2 : \url{https://github.com/GeneralDevilX/Snake360/pull/2/files}. Ketiga labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar \textit{canvas} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin yang seluruhnya adalah dinding dan memposisikan ular di (0,0). Penulis ingin memberitahukan penguji 2 bahwa labirin yang dibuat belum benar, tetapi terjadi sebuah kesalahan yaitu penulis menekan tombol \textit{merge request}. Hal ini membuat penulis harus memperbaiki labirin yang dibuat oleh penguji 2.
 	
 	\begin{figure}[H]
 		\centering  
@@ -200,4 +224,54 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 		\label{fig:pengujian2} 
 	\end{figure}
 	
+	\item Penguji 3 : ThobyGitHub\\
+	Penguji 3 berhasil menambahkan labirin level 10 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq3}. Link untuk file teks yang dibuat penguji 3 : \url{https://github.com/GeneralDevilX/Snake360/pull/4/files}. Labirin yang dibuat oleh penguji 3 sudah sesuai ketentuan membuat labirin pada file readme sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian3}.
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pullReq3}  
+		\caption[Tampilan hasil pull request milik penguji 3]{Tampilan hasil pull request milik penguji 3}
+		\label{fig:pullReq3} 
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pengujian3}  
+		\caption[Tampilan pengujian labirin yang dibuat oleh penguji 3]{Tampilan pengujian labirin yang dibuat oleh penguji 3}
+		\label{fig:pengujian3} 
+	\end{figure}
+	
+	\item Penguji 4 : felicia-11\\
+	Penguji 4 berhasil menambahkan labirin level 11 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq4}. Link untuk file teks yang dibuat penguji 4 : \url{https://github.com/GeneralDevilX/Snake360/pull/6/files}. Labirin yang dibuat oleh penguji 4 sudah sesuai ketentuan membuat labirin pada file readme sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian4}.
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pullReq4}  
+		\caption[Tampilan hasil pull request milik penguji 4]{Tampilan hasil pull request milik penguji 4}
+		\label{fig:pullReq4} 
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pengujian4}  
+		\caption[Tampilan pengujian labirin yang dibuat oleh penguji 4]{Tampilan pengujian labirin yang dibuat oleh penguji 4}
+		\label{fig:pengujian4} 
+	\end{figure}
+	
+	\item Penguji 5 : tegarmuhammad3775\\
+	Penguji 5 berhasil menambahkan labirin level 12 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq5}. Link untuk file teks yang dibuat penguji 5 : \url{https://github.com/GeneralDevilX/Snake360/pull/5/files}. Labirin yang dibuat oleh penguji 5 sudah sesuai ketentuan membuat labirin pada file readme sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian5}.
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pullReq5}  
+		\caption[Tampilan hasil pull request milik penguji 5]{Tampilan hasil pull request milik penguji 5}
+		\label{fig:pullReq5} 
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pengujian5}  
+		\caption[Tampilan pengujian labirin yang dibuat oleh penguji 5]{Tampilan pengujian labirin yang dibuat oleh penguji 5}
+		\label{fig:pengujian5} 
+	\end{figure}
 \end{enumerate}
