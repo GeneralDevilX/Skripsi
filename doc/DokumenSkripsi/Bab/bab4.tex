@@ -100,12 +100,33 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  Input : tidak ada\\
 				  Output : \textit{boolean gameOver}
 				  	\begin{itemize}
-				  		\item \textit{gameOver} : status apapbila permainan sudah berakhir atau belum
+				  		\item \textit{gameOver} : status apabila permainan sudah berakhir atau belum
 				  	\end{itemize}
 			\item Nama \textit{method} : \textit{animate}\\
 				  Deskripsi : membuat animasi dari setiap objek\\
 				  Input : tidak ada\\
 				  Output : tidak ada
+			\item Nama \textit{method} : \textit{changeLevel}\\
+				  Deskripsi : mengubah jumlah level pada menu utama \\
+				  Input : \textit{int} levels
+				  	\begin{itemize}
+				  		\item \textit{levels} : jumlah \textit{level} pada server
+				  	\end{itemize}
+				  Output : tidak ada
+			\item Nama \textit{method} : \textit{loadMaze}\\
+				  Deskripsi : mengambil dan memeuat labirin yang dipilih pemain\\
+				  Input : \textit{function callback}
+				  	\begin{itemize}
+				  		\item \textit{callback} : fungsi yang akan dijalankan setelah \textit{method loadMaze} selesai mengeksekusi
+				  	\end{itemize}
+				  Output : tidak ada
+			\item Nama \textit{method} : \textit{countLevels}\\
+				  Deskripsi : menghitung jumlah \textit{file} labirin pada server\\
+				  Input : \textit{int level}
+				  	\begin{itemize}
+				  		\item \textit{level} : \textit{file} labirin yang ingin dicek keberadaanya pada server
+				  	\end{itemize}
+				  Output : tidak ada\\
 		\end{itemize}
 		
 	\item Kelas \textit{Snake}\\
@@ -120,6 +141,30 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  		\item y : koordinat y milik ular
 				  	\end{itemize}
 				  Output : tidak ada\\
+				  
+			\item Nama \textit{method} : \textit{setSpeed}\\
+				  Deskripsi : mengubah nilai atribut \textit{speed}\\
+				  Input : \textit{int speed}
+				  	\begin{itemize}
+				  		\item speed : kecepatan laju ular
+				  	\end{itemize}
+				  Output : tidak ada
+				  
+			\item Nama \textit{method} : \textit{getSpeed}\\
+				  Deskripsi : mendapatkan nilai atribut \textit{speed}\\
+				  Input : tidak ada\\
+				  Output : \textit{int speed}
+				  	\begin{itemize}
+				  		\item \textit{speed} : kecepatan laju ular
+				  	\end{itemize}
+				  	
+			\item Nama \textit{method} : \textit{getBesarUlar}\\
+				  Deskripsi : mendapatkan nilai atribut besarUlar\\
+				  Input : tidak ada\\
+				  Output : \textit{int speed}
+				  	\begin{itemize}
+				  		\item besarUlar : lebar tubuh ular
+				  	\end{itemize}
 		\end{itemize}
 		
 	\item Kelas \textit{DrawingObject}\\
@@ -134,6 +179,7 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  		\item y : koordinat y milik apel
 				  	\end{itemize}
 				  Output : tidak ada\\
+				  
 			\item Nama \textit{method} : \textit{drawSnake}\\
 				  Deskripsi : menggambar objek ular\\
 				  Input : \textit{int}[] arrayUlar, \textit{int} besarUlar
@@ -142,6 +188,7 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  		\item besarUlar : lebar tubuh ular
 				  	\end{itemize}
 				  Output : tidak ada\\
+				  
 			\item Nama \textit{method} : \textit{drawMaze}\\
 				  Deskripsi : menggambar labirin\\
 				  Input : \textit{String arrayLayout}, \textit{int besarDinding}
@@ -152,6 +199,51 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  Output : tidak ada\\
 		\end{itemize}
 		
+	\item Kelas \textit{Apple}\\
+	Kelas \textit{Apple} adalah kelas yang merepresentasikan objek apel.
+	
+		\begin{itemize}
+			\item Nama \textit{method} : \textit{getBesarApel}\\
+				  Deskripsi : mendapatkan nilai atribut besarApel\\
+				  Input : tidak ada\\
+				  Output : \textit{int} besarApel
+				  	\begin{itemize}
+				  		\item besarApel : besar apel
+				  	\end{itemize}
+		\end{itemize}
+		
+	\item Kelas \textit{Maze}\\
+	Kelas Maze adalah kelas yang merepresentasikan labirin.
+	
+		\begin{itemize}
+			\item Nama \textit{method} : \textit{setMazeLayout}\\
+				  Deskripsi : membuat labirin berdasarkan file teks yang dipilih\\
+				  Input : \textit{text layoutInText }
+				  	\begin{itemize}
+				  		\item \textit{layoutInText} : isi teks file labirin
+				  	\end{itemize}
+				  Output : tidak ada\\
+		\end{itemize}
+		
+		\begin{itemize}
+			\item Nama \textit{method} : \textit{getMazeLayout}\\
+				  Deskripsi : mendapatkan labirin \\
+				  Input : tidak ada\\
+				  Output : \textit{Arrays} \textit{maze}
+				  	\begin{itemize}
+				  		\item maze : labirin 
+				  	\end{itemize}
+		\end{itemize}
+		
+		\begin{itemize}
+			\item Nama \textit{method} : \textit{getBesarDinding}\\
+				  Deskripsi : mendapatkan besar dinding labirin \\
+				  Input : tidak ada\\
+				  Output : \textit{int} besarDinding
+				  	\begin{itemize}
+				  		\item besarDinding : besar dinding labirin
+				  	\end{itemize}
+		\end{itemize}
 \end{enumerate} 
 
 \section{Rancangan Tampilan Antarmuka}
