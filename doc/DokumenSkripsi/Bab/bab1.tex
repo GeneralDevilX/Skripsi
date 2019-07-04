@@ -7,7 +7,7 @@
 
 \textit{Snake} merupakan sebuah permainan yang pertama kali dibuat oleh Peter Trefonas pada tahun 1978. Konsep \textit{Snake} berasal dari permainan arkade yaitu \textit{Blockade}. Awalnya \textit{Snake} hanya dapat dimainkan pada komputer pribadi. Namun pada tahun 1997, \textit{Snake} dapat dimainkan pada telepon genggam \textit{Nokia}\footnote{https://en.wikipedia.org/wiki/Snake\_(video\_ game\_ genre)}. Cara bermain \textit{Snake} adalah pemain menggerakan ular pada sebuah labirin. Ular tersebut harus mendapatkan makanan sebanyak-banyaknya tanpa menabrak dinding atau ular itu sendiri. Setiap memakan makanan, tubuh ular akan memanjang dan pemain akan semakin sulit untuk menggerakan ular tersebut dengan bebas karena tubuh ular semakin lama akan menutupi labirin tersebut. \\
 
-HTML(\textit{Hyper Text Markup Language}) adalah sebuah bahasa markah yang digunakan untuk membuat halaman web. HTML5 merupakan HTML versi 5 yang terbaru dan penerus dari HTML4, XHTML1, dan DOM \textit{level} 2 HTML. HTML5 memiliki beberapa elemen baru, salah satunya adalah HTML5 Canvas. HTML5 Canvas adalah tempat untuk menggambar \textit{pixel-pixel} yang dapat ditulis menggunakan bahasa pemrograman \textit{JavaScript}. \textit{Javascript} adalah bahasa pemrograman tingkat tinggi yang digunakan untuk membuat halaman web menjadi lebih interaktif. \textit{jQuery} merupakan \textit{library Javascript} yang cepat, kecil dan kaya dengan fitur. \textit{jQuery} membuat hal-hal seperti traversal dan manipulasi dokumen HTML, penanganan \textit{event}, animasi dan \textit{Ajax} jauh lebih sederhana dengan API\textit{(Application Programming Interface)} yang mudah untuk digunakan pada banyak \textit{browser}. \textit{GitHub} adalah layanan \textit{web hosting} bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem \textit{version control} yaitu \textit{Git}. Dengan adanya \textit{GitHub}, \textit{programmer} dapat mengetahui perubahan yang pada \textit{repository} tersebut. \\
+HTML(\textit{Hyper Text Markup Language}) adalah sebuah bahasa markah yang digunakan untuk membuat halaman web. HTML5 merupakan HTML versi 5 dan penerus dari HTML4, XHTML1, dan DOM \textit{level} 2 HTML. HTML5 memiliki beberapa elemen baru, salah satunya adalah HTML5 Canvas. HTML5 Canvas adalah tempat untuk menggambar \textit{pixel-pixel} yang dapat ditulis menggunakan bahasa pemrograman \textit{JavaScript}. \textit{Javascript} adalah bahasa pemrograman tingkat tinggi yang digunakan untuk membuat halaman web menjadi lebih interaktif. \textit{jQuery} merupakan \textit{library Javascript} yang cepat, kecil dan kaya dengan fitur. \textit{jQuery} membuat hal-hal seperti traversal dan manipulasi dokumen HTML, penanganan \textit{event}, animasi dan \textit{Ajax} jauh lebih sederhana dengan API\textit{(Application Programming Interface)} yang mudah untuk digunakan pada banyak \textit{browser}. \textit{GitHub} adalah layanan \textit{web hosting} bersama untuk proyek pengembangan perangkat lunak yang menggunakan sistem \textit{version control} yaitu \textit{Git}. Dengan adanya \textit{GitHub}, \textit{programmer} dapat mengetahui perubahan yang pada \textit{repository} tersebut. \\
 
 Pada permainan \textit{Snake}, umumnya pergerakan ular hanya atas, bawah, kiri, dan kanan saja. Pada skripsi ini, peneliti akan membuat permainan \textit{Snake} yang ularnya dapat bergerak ke segala arah dan orang lain dapat menambahkan labirin menggunakan mekanisme \textit{pull request GitHub}. Dengan begitu, orang lain dapat menambahkan labirin sesuai dengan keinginanya dan pemain tidak akan cepat bosan karena labirin yang disediakan cukup banyak dan variatif.
 
@@ -15,7 +15,7 @@ Pada permainan \textit{Snake}, umumnya pergerakan ular hanya atas, bawah, kiri, 
 \label{sec:rumusan}
 Rumusan dari masalah yang akan dibahas pada skripsi ini adalah sebagai berikut:
 \begin{itemize}
-	\item Bagaimana membangun permainan \textit{Snake} menggunakan HTML5?
+	\item Bagaimana membangun permainan \textit{Snake} menggunakan HTML5 Canvas?
 	\item Bagaimana cara menyimpan labirin pada \textit{file} eksternal?
 	\item Bagaimana cara menggunakan \textit{pull request} pada \textit{GitHub} agar orang lain dapat menambahkan labirin?
 \end{itemize}
@@ -25,7 +25,7 @@ Rumusan dari masalah yang akan dibahas pada skripsi ini adalah sebagai berikut:
 \label{sec:tujuan}
 Tujuan-tujuan yang hendak dicapai melalui penulisan skripsi ini adalah sebagai berikut:
 \begin{itemize}
-	\item Dapat membangun permainan \textit{Snake} menggunakan HTML5.
+	\item Dapat membangun permainan \textit{Snake} menggunakan HTML5 Canvas.
 	\item Dapat menyimpan labirin pada \textit{file} eksternal.
 	\item Dapat menggunakan \textit{pull request} pada \textit{GitHub} agar orang lain dapat menambahkan labirin.
 \end{itemize}
@@ -35,8 +35,8 @@ Tujuan-tujuan yang hendak dicapai melalui penulisan skripsi ini adalah sebagai b
 \label{sec:batasan}
 Beberapa batasan yang dibuat terkait dengan pengerjaan skripsi ini adalah sebagai berikut:
 \begin{itemize}
-	\item Permainan ini hanya dapat dimainkan menggunakan \textit{web browser}.
 	\item \textit{Web browser} yang digunakan sudah mendukung HTML5 Canvas.
+	\item Permainan ini hanya dapat dimainkan oleh 1 orang.
 \end{itemize}
 
 
@@ -44,13 +44,14 @@ Beberapa batasan yang dibuat terkait dengan pengerjaan skripsi ini adalah sebaga
 \label{sec:metlit}
 Metodologi pada penelitian ini adalah sebagai berikut:
 \begin{enumerate}
-	\item Melakukan studi literatur tentang HTML5, \textit{JavaScript}, \textit{jQuery}, dan \textit{Git}.
+	\item Melakukan studi literatur tentang HTML5 Canvas, \textit{Open Source}, \textit{JavaScript}, \textit{jQuery}, AJAX, dan \textit{Version Control}.
 	\item Melakukan analisis dan menentukan objek-objek.
 	\item Merancang algoritma untuk menggambar tubuh ular, pergerakan ular dan membuat labirin.
 	\item Mengimplementasikan keseluruhan algoritma.
 	\item Menambahkan labirin menggunakan \textit{pull request} pada \textit{GitHub}.
 	\item Melakukan pengujian.
 	\item Melakukan penarikan kesimpulan. 
+	\item Menuliskan dokumen skripsi.
 \end{enumerate}
 
 
@@ -59,8 +60,8 @@ Metodologi pada penelitian ini adalah sebagai berikut:
 Sistematikan penulisan setiap bab pada penelitian ini adalah sebagai berikut:
 \begin{enumerate}
 	\item Bab 1 berisikan latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi, dan sistematika pembahasan dari penelitian yang dilakukan.
-	\item Bab 2 berisikan dasar-dasar teori yang menunjang penelitian ini. Teori yang digunakan adalah: pengertian \textit{Snake} Game, HTML5 Canvas, \textit{Javascript}, \textit{jQuery}, dan \textit{Git}.
-	\item Bab 3 berisikan analisis sistem yang sudah ada, analisis sistem yang dibangun dan analisis berorientasi objek.
+	\item Bab 2 berisikan dasar-dasar teori yang menunjang penelitian ini. Teori yang digunakan adalah: pengertian \textit{Snake} Game, \textit{Open Source}, HTML5 Canvas, \textit{Javascript}, \textit{jQuery}, AJAX, dan \textit{Version Control}.
+	\item Bab 3 berisikan analisis sistem yang sudah ada, analisis sistem yang dibangun dan analisis berorientasi objek. Analisis sistem yang sudah ada berisikan analisis permainan Snake Nokia dan Slither.io. Analisis berorientasi objek berisikan skenario permainan dan diagram kelas. 
 	\item Bab 4 berisikan perancangan perangkat lunak yang dibangun. Perancangan yang dilakukan meliputi perancangan diagram \textit{sequence}, perancangan diagram kelas dan perancangan tampilan antarmuka.
 	\item Bab 5 berisikan implementasi dan pengujian perangkat lunak.
 	\item Bab 6 berisikan kesimpulan dan saran.

@@ -49,6 +49,23 @@ Berikut adalah lingkungan perangkat lunak yang digunakan dalam pembangunan perma
 	\item Sistem Operasi \textit{Smartphone} : Android Nougat v7.0
 \end{enumerate}
 
+\subsection{GitHub Hosting}
+Open Source Snake 360 dapat dimainkan pada link: \url{https://generaldevilx.github.io/Snake360/} karena permainan ini sudah dihosting di GitHub. Dengan cara ini, orang lain dapat memainkan Open Source Snake 360 secara langsung dengan mengakses link tersebut. Sebelum hosting, pada repository harus terdapat halaman utama yaitu 'index.html'. Caranya adalah : buka repository kemudian pilih tab 'settings'. Sesudah itu, carilah bagian 'GitHub Pages' kemudian pada bagian source, klik dropdown list dan akan muncul list seperti pada Gambar~\ref{fig:hosting}. List tersebut adalah branch pada repository yang akan dihosting. Karena peneliti menggunakan branch master untuk membuat Open Source Snake 360, maka list pertama akan dipilih. Setelah itu, GitHub akan menyediakan link yang dapat diakses oleh orang lain yang hasilnya dapat dilihat pada Gambar~\ref{fig:hosting2}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{hosting}  
+	\caption[Tampilan memilih branch repository untuk dihosting]{Tampilan memilih branch repository untuk dihosting}
+	\label{fig:hosting} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{hosting2}  
+	\caption[Tampilan setelah melakukan hosting di GitHub]{Tampilan setelah melakukan hosting di GitHub}
+	\label{fig:hosting2} 
+\end{figure}
+
 \subsection{Implementasi Antarmuka}
 Pada subbab ini akan ditampilkan dan dijelaskan tampilan antarmuka dari Open Source Snake 360. 
 
@@ -152,10 +169,12 @@ Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat l
 			Ular menabrak dinding & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 			Ular menabrak tubuh sendiri & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
 			Ular mencapai sisi ujung labirin & Ular akan muncul di sisi ujung labirin yang berlawanan & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Tombol arah kanan ditekan 9 kali dengan kecepatan sudut sebesar 10  & Ular akan bergerak ke bawah & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Tombol arah kiri ditekan 9 kali dengan kecepatan sudut sebesar 10  & Ular akan bergerak ke atas & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 		\end{tabular}
 	\end{table}
 	
-	Berdasarkan tabel~\ref{tab:table2}, dapat disimpulkan bahwa kasus uji tampilan bermain pada desktop membawakan hasil sesuai dengan yang diharapkan. 
+	Berdasarkan tabel~\ref{tab:table2}, dapat disimpulkan bahwa kasus uji tampilan bermain pada desktop membawakan hasil sesuai dengan yang diharapkan.
 	
 	\item Pengujian fungsionalitas tampilan bermain pada \textit{smartphone}.
 	
@@ -170,6 +189,8 @@ Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat l
 			Ular menabrak dinding & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 			Ular menabrak tubuh sendiri & Tampilan "\textit{game over}" akan muncul & Hasil pengujian sesuai dengan yang diharapkan\\ \hline 
 			Ular mencapai sisi ujung labirin & Ular akan muncul di sisi ujung labirin yang berlawanan & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Bagian kanan layar ditekan 9 kali dengan kecepatan sudut sebesar 10  & Ular akan bergerak ke bawah & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Bagian kiri layar ditekan 9 kali dengan kecepatan sudut sebesar 10  & Ular akan bergerak ke atas & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
 		\end{tabular}
 	\end{table}
 	
@@ -194,7 +215,7 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 
 \begin{enumerate}
 	\item Penguji 1 : EllenaAngelica\\
-	Penguji 1 berhasil menambahkan labirin \textit{level} 6 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq1}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 1 :  \url{https://github.com/GeneralDevilX/Snake360/pull/3/files}. Labirin yang dibuat sudah sesuai dengan besar \textit{canvas}. Namun posisi ular yang dimasukkan tidak sesuai. Penguji 1 menambahkan sebuah baris kosong di akhir \textit{file} tersebut sehingga menyebabkan permainan menjadi \textit{error}. Hal ini disebabkan karena pembacaan posisi ular selalu mengambil teks baris paling terakhir. Karena itu, peneliti harus memperbaiki labirin yang dibuat oleh penguji 1. Gambar~\ref{fig:pengujian1} merupakan hasil pengujian menggunakan labirin yang dibuat oleh penguji 1. 
+	Penguji 1 berhasil menambahkan labirin ke 6 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq1}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 1 :  \url{https://github.com/GeneralDevilX/Snake360/pull/3/files}. Gambar~\ref{fig:pengujian1} merupakan hasil pengujian menggunakan labirin yang dibuat oleh penguji 1. Pada Gambar~\ref{fig:pengujian1}, Penguji 1 membuat labirin yang sudah sesuai dengan besar \textit{canvas}. Namun posisi ular yang dimasukkan tidak sesuai. Penguji 1 menambahkan sebuah baris kosong di akhir \textit{file} tersebut sehingga menyebabkan permainan menjadi \textit{error}. Hal ini disebabkan karena pembacaan posisi ular selalu mengambil teks baris paling terakhir. Karena itu, peneliti harus memperbaiki labirin yang dibuat oleh penguji 1.
 	
 	\begin{figure}[H]
 		\centering  
@@ -206,12 +227,15 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	\begin{figure}[H]
 		\centering  
 		\includegraphics[scale=0.4]{pengujian1}  
-		\caption[Tampilan pengujian labirin yang dibuat oleh penguji 1]{Tampilan pengujian labirin yang dibuat oleh penguji 1}
+		\caption[Tampilan pengujian labirin ke 6 yang dibuat oleh penguji 1]{Tampilan pengujian labirin yang dibuat oleh penguji 1}
 		\label{fig:pengujian1} 
 	\end{figure}	
 	
 	\item Penguji 2 : adamadamadamadamadam\\
-	Penguji 2 berhasil menambahkan labirin \textit{level} 7, 8 dan 9 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq2}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 2 : \url{https://github.com/GeneralDevilX/Snake360/pull/2/files}. Ketiga labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar \textit{canvas} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin \textit{level} 7 dan 8 yang seluruhnya adalah dinding dan memposisikan ular di (0,0). Pada labirin level 9, penguji 2 menambahkan sebuah baris kosong di akhir \textit{file} sehingga menyebabkan permainan menjadi \textit{error}. Peneliti ingin memberitahukan penguji 2 bahwa labirin yang dibuat belum benar, tetapi terjadi sebuah kesalahan yaitu peneliti menekan tombol \textit{merge request}. Hal ini membuat peneliti harus memperbaiki labirin yang dibuat oleh penguji 2.
+	Penguji 2 berhasil menambahkan labirin ke 7, 8 dan 9 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq2}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 2 : \url{https://github.com/GeneralDevilX/Snake360/pull/2/files}. Penguji 2 membuat labirin ke 7 yang seluruhnya terdapat dinding dan memposisikan ular di koordinat (0,0). Selain itu, pada file teks labirin ke 7, labirin dibuat kurang dari 60 baris. Penguji 2 membuat labirin ke 7 dan labirin ke 8. Gambar~\ref{fig:pengujian2} merupakan hasil pengujian labirin ke 7.
+	
+	
+	Ketiga labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar \textit{canvas} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin \textit{level} 7 dan 8 yang seluruhnya adalah dinding dan memposisikan ular di (0,0). Pada labirin level 9, penguji 2 menambahkan sebuah baris kosong di akhir \textit{file} sehingga menyebabkan permainan menjadi \textit{error}. Peneliti ingin memberitahukan penguji 2 bahwa labirin yang dibuat belum benar, tetapi terjadi sebuah kesalahan yaitu peneliti menekan tombol \textit{merge request}. Hal ini membuat peneliti harus memperbaiki labirin yang dibuat oleh penguji 2.
 	
 	\begin{figure}[H]
 		\centering  
@@ -223,14 +247,26 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	\begin{figure}[H]
 		\centering  
 		\includegraphics[scale=0.4]{pengujian2}
-		\includegraphics[scale=0.4]{pengujian2_2}
-		\includegraphics[scale=0.4]{pengujian2_3}
-		\caption[Tampilan pengujian labirin yang dibuat oleh penguji 2]{Tampilan pengujian labirin yang dibuat oleh penguji 2}
+		\caption[Tampilan pengujian labirin ke 7 yang dibuat oleh penguji 2]{Tampilan pengujian labirin ke 7 yang dibuat oleh penguji 2}
 		\label{fig:pengujian2} 
 	\end{figure}
 	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pengujian2_2}  
+		\caption[Tampilan pengujian labirin ke 8 yang dibuat oleh penguji 2]{Tampilan pengujian labirin ke 8 yang dibuat oleh penguji 2}
+		\label{fig:pengujian2_2} 
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering  
+		\includegraphics[scale=0.4]{pengujian2_3}  
+		\caption[Tampilan pengujian labirin ke 9 yang dibuat oleh penguji 2]{Tampilan pengujian labirin ke 9 yang dibuat oleh penguji 2}
+		\label{fig:pengujian2_3} 
+	\end{figure}
+	
 	\item Penguji 3 : ThobyGitHub\\
-	Penguji 3 berhasil menambahkan labirin \textit{level} 10 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq3}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 3 : \url{https://github.com/GeneralDevilX/Snake360/pull/4/files}. Labirin yang dibuat oleh penguji 3 sudah sesuai ketentuan membuat labirin pada \textit{file readme} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian3}.
+	Penguji 3 berhasil menambahkan labirin \textit{level} 10 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq3}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 3 : \url{https://github.com/GeneralDevilX/Snake360/pull/4/files}. Labirin yang dibuat oleh penguji 3 sudah sesuai ketentuan membuat labirin pada \textit{file readme}. Gambar~\ref{fig:pengujian3} merupakan tampilan labirin yang dibuat oleh penguji 3.
 	
 	\begin{figure}[H]
 		\centering  

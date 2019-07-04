@@ -57,6 +57,9 @@ Permainan \textit{Snake} ini dapat dimainkan secara \textit{singleplayer} atau \
 	\label{fig:slither} 
 \end{figure} 
 
+\section{\textit{Open Source}}
+Open source adalah istilah yang digunakan pada perangkat lunak yang sumber kodenya dapat dilihat dan diubah/dimodifikasi oleh orang lain untuk memperbaiki dan membantu mengembangkan perangkat lunak menjadi lebih baik.\cite{fogel2005producing}. Proyek open source dikerjakan oleh pengembang lain yang tidak kita kenal. Proyek open source belum tentu menarik perhatian pengembang lainnya untuk membantu mengembangkan proyek tersebut. Selain itu, pemilik proyek harus membuat dokumentasi tentang proyek, membuat forum diskusi dan memastikan bahwa sumber kode proyek dapat dilihat dan dimodifikasi oleh orang lain. Jika ada pengembang yang tertarik dengan proyek tersebut, maka pemilik proyek harus sudah siap untuk menjawab pertanyaan meskipun hasil yang dilakukan oleh pengembang belum terlihat. Proyek open source memiliki kerja ekstra dibandingkan dengan proyek closed source, namun hasilnya dapat terlihat pada saat mulai pengembangan proyek. Keuntungan dari proyek ini adalah pengembang akan merasa puas dengan hasil proyek dan kerjanya akan dihargai oleh orang lain.
+
 \section{HTML5 \textit{Canvas}}
 \label{sec:HTML5Canvas}
 HTML5 \textit{Canvas} adalah sebuah daerah \textit{bitmap} yang dapat dimanipulasi oleh \textit{Javascript} \cite{fulton2013html5}. Pada daerah \textit{bitmap} tersebut, \textit{pixel-pixel} akan di\textit{render} oleh canvas. Setiap \textit{frame}, HTML5 \textit{Canvas} akan menggambar pada area \textit{bitmap} tersebut menggunakan \textit{Canvas} API(\textit{Application Programming Interface}) yang dipanggil pada \textit{Javascript}. API dari HTML5 \textit{Canvas} yang umum adalah 2D \textit{Context}. Dengan adanya 2D \textit{Context}, \textit{programmer} dapat membuat bentuk 2D, menampilkan gambar, \textit{render} tulisan, memberi warna, membuat garis dan kurva, dan manipulasi \textit{pixel}. HTML5 Canvas tidak hanya digunakan untuk menggambar tetapi juga dapat digunakan untuk menampilkan gambar serta tulisan. HTML5 \textit{Canvas} juga dapat digunakan untuk membuat animasi, aplikasi pada \textit{web} dan permainan. \\
@@ -122,56 +125,6 @@ Untuk menambahkan \textit{Javascript} pada sebuah halaman \textit{web} yang dibu
 
 			</body>
 		</html>
-	
-\end{lstlisting}
-
-\subsection{Variabel}
-Variabel adalah sebuah wadah untuk menyimpan nilai/\textit{value}. Untuk mendeklarasi variabel pada \textit{Javascript}, digunakan \textit{keyword 'var'}. Variabel pada \textit{Javascript} tidak perlu menuliskan tipe datanya ketika mendeklarasikan variabel, karena tipe data variabel akan otomatis mengikuti tipe data nilai yang di\textit{assign} ke variabel tersebut.  Pada \textit{listing} ~\ref{lst:var1} terdapat potongan kode untuk mendeklarasikan variabel.
-
-\begin{lstlisting}[language=Javascript, caption=Deklarasi variabel, label={lst:var1}]
-	var myVariable;
-	
-\end{lstlisting}
-
-Nilai variabel pada listing~\ref{lst:var1} adalah \textit{undifined} karena variabel tersebut tidak diberi nilai/\textit{value}. Pada \textit{listing} ~\ref{lst:var2} terdapat potongan kode untuk mengisi nilai pada variabel. 
-
-\begin{lstlisting}[language=Javascript, caption=Mengisi nilai sebuah variabel, label={lst:var2}]
-	myVariable = 3;	
-	
-\end{lstlisting}
-
-Variabel dapat menyimpan beberapa tipe data diantaranya adalah:
-\begin{itemize}
-	\item \textit{String} : nilai yang berupa teks atau sekumpulan huruf.
-	\item \textit{Number} : nilai yang berupa angka.
-	\item \textit{Boolean} : nilai \textit{true/false}.
-	\item \textit{Array} : struktur untuk menyimpan lebih dari 1 nilai dalam sebuah \textit{reference}
-	\item \textit{Object} : semua yang ada pada \textit{Javascript} termasuk objek pada HTML.
-\end{itemize}
-
-\subsection{\textit{Constant}}
-\textit{Constant} adalah sebuah variabel \textit{read-only}, artinya nilai pada \textit{constant} tidak dapat diubah. Untuk mendeklarasikan \textit{constant}, digunakan \textit{keyword 'const'}. Pada \textit{listing} ~\ref{lst:const} terdapat potongan kode untuk mendeklarasi \textit{constant}.
-
-\begin{lstlisting}[language=Javascript, caption=Deklarasi \textit{constant}, label={lst:const}]
-	const myConst = 1;
-	
-\end{lstlisting}
-
-\subsection{\textit{Function}}
-\textit{Function} adalah sekumpulan perintah/\textit{statements} untuk menjalankan suatu tugas atau menghitung nilai. Untuk membuat \textit{function}, digunakan \textit{keyword 'function'}, kemudian diikuti dengan nama \textit{function} tersebut, parameter yang dituliskan di dalam kurung, dan \textit{statement}/perintah \textit{Javascript} yang ditulis di dalam kurung kurawal. Parameter pada \textit{function} bisa lebih dari 1 yang penulisanya dipisahkan oleh koma. \textit{Function} bisa memiliki parameter atau tidak. Pada \textit{Listing}~\ref{lst:func1} terdapat potongan kode untuk membuat \textit{function} penjumlahan 2 buah bilangan.
-
-\begin{lstlisting}[language=Javascript, caption=\textit{Function} penjumlahan 2 buah bilangan, label={lst:func1}]
-	function penjumlahan(angka1,angka2){
-		var hasil = angka1+angka2;
-		return hasil;
-	}
-	
-\end{lstlisting}
-
-Setelah membuat \textit{function}, \textit{function} tersebut tidak langsung dieksekusi. Membuat \textit{function} hanya memberi nama \textit{function} tersebut dan mendeskripsikan apa yang akan dilakukan oleh \textit{function} tersebut apabila dipanggil. Dengan memanggil \textit{function}, maka \textit{function} akan dieksekusi. Pada \textit{listing}~\ref{lst:func2} terdapat potongan kode untuk memanggil \textit{function} dengan nama penjumlahan.
-
-\begin{lstlisting}[language=Javascript, caption=Memanggil \textit{function} penjumlahan, label={lst:func2}]
-	penjumlahan(10,5);
 	
 \end{lstlisting}
 
@@ -604,7 +557,7 @@ Berikut adalah method yang digunakan untuk mendapatkan dimensi kotak :
 	\item \textit{innerWidth(true)} : lebar dari kotak ditambah \textit{padding, border dan padding}
 \end{itemize}
 
-\subsection{AJAX}
+\section{AJAX}
 AJAX(\textit{Asynchronous Javascript and XML}) adalah sebuah teknik pengembangan \textit{web} yang digunakan untuk memuat data pada bagian halaman \textit{web} tanpa memuat ulang/\textit{refresh} halaman \textit{web}. Penggunaan AJAX yang umum adalah sebagai berikut:
 
 \begin{itemize}
@@ -618,7 +571,7 @@ AJAX menggunakan \textit{asynchronous processing model} yang artinya adalah peng
 
 Langkah-langkah AJAX mengirim \textit{request} dan menerima respon dari server adalah : Pertama, \textit{browser} meminta informasi dari server. Permintaan tersebut dapat mengandung informasi yang dibutuhkan oleh server untuk diproses. Browser mengimplemen sebuah objek yang bernama \textit{XMLHttpRequest} untuk menangani \textit{Ajax request}. Browser tidak menunggu respon dari server. Setelah mengirim \textit{request} dan server menerima \textit{Ajax request}, server akan mengirmkan HTML atau data dalam format lainnya seperti JSON(\textit{Javascript Object Notation}) atau XML. Setelah server selesai merespon \textit{request} tersebut, \textit{browser} akan menjalankan \textit{event}. Event ini dapat digunakan untuk \textit{trigger} fungsi-fungsi \textit{Javascript} yang akan memproses data dan memnambahkanya ke sebuah bagian/elemen dari halaman \textit{web}.
 
-\subsubsection{Ajax \textit{Request} dan \textit{Response}}
+\subsection{Ajax \textit{Request} dan \textit{Response}}
 Untuk membuat \textit{Ajax request}, \textit{browser} menggunakan objek \textit{XMLHttpRequest}. Ketika server merespon \textit{request} dari browser, objek \textit{XMLHttpRequest} yang sama akan memproses hasilnya. Pada \textit{listing}~\ref{lst:jQuery12} terdapat potongan kode untuk membuat \textit{Ajax request}. 
 
 \begin{lstlisting}[language=Javascript, caption=Membuat \textit{Ajax request} , label={lst:jQuery12}]
@@ -637,7 +590,7 @@ Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adal
 	}
 \end{lstlisting}
 
-\subsubsection{\textit{jQuery} dan AJAX \textit{Request}}
+\subsection{\textit{jQuery} dan AJAX \textit{Request}}
 \textit{jQuery} menyediakan beberapa \textit{method} untuk menangani \textit{Ajax request} diantaranya adalah :
 
 \begin{itemize}
@@ -649,7 +602,7 @@ Berdasarkan \textit{listing}~\ref{lst:jQuery12}, hal pertama yang dilakukan adal
 	\item \$.ajax(): \textit{method} ini digunakan untuk menjalankan semua \textit{request} yang sudah dijelaskan pada poin sebelumnya. 
 \end{itemize}
 
-\subsubsection{\textit{jQuery} dan AJAX \textit{Response}}
+\subsection{\textit{jQuery} dan AJAX \textit{Response}}
 Ketika menggunakan \textit{method load()}, HTML yang dikirim dari server akan dimasukkan ke \textit{jQuery selection}. \textit{jQuery} memiliki objek yaitu \textit{jqXHR} yang mempermudah untuk menangani data yang dikirim dari server. Berikut adalah properti dan method dari \textit{jqXHR} :
 
 \begin{itemize}
@@ -676,10 +629,9 @@ Ketika menggunakan \textit{method load()}, HTML yang dikirim dari server akan di
 	\item \textit{timeout} : angka dalam milisekon untuk menunggu sebelum \textit{event} akan gagal
 \end{itemize}
 
-\section{\textit{Git}}
-\label{sec:Git}
+\section{\textit{Version Control}}
+\label{sec:version}
 
-\subsection{\textit{Version Control}}
 \textit{Version control} adalah sistem yang menyimpan perubahan pada sebuah \textit{file} atau sekumpulan \textit{file} secara berkala sehingga dapat mendapatkan versi yang spesifik nantinya \cite{chacon2014pro}. VCS(\textit{Version Control System}) memungkinkan pengguna untuk mengembalikan \textit{file} yang diinginkan ke \textit{state} sebelumnya, mengembalikan keseluruhan proyek ke \textit{state} sebelumnya, membandingkan perubahan secara berkala, dapat melihat pengguna terakhir yang memodifikasi sesuatu yang menyebabkan masalah, dan masih banyak lagi. Ketika beberapa \textit{file} ada yang hilang karena sebuah kesalahan, \textit{file-file} tersebut dapat dikembalikan dengan mudah. 
 
 \subsubsection{Local Version Control System}
