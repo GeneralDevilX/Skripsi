@@ -1,9 +1,9 @@
 \chapter{Perancangan}
 \label{chap:perancangan}
 
-Pada bab ini akan dibahas mengenai perancangan permainan yang dibangun. Perancangan akan dilakukan meliputi perancangan diagram \textit{sequence}, perancangan diagram kelas, dan perancangan tampilan antarmuka.
+Pada bab ini akan dibahas mengenai perancangan permainan yang dibangun. Perancangan akan dilakukan meliputi perancangan diagram \textit{sequence}, perancangan diagram \textit{state}, perancangan diagram kelas, dan perancangan tampilan antarmuka.
 
-\section{Rancangan Diagram Sequence}
+\section{Rancangan Diagram \textit{Sequence}}
 Pada bagian ini akan ditunjukan dan dijelaskan diagram \textit{sequence} Open Source Snake 360. Diagram \textit{sequence} yang dibuat adalah memuat labirin. 
 
 \begin{figure}[H]
@@ -16,12 +16,22 @@ Pada bagian ini akan ditunjukan dan dijelaskan diagram \textit{sequence} Open So
 Pada Gambar~\ref{fig:sequenceLoad}, pemain memulai bermain dengan memilih labirin. Berikut adalah penjelasan dari Gambar~\ref{fig:sequenceLoad}:
 
 \begin{enumerate}
-	\item Pemain memilih level labirin. 
-	\item Kelas Game akan menerima input dari pemain dan mencari \textit{file} labirin yang sesuai dengan yang pemain pilih di folder labirin. File labirin merupakan file teks.
-	\item Jika \textit{file} ditemukan, maka kelas Game akan memanggil \textit{method} kelas Maze untuk membuat labirin yang sesuai dengan isi \textit{file} labirin. 
-	\item Setelah labirin selesai dibuat, kelas Game akan memanggil \textit{method} kelas DrawingObject untuk menggambar labirin.
+	\item Pemain memilih labirin. 
+	\item Kelas \textit{Game} akan menerima input dari pemain dan mencari \textit{file} labirin yang sesuai dengan yang pemain pilih di folder labirin. \textit{File} labirin merupakan file teks.
+	\item Jika \textit{file} ditemukan, maka kelas \textit{Game} akan memanggil \textit{method} kelas \textit{Maze} untuk membuat labirin yang sesuai dengan isi \textit{file} labirin. 
+	\item Setelah labirin selesai dibuat, kelas Game akan memanggil \textit{method} kelas \textit{DrawingObject} untuk menggambar labirin.
 	\item Jika labirin sudah selesai digambar, kelas Game akan memulai permainan.
 \end{enumerate}
+
+\section{Rancangan Diagram \textit{State}}
+Pada bagian ini akan ditunjukan diagram \textit{state} pada Open Source Snake 360. Diagram \textit{state} yang dibuat adalah proses bermain mulai dari awal sampai akhir permainan. Diagram \textit{state} dapat dilihat pada Gambar~\ref{fig:stateDiagram}.
+
+\begin{figure}[H]
+	\centering  
+	\includegraphics[scale=0.4]{stateDiagram}  
+	\caption[Diagram state proses bermain dari Open Source \textit{Snake} 360]{Diagram state proses bermain dari Open Source \textit{Snake} 360}
+	\label{fig:stateDiagram} 
+\end{figure}
 
 \section{Rancangan Diagram Kelas Rinci}
 Pada bagian ini akan ditunjukan dan dijelaskan diagram kelas dari \textit{Open Source Snake 360} secara lengkap. Diagram kelas dapat dilihat pada Gambar~\ref{fig:classDiagramComplete}.
@@ -35,7 +45,7 @@ Pada bagian ini akan ditunjukan dan dijelaskan diagram kelas dari \textit{Open S
 
 \textbf{Deskripsi Kelas dan Method}\\
 
-Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada setiap kelas. Penjelasan kelas dan \textit{method} meliputi nama kelas, deskripsi \textit{method}, input yang dibutuhkan, dan output yang dihasilkan. 
+Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada setiap kelas. Penjelasan kelas dan \textit{method} meliputi nama kelas, deskripsi \textit{method}, \textit{input} yang dibutuhkan, dan \textit{output} yang dihasilkan. 
 
 \begin{enumerate}
 	\item Kelas \textit{Game} \\
@@ -106,10 +116,10 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 				  Input : tidak ada\\
 				  Output : tidak ada
 			\item Nama \textit{method} : \textit{changeLevel}\\
-				  Deskripsi : mengubah jumlah level pada menu utama \\
+				  Deskripsi : mengubah jumlah labirin pada menu utama \\
 				  Input : \textit{int} levels
 				  	\begin{itemize}
-				  		\item \textit{levels} : jumlah \textit{level} pada server
+				  		\item \textit{levels} : jumlah \textit{labirin} pada server
 				  	\end{itemize}
 				  Output : tidak ada
 			\item Nama \textit{method} : \textit{loadMaze}\\
@@ -246,10 +256,10 @@ Pada bagian ini akan dijelaskan deskripsi kelas dan \textit{method-method} pada 
 \end{enumerate} 
 
 \section{Rancangan Tampilan Antarmuka}
-Pada bagian ini akan ditunjukan rancangan tampilan antarmuka dari permainan yang dibangun yang terdiri dari menu pemilihan level labirin, mulai bermain, dan permainan berakhir.
+Pada bagian ini akan ditunjukan rancangan tampilan antarmuka dari permainan yang dibangun yang terdiri dari menu pemilihan labirin, mulai bermain, dan permainan berakhir.
 
 \subsection{Tampilan Menu Utama}
-Gambar~\ref{fig:menuUtama} merupakan rancangan tampilan awal dari permainan yang dibangun. Pada tampilan ini terdapat judul permainan, 3 buah input untuk memilih level labirin, memilih kecepatan gerak ular, dan memilih kecepatan ular berbelok dan sebuah tombol '\textit{Play Game}' untuk memulai permainan. Tampilan menu utama akan menampilkan pesan kesalahan seperti terdapat pada Gambar~\ref{fig:menuUtamaSalah}. Apabila pemain salah memasukkan salah satu data, maka permainan tidak akan dimulai jika tombol '\textit{Play Game}' ditekan.
+Gambar~\ref{fig:menuUtama} merupakan rancangan tampilan awal dari permainan yang dibangun. Pada tampilan ini terdapat judul permainan dan 3 buah \textit{input}, yaitu memilih labirin, memilih kecepatan gerak ular, dan memilih kecepatan ular berbelok dan sebuah tombol '\textit{Play Game}' untuk memulai permainan. Tampilan menu utama akan menampilkan pesan kesalahan seperti terdapat pada Gambar~\ref{fig:menuUtamaSalah}. Apabila pemain salah memasukkan salah satu data, maka permainan tidak akan dimulai jika tombol '\textit{Play Game}' ditekan.
 
 \begin{figure}[H]
 	\centering  
@@ -266,7 +276,7 @@ Gambar~\ref{fig:menuUtama} merupakan rancangan tampilan awal dari permainan yang
 \end{figure}
 
 \subsection{Tampilan Bermain}
-Tampilan bermain akan muncul setelah pemain memilih level labirin, kecepatan ular dan kecepatan ular berbelok pada menu utama dengan benar dan sudah menekan tombol '\textit{Play Game}' (Gambar~\ref{fig:menuUtama}). Gambar~\ref{fig:permainan} merupakan tampilan permainan sudah dimulai. Pada tampilan ini terdapat ular, dinding labirin dan makanan berbentuk apel. Pada tampilan ini juga terdapat level labirin yang dipilih dan skor yang didapat. 
+Tampilan bermain akan muncul setelah pemain memilih labirin, kecepatan ular dan kecepatan ular berbelok pada menu utama dengan benar dan sudah menekan tombol '\textit{Play Game}' (Gambar~\ref{fig:menuUtama}). Gambar~\ref{fig:permainan} merupakan tampilan permainan sudah dimulai. Pada tampilan ini terdapat ular, dinding labirin dan makanan berbentuk apel. Pada tampilan ini juga terdapat labirin yang dipilih dan skor yang didapat. 
 
 \begin{figure}[H]
 	\centering  

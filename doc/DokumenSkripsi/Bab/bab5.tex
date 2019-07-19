@@ -49,7 +49,7 @@ Berikut adalah lingkungan perangkat lunak yang digunakan dalam pembangunan perma
 	\item Sistem Operasi \textit{Smartphone} : Android Nougat v7.0
 \end{enumerate}
 
-\subsection{GitHub Hosting}
+\subsection{Lingkungan Pengujian}
 Open Source Snake 360 dapat dimainkan pada link: \url{https://generaldevilx.github.io/Snake360/} karena permainan ini sudah dihosting di GitHub. Dengan cara ini, orang lain dapat memainkan Open Source Snake 360 secara langsung dengan mengakses link tersebut. Sebelum hosting, pada repository harus terdapat halaman utama yaitu 'index.html'. Caranya adalah : buka repository kemudian pilih tab 'settings'. Sesudah itu, carilah bagian 'GitHub Pages' kemudian pada bagian source, klik dropdown list dan akan muncul list seperti pada Gambar~\ref{fig:hosting}. List tersebut adalah branch pada repository yang akan dihosting. Karena peneliti menggunakan branch master untuk membuat Open Source Snake 360, maka list pertama akan dipilih. Setelah itu, GitHub akan menyediakan link yang dapat diakses oleh orang lain yang hasilnya dapat dilihat pada Gambar~\ref{fig:hosting2}.
 
 \begin{figure}[H]
@@ -70,7 +70,7 @@ Open Source Snake 360 dapat dimainkan pada link: \url{https://generaldevilx.gith
 Pada subbab ini akan ditampilkan dan dijelaskan tampilan antarmuka dari Open Source Snake 360. 
 
 \subsubsection{Tampilan Menu Utama}
-Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampilan antarmuka menu utama pada \textit{desktop} dan \textit{smartphone}. Pada tampilan ini terdapat judul dari permainan, \textit{input} untuk mengisi \textit{level} labirin, kecepatan ular berbelok, kecepatan ular, dan tombol '\textit{Play Game}'. Jika pemain salah memasukkan data, maka terdapat pesan kesalahan yang ditandai dengan tulisan bewarna merah. Misal, pada Gambar~\ref{fig:GUIUtamaSalah} dan Gambar~\ref{fig:GUIUtamaSalahAndroid}, pemain salah memasukkan data untuk level labirin sehingga muncul pesan kesalahan bahwa \textit{input} yang dimasukkan salah.
+Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampilan antarmuka menu utama pada \textit{desktop} dan \textit{smartphone}. Pada tampilan ini terdapat judul dari permainan, \textit{input} untuk mengisi labirin, kecepatan ular berbelok, kecepatan ular, dan tombol '\textit{Play Game}'. Jika pemain salah memasukkan data, maka terdapat pesan kesalahan yang ditandai dengan tulisan bewarna merah. Misal, pada Gambar~\ref{fig:GUIUtamaSalah} dan Gambar~\ref{fig:GUIUtamaSalahAndroid}, pemain salah memasukkan data untuk labirin sehingga muncul pesan kesalahan bahwa \textit{input} yang dimasukkan salah.
 
 \begin{figure}[H]
 	\centering  
@@ -89,19 +89,19 @@ Gambar~\ref{fig:GUIUtama} dan Gambar~\ref{fig:GUIUtamaAndroid} merupakan tampila
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.4]{GUIUtamaSalah}  
-	\caption[Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{desktop}]{Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{desktop}}
+	\caption[Tampilan menu utama jika pemain salah memasukkan data labirin pada \textit{desktop}]{Tampilan menu utama jika pemain salah memasukkan data labirin pada \textit{desktop}}
 	\label{fig:GUIUtamaSalah} 
 \end{figure}
 
 \begin{figure}[H]
 	\centering  
 	\includegraphics[scale=0.2]{GUIUtamaSalahAndroid}  
-	\caption[Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{smartphone}]{Tampilan menu utama jika pemain salah memasukkan data \textit{level} labirin pada \textit{smartphone}}
+	\caption[Tampilan menu utama jika pemain salah memasukkan data labirin pada \textit{smartphone}]{Tampilan menu utama jika pemain salah memasukkan data labirin pada \textit{smartphone}}
 	\label{fig:GUIUtamaSalahAndroid} 
 \end{figure}
 
 \subsubsection{Tampilan Bermain}
-Gambar~\ref{fig:GUIBermain} dan Gambar~\ref{fig:GUIBermainAndroid} merupakan tampilan antarmuka mulai bermain pada \textit{desktop} dan \textit{smartphone}. Tampilan ini muncul apabila pemain memasukkan data level labirin, kecepatan ular berbelok dan kecepatan ular dengan benar dan menekan tombol "\textit{Play Game}". Pada tampilan ini terdapat ular yang dikontrol oleh pemain, dinding labirin, makanan ular, \textit{level} labirin dan skor yang didapat pemain.
+Gambar~\ref{fig:GUIBermain} dan Gambar~\ref{fig:GUIBermainAndroid} merupakan tampilan antarmuka mulai bermain pada \textit{desktop} dan \textit{smartphone}. Tampilan ini muncul apabila pemain memasukkan data labirin, kecepatan ular berbelok dan kecepatan ular dengan benar dan menekan tombol "\textit{Play Game}". Pada tampilan ini terdapat ular yang dikontrol oleh pemain, dinding labirin, makanan ular, labirin dan skor yang didapat pemain.
 
 \begin{figure}[H]
 	\centering  
@@ -148,9 +148,9 @@ Pengujian fungsional dilakukan untuk mengetahui tingkat keberhasilan perangkat l
 		\begin{tabular}{| m{4cm} | m{6cm}  | m{4cm} |}
 			\hline
 			Kasus uji & Hasil yang diharapkan & Hasil uji \\ \hline
-			Pemain memilih labirin dan kecepatan berbelok & Jika pemain salah memasukkan data level labirin, maka akan ditampilkan sebuah text bahwa data yang diisi tidak valid & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
-			Pada bagian pemilihan level labirin, terdapat jumlah labirin yang dapat dipilih oleh pemain & Jumlah labirin yang ditampilkan harus sesuai dengan jumlah labirin yang terdapat pada server & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
-			Pemain menekan tombol "Play Game" & Pemain akan diarahkan ke tampilan bermain. Kondisi untuk dapat memulai permainan adalah data level labirin, kecepatan berbelok dan kecepatan laju ular sudah valid. Posisi ular dan dinding labirin sesuai dengan level labirin yang dipilih. Posisi apel tidak berada di atas dinding labirin atau tubuh ular. & Umumnya, posisi apel tidak berada tepat di atas dinding labirin. Pada beberapa kasus, posisi apel tepat berada di atas dinding labirin.\\ \hline
+			Pemain memilih labirin dan kecepatan berbelok & Jika pemain salah memasukkan data labirin, maka akan ditampilkan sebuah text bahwa data yang diisi tidak valid & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Pada bagian pemilihan labirin, terdapat jumlah labirin yang dapat dipilih oleh pemain & Jumlah labirin yang ditampilkan harus sesuai dengan jumlah labirin yang terdapat pada server & Hasil pengujian sesuai dengan yang diharapkan\\ \hline
+			Pemain menekan tombol "Play Game" & Pemain akan diarahkan ke tampilan bermain. Kondisi untuk dapat memulai permainan adalah data labirin, kecepatan berbelok dan kecepatan laju ular sudah valid. Posisi ular dan dinding labirin sesuai dengan labirin yang dipilih. Posisi apel tidak berada di atas dinding labirin atau tubuh ular. & Umumnya, posisi apel tidak berada tepat di atas dinding labirin. Pada beberapa kasus, posisi apel tepat berada di atas dinding labirin.\\ \hline
 		\end{tabular}
 	\end{table}
 	
@@ -235,7 +235,7 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	Penguji 2 berhasil menambahkan labirin ke 7, 8 dan 9 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq2}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 2 : \url{https://github.com/GeneralDevilX/Snake360/pull/2/files}. Penguji 2 membuat labirin ke 7 yang seluruhnya terdapat dinding dan memposisikan ular di koordinat (0,0). Selain itu, pada file teks labirin ke 7, labirin dibuat kurang dari 60 baris. Penguji 2 membuat labirin ke 7 dan labirin ke 8. Gambar~\ref{fig:pengujian2} merupakan hasil pengujian labirin ke 7.
 	
 	
-	Ketiga labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar \textit{canvas} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin \textit{level} 7 dan 8 yang seluruhnya adalah dinding dan memposisikan ular di (0,0). Pada labirin level 9, penguji 2 menambahkan sebuah baris kosong di akhir \textit{file} sehingga menyebabkan permainan menjadi \textit{error}. Peneliti ingin memberitahukan penguji 2 bahwa labirin yang dibuat belum benar, tetapi terjadi sebuah kesalahan yaitu peneliti menekan tombol \textit{merge request}. Hal ini membuat peneliti harus memperbaiki labirin yang dibuat oleh penguji 2.
+	Ketiga labirin yang dibuat oleh penguji 2 tidak sesuai dengan besar \textit{canvas} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian2}. Penguji 2 membuat labirin ke 7 dan 8 yang seluruhnya adalah dinding dan memposisikan ular di (0,0). Pada labirin ke 9, penguji 2 menambahkan sebuah baris kosong di akhir \textit{file} sehingga menyebabkan permainan menjadi \textit{error}. Peneliti ingin memberitahukan penguji 2 bahwa labirin yang dibuat belum benar, tetapi terjadi sebuah kesalahan yaitu peneliti menekan tombol \textit{merge request}. Hal ini membuat peneliti harus memperbaiki labirin yang dibuat oleh penguji 2.
 	
 	\begin{figure}[H]
 		\centering  
@@ -266,7 +266,7 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	\end{figure}
 	
 	\item Penguji 3 : ThobyGitHub\\
-	Penguji 3 berhasil menambahkan labirin \textit{level} 10 dengan menggunakan pull request seperti yang terlihat pada Gambar~\ref{fig:pullReq3}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 3 : \url{https://github.com/GeneralDevilX/Snake360/pull/4/files}. Labirin yang dibuat oleh penguji 3 sudah sesuai ketentuan membuat labirin pada \textit{file readme}. Gambar~\ref{fig:pengujian3} merupakan tampilan labirin yang dibuat oleh penguji 3.
+	Penguji 3 berhasil menambahkan labirin ke 10 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq3}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 3 : \url{https://github.com/GeneralDevilX/Snake360/pull/4/files}. Labirin yang dibuat oleh penguji 3 sudah sesuai ketentuan membuat labirin pada \textit{file readme}. Gambar~\ref{fig:pengujian3} merupakan tampilan labirin yang dibuat oleh penguji 3.
 	
 	\begin{figure}[H]
 		\centering  
@@ -283,7 +283,7 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	\end{figure}
 	
 	\item Penguji 4 : felicia-11\\
-	Penguji 4 berhasil menambahkan labirin level 11 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq4}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 4 : \url{https://github.com/GeneralDevilX/Snake360/pull/6/files}. Labirin yang dibuat oleh penguji 4 sudah sesuai ketentuan membuat labirin pada \textit{file readme} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian4}.
+	Penguji 4 berhasil menambahkan labirin ke 11 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq4}. \textit{Link} untuk \textit{file} teks yang dibuat penguji 4 : \url{https://github.com/GeneralDevilX/Snake360/pull/6/files}. Labirin yang dibuat oleh penguji 4 sudah sesuai ketentuan membuat labirin pada \textit{file readme} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian4}.
 	
 	\begin{figure}[H]
 		\centering  
@@ -300,7 +300,7 @@ Pada pengujian eksperimental akan diuji penambahan labirin oleh orang lain. Pada
 	\end{figure}
 	
 	\item Penguji 5 : tegarmuhammad3775\\
-	Penguji 5 berhasil menambahkan labirin \textit{level} 12 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq5}. Link untuk file teks yang dibuat penguji 5 : \url{https://github.com/GeneralDevilX/Snake360/pull/5/files}. Labirin yang dibuat oleh penguji 5 sudah sesuai ketentuan membuat labirin pada \textit{file readme} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian5}.
+	Penguji 5 berhasil menambahkan labirin ke 12 dengan menggunakan \textit{pull request} seperti yang terlihat pada Gambar~\ref{fig:pullReq5}. Link untuk file teks yang dibuat penguji 5 : \url{https://github.com/GeneralDevilX/Snake360/pull/5/files}. Labirin yang dibuat oleh penguji 5 sudah sesuai ketentuan membuat labirin pada \textit{file readme} sehingga tampilan menjadi seperti pada Gambar~\ref{fig:pengujian5}.
 	
 	\begin{figure}[H]
 		\centering  
